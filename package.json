@@ -2,11 +2,12 @@
   "private": true,
   "author": "wenshan <hou_ve@hotmail.com>",
   "scripts": {
-    "dev": "max dev",
-    "build": "max build",
-    "postinstall": "max setup",
+    "dev": "export NODE_OPTIONS=--openssl-legacy-provider && max dev",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && max build",
+    "postinstall": "export NODE_OPTIONS=--openssl-legacy-provider && max setup",
     "setup": "max setup",
-    "start": "max dev"
+    "start": "max dev",
+    "publish": "node uploadOSS"
   },
   "dependencies": {
     "@umijs/max": "^4.3.1",
