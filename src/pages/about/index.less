@@ -1,0 +1,115 @@
+.page {
+  padding: 0;
+  margin: 0;
+  background-color: #EFEFEF;
+}
+.about-page {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  .des-tx {
+    background-color: #EFEFEF;
+    h1 {
+      font-size: 32px;
+      line-height: 50px;
+      padding-left: 20px;
+      padding-top: 30px;
+      font-weight: 500;
+    }
+    p {
+      font-size: 24px;
+      line-height: 32px;
+      padding: 20px;
+    }
+    img {
+      width: 710px;
+      margin: 0 auto;
+    }
+  }
+  .company {
+    background-color: #EFEFEF;
+    padding-left: 20px;
+    font-size: 24px;
+    h1 {
+      padding-left: 0;
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+      width: 710px;
+      li {
+        height: 48px;
+        line-height: 48px;
+        overflow: hidden;
+        width: 710px;
+        span {
+          display: inline-block;
+          padding-right: 5px;
+          font-weight: 500;
+          overflow: hidden;
+          vertical-align: middle;
+        }
+        a {
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .contact{
+    background-color: #EFEFEF;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    height: 60px;
+    position: relative;
+    z-index: 9;
+    div.wechat {
+      display: inline-block;
+      width: 50%;
+      text-align: center;
+      img {
+        width: 80px;
+        display: inline;
+      }
+    }
+    div.youtube {
+      display: inline-block;
+      width: 50%;
+      text-align: center;
+      img {
+        width: 80px;
+        display: inline;
+      }
+    }
+    .mask-model {
+      padding: 20px;
+      width: 700px;
+      height: 700px;
+      position: absolute;
+      z-index: 11;
+      left: 0;
+      top: -740px;
+      background-color: #dedede;
+      border: 5px solid #dedede;
+      display: none;
+      img {
+        max-width: 700px;
+      }
+      .close {
+        font-size: 72px;
+        color: #333;
+        height: 80px;
+        width: 80px;
+        position: absolute;
+        z-index: 13;
+        right: 30px;
+        top: 30px;
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
+    .mask-model.action {
+      display: block;
+    }
+  }
+}

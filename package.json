@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "author": "wenshan <hou_ve@hotmail.com>",
+  "scripts": {
+    "dev": "max dev",
+    "build": "max build",
+    "postinstall": "max setup",
+    "setup": "max setup",
+    "start": "max dev"
+  },
+  "dependencies": {
+    "@umijs/max": "^4.3.1",
+    "antd-mobile": "^5.37.1",
+    "axios": "^1.7.2",
+    "js-cookie": "^3.0.5",
+    "moment": "^2.29.1",
+    "store2": "^2.14.3",
+    "swiper": "^11.1.4"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
+    "@umijs/max": "^4.3.1",
+    "postcss": "^8.4.39",
+    "postcss-plugin-px2rem": "^0.8.1",
+    "postcss-px-to-viewport": "^1.1.1",
+    "postcss-px2rem": "^0.3.0",
+    "postcss-pxtorem": "^6.1.0",
+    "typescript": "^5.0.3"
+  }
+}

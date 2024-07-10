@@ -1,0 +1,146 @@
+.header-warp {
+  height: 393px;
+  overflow: hidden;
+  margin: auto;
+  background-image: url(https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeetpet/banner2tobg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+  z-index: 9;
+  .mask {
+    height: 393px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 11;
+    background-color: #D8D8D8;
+    opacity: 0.5;
+  }
+}
+.arrow-left {
+  width: 57px;
+  height: 57px;
+  position: absolute;
+  z-index: 15;
+  top: 20px;
+  left: 20px;
+  background-image: url('https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeetpet/limeethouseaorrw-left.png');
+  background-position: center;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.main {
+  width: 600px;
+  position: absolute;
+  z-index: 13;
+  top: 157px;
+  left: 0px;
+  display: flex;
+  .des {
+    padding-top:15px;
+    height: 100px;
+    color: #000000;
+    width: 450px;
+    h1 {
+      font-size: 32px;
+      font-weight: 450;
+      height: 40px;
+      line-height: 40px;
+      text-shadow: 0 1px 2px rgba(51, 51, 51, 0.9);
+    }
+    h2{
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 300;
+      text-shadow: 0 1px 2px rgba(51, 51, 51, 0.9);
+      color: #333;
+    }
+    p{
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 400;
+      text-shadow: 0 1px 1px rgba(51, 51, 51, 0.9);
+      color: #666;
+    }
+  }
+  .logo {
+    width: 140px;
+    height: 140px;
+    padding: 5px;
+    margin-left: 20px;
+    img {
+      width: 140px;
+      height: 140px;
+    }
+  }
+}
+.header {
+  width: 100%;
+  height: 351px;
+}
+.locale {
+  width: 120px;
+  height: 40px;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  background-color: #dfdfdf;
+  font-size: 14px;
+  line-height: 40px;
+  border-radius: 10px;
+  color: #333;
+  text-align: center;
+}
+ul.lan-list {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  li {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 45px;
+  }
+}
+.nav {
+  height: 42px;
+  width: 100%;
+  position: relative;
+  z-index: 99;
+  .mask-sub {
+    position: absolute;
+    width: 100%;
+    height: 42px;
+    background-color: #D8D8D8;
+    opacity: 0.7;
+    left: 0;
+    top: 0;
+  }
+  ul{
+    position: absolute;
+    width: 100%;
+    height: 42px;
+    z-index: 101;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    top: 0;
+    display: flex;
+    li {
+      width: 33%;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      font-size: 16px;
+      text-shadow: 0 1px 1px rgba(51, 51, 51, 0.9);
+      border-bottom: 2px solid #D8D8D8;
+      cursor: pointer;
+    }
+    li.action {
+      color: #000;
+      font-weight: 500;
+      border-bottom: 2px solid #F6912D;
+    }
+  }
+}

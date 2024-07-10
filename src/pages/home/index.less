@@ -1,0 +1,23 @@
+@import "../../styles/theme";
+@import "../../styles/mixin";
+
+.page {
+  background-color: #EFEFEF;
+}
+.tabbar-wrap {
+  height: 100px;
+  position: fixed;
+  bottom: 0; /* 距离底部为0像素 */
+  left: 0; /* 左侧与视口边界对齐 */
+  width: 100%; /* 宽度等于视口宽度 */
+  z-index: 9999;
+}
+
+.home-page {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  background: transparent;
+  color: @color-text-paragraph;
+}
