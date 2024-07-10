@@ -57,7 +57,7 @@ class DetailPage extends Component {
   }
 
   render() {
-    const { product_detail, additional_image_link, image_link} = this.props.productDetail;
+    const { product_detail, additional_image_link, image_link, title, link, mobile_link, monetary_unit, sale_price, price} = this.props.productDetail;
     return (
       <div className="page clearfix">
         <div className="page-detail clearfix">
@@ -65,17 +65,17 @@ class DetailPage extends Component {
           <ProductGroup></ProductGroup>
           <div className='price-wrap clearfix'>
             <div className='price'>
-              <i className='unit'>$</i>
-              <span className='value'>29.9</span>
-              <span className='original-value'>-20%</span>
+              <i className='unit'>{monetary_unit}</i>
+              <span className='value'>{sale_price}</span>
+              <span className='original-value'>-{((price - sale_price) / price).toFixed(2) * 100}%</span>
             </div>
             <div className='title'>
-              Pet Collar Dog Collar Puppy Reflective Collar Adjustable Cat collar Safety Buckle Bell Neck Strap
+              {title}
             </div>
 
           </div>
           <div className='submit-button clearfix'>
-            Go to Amazon to buy
+            <a href={`${mobile_link ? mobile_link : link}`} target="_blank" >Go to Amazon to buy</a>
           </div>
           <ProductAttr product_detail={product_detail}></ProductAttr>
           <ProductDetail list={additional_image_link}></ProductDetail>

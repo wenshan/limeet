@@ -8,7 +8,7 @@ const DEV_ENV = process.env.DEV_ENV;
 export default {
   namespace: 'common',
   state: {
-    userid: 9,
+    userid: 277,
     language: 'en-US',
     fromType: 0,
     platform: 'wap',
@@ -20,7 +20,13 @@ export default {
         const query = QueryString.parse(window.location.search);
         const lang = query.lang || Cookie.get('lang') || 'en-US';
         if (lang) {
-          setLocale(lang, true);
+          setLocale(lang, false);
+          dispatch({
+            type: 'update',
+            payload: {
+              language: lang
+            }
+          });
         }
       });
     }

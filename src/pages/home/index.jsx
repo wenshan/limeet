@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { connect, history } from 'umi';
-import { SelectLang } from 'umi';
+import { connect, history, FormattedMessage } from 'umi';
 import BannerSwiper from '@/components/BannerSwiper';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
@@ -110,7 +109,7 @@ class HomePage extends Component {
             <BannerSwiper swiperBanner={this.props.swiperBanner} callback={this.swpierClick}></BannerSwiper>
           </div>
           <Categories productCategories={this.props.productCategories} clickCateCallback={this.handleClickCateCallback}></Categories>
-          <Title title="Highest Sales"></Title>
+          <Title title="common.title.sales"></Title>
           <List productList={this.props.hotProductList} productToDetailCallback={this.productToDetailCallback}></List>
           <Footer></Footer>
         </div>

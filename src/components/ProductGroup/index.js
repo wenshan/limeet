@@ -17,7 +17,7 @@ class ProductGroup extends Component {
           <li>
             <div className='item'>
               <div className='img-box'>
-                <img src='https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeetpet/%E4%B8%BB%E5%9B%BE_1.jpg' />
+                <img src='https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/%E4%B8%BB%E5%9B%BE_1.jpg' />
               </div>
               <div className='title'>Pet Collar Bells for Dogs and Cats, 22mm, 14Colors…</div>
               <div className='price'>
@@ -30,7 +30,7 @@ class ProductGroup extends Component {
           <li>
             <div className='item'>
               <div className='img-box'>
-                <img src='https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeetpet/%E4%B8%BB%E5%9B%BE_1.jpg' />
+                <img src='https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/%E4%B8%BB%E5%9B%BE_1.jpg' />
               </div>
               <div className='title'>Pet Collar Bells for Dogs and Cats, 22mm, 14Colors…</div>
               <div className='price'>
@@ -43,7 +43,7 @@ class ProductGroup extends Component {
           <li>
             <div className='item'>
               <div className='img-box'>
-                <img src='https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeetpet/%E4%B8%BB%E5%9B%BE_1.jpg' />
+                <img src='https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/%E4%B8%BB%E5%9B%BE_1.jpg' />
               </div>
               <div className='title'>Pet Collar Bells for Dogs and Cats, 22mm, 14Colors…</div>
               <div className='price'>
@@ -56,7 +56,7 @@ class ProductGroup extends Component {
           <li>
             <div className='item'>
               <div className='img-box'>
-                <img src='https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeetpet/%E4%B8%BB%E5%9B%BE_1.jpg' />
+                <img src='https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/%E4%B8%BB%E5%9B%BE_1.jpg' />
               </div>
               <div className='title'>Pet Collar Bells for Dogs and Cats, 22mm, 14Colors…</div>
               <div className='price'>

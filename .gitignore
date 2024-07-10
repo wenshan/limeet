@@ -27,4 +27,6 @@ push.sh
 jenkins.sh
 gita.py
 dist
-node_modules
+node_modules,
+uploadOSS.js
+upload.js

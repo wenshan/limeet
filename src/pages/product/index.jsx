@@ -88,7 +88,7 @@ class ProductListPage extends Component {
         <div className="page-list clearfix">
           <Header navigationCallback={this.handelNavigationHeader} currentPath={this.props.currentPath} goBackCallback={this.handelGoBack} from="product"></Header>
           <Categories productCategories={this.props.productCategories} clickCateCallback={this.handleClickCateCallback}></Categories>
-          <Title title="Product List"></Title>
+          <Title title="common.title.list"></Title>
           <List productList={this.props.productList} productToDetailCallback={this.productToDetailCallback}></List>
         </div>
       </div>

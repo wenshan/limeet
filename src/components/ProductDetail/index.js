@@ -27,7 +27,7 @@ class ProductDetail extends Component {
     if (!this.props.list || !this.props.list.length) return;
     return (
       <div className='product-detail clearfix'>
-        <Title title='Product detail' />
+        <Title title='common.title.detail' />
         <div className='clearfix'>{this.imgList()}</div>
       </div>
     );

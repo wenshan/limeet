@@ -40,7 +40,9 @@ class List extends Component {
               <div className='price'>
                 <i className='unit'>{item.monetary_unit}</i>
                 <span className='value'>{item.sale_price ? item.sale_price : item.price}</span>
-                <span className='original-value'>{item.price} </span>
+                <span className='original-value'>
+                  -{((item.price - item.sale_price) / item.price).toFixed(2) * 100}%
+                </span>
               </div>
             </div>
           </li>

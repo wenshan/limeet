@@ -14,7 +14,6 @@ class ProductAttr extends Component {
   listAttr = () => {
     const html = [];
     const { product_detail } = this.state;
-    console.log('product_detail:', product_detail);
     if (
       product_detail &&
       Object.prototype.toString.call(product_detail) === '[object Array]' &&
@@ -46,7 +45,7 @@ class ProductAttr extends Component {
   render() {
     return (
       <div className='product-attr clearfix'>
-        <Title title='Product Attribute' />
+        <Title title='common.title.attribute' />
         <div className='clearfix'>
           <ul>{this.listAttr()}</ul>
         </div>

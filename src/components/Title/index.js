@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FormattedMessage } from 'umi';
 import './index.less';
 
 class Title extends Component {
@@ -17,7 +18,9 @@ class Title extends Component {
       <div className='title-wrap clearfix'>
         <div className='title'>
           <i className='left-icon' />
-          <h3>{this.props.title}</h3>
+          <h3>
+            <FormattedMessage id={this.props.title} />
+          </h3>
           <i className='right-icon' />
         </div>
       </div>

@@ -83,10 +83,10 @@ instance.interceptors.response.use(
 );
 
 export default (url, options = { method: 'GET', data, config }) => {
-  const access_token = Cookies.get('access_token');
+  const language = Cookies.get('lang');
   let config = Object.assign({}, initConfig, options.config);
-  if (access_token && config.isAccess) {
-    options.data = Object.assign({}, options.data, { access_token });
+  if (language) {
+    options.data = Object.assign({}, options.data, { language });
   } else {
     options.data = Object.assign({}, options.data);
   }

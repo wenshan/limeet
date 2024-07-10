@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FormattedMessage } from 'umi';
 import Title from '../Title';
 import Tool from '@/utils/tool';
 import './index.less';
@@ -78,14 +79,14 @@ class Categories extends Component {
   render() {
     return (
       <div className='categories clearfix'>
-        <Title title='Categories' />
+        <Title title='common.title.categories' />
         <div className='menu clearfix'>
           <ul className='clearfix'>{this.listHtml()}</ul>
         </div>
         <div className='describe clearfix'>
           <p>
-            Welcome to LimeetPet We are your best companions, providing a wide range of high-quality pet supplies and
-            services for you and your pets.
+            <img src='https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/jiaozhang.png' />
+            <FormattedMessage id='common.about.des' />
             <a harf='#'>See More</a>
           </p>
         </div>

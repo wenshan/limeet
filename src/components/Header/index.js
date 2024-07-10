@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Popup } from 'antd-mobile';
+import { FormattedMessage } from 'umi';
 import Cookie from 'js-cookie';
 import languageObj from '@/constant/language';
 import { setLocale, getAllLocales, getLocale } from 'umi';
@@ -14,17 +15,17 @@ class Header extends Component {
       language: getLocale(),
       menu: [
         {
-          name: 'Home',
+          name: <FormattedMessage id='common.nav.home' />,
           value: 'home',
           path: '/index.html'
         },
         {
-          name: 'Products',
+          name: <FormattedMessage id='common.nav.products' />,
           value: 'product',
           path: '/product.html'
         },
         {
-          name: 'Factory',
+          name: <FormattedMessage id='common.nav.factory' />,
           value: 'about',
           path: '/about.html'
         }
@@ -105,12 +106,18 @@ class Header extends Component {
           {this.props.from !== 'home' && <div className='arrow-left' onClick={this.goToBack} />}
           <div className='main'>
             <div className='logo'>
-              <img src='https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeetpet/limeet_logo.png' />
+              <img src='https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/limeet_logo.png' />
             </div>
             <div className='des'>
-              <h1>LimeetPet</h1>
-              <h2>Creating a Warm Home for Pets.</h2>
-              <p>We design many creative cat furniture items, allowing cats and people to coexist warmly.</p>
+              <h1>Limeet</h1>
+              <h2>
+                <FormattedMessage id='common.header.name.second' />
+                <img src='https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/maogou.png' />
+              </h2>
+              <p>
+                <img src='https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/xin.png' />
+                <FormattedMessage id='common.header.name.des' />
+              </p>
             </div>
           </div>
         </div>
