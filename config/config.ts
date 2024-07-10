@@ -1,7 +1,10 @@
 import { defineConfig } from 'umi';
+import routes  from './routes';
+
 const path = require("path");
 const pxtorem = require('postcss-pxtorem');
-import routes  from './routes';
+const isDev = process.env.NODE_ENV === 'development';
+
 export default defineConfig({
   outputPath: 'dist',
   model: {},
@@ -15,6 +18,7 @@ export default defineConfig({
   },
   dva: {},
   devtool: process.env.NODE_ENV === 'development' ? 'eval' : false,
+  publicPath: isDev ? '/' : 'https://img.dreamstep.top/limeet/dist/',
   routes: routes.routes,
   // https://umijs.org/zh-CN/plugins/plugin-locale
   locale: {
