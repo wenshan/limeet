@@ -57,11 +57,12 @@ class DetailPage extends Component {
   }
 
   render() {
-    const { product_detail, additional_image_link, image_link, title, link, mobile_link, monetary_unit, sale_price, price} = this.props.productDetail;
+    const { product_detail, additional_image_link, lifestyle_image_link, image_link, title, link, mobile_link, monetary_unit, sale_price, price} = this.props.productDetail;
+    const mainProductImg = image_link.concat(additional_image_link) || [];
     return (
       <div className="page clearfix">
         <div className="page-detail clearfix">
-          <DetailSwiper list={image_link} callback={this.swpierClick} goBackCallback={this.handelGoBack} from="detail"></DetailSwiper>
+          <DetailSwiper list={mainProductImg} callback={this.swpierClick} goBackCallback={this.handelGoBack} from="detail"></DetailSwiper>
           <ProductGroup></ProductGroup>
           <div className='price-wrap clearfix'>
             <div className='price'>
@@ -78,7 +79,7 @@ class DetailPage extends Component {
             <a href={`${mobile_link ? mobile_link : link}`} target="_blank" >Go to Amazon to buy</a>
           </div>
           <ProductAttr product_detail={product_detail}></ProductAttr>
-          <ProductDetail list={additional_image_link}></ProductDetail>
+          <ProductDetail list={lifestyle_image_link}></ProductDetail>
         </div>
       </div>
     );

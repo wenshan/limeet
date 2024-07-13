@@ -121,9 +121,11 @@ class Header extends Component {
             </div>
           </div>
         </div>
-        <div className='locale'>
-          <Button onClick={this.popupButtonShow}>{this.languageCurrent()}</Button>
-        </div>
+        {this.props.from === 'home' && (
+          <div className='locale'>
+            <Button onClick={this.popupButtonShow}>{this.languageCurrent()}</Button>
+          </div>
+        )}
         <div className='nav'>
           <div className='mask-sub' />
           <ul>{this.menuNav()}</ul>

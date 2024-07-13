@@ -5,8 +5,7 @@ import * as Plugin_0 from '/Users/hou/work/limeet/src/app.ts';
 import * as Plugin_1 from '@@/core/helmet.ts';
 import * as Plugin_2 from '/Users/hou/work/limeet/src/.umi-production/plugin-dva/runtime.tsx';
 import * as Plugin_3 from '/Users/hou/work/limeet/src/.umi-production/plugin-initialState/runtime.tsx';
-import * as Plugin_4 from '/Users/hou/work/limeet/src/.umi-production/plugin-locale/runtime.tsx';
-import * as Plugin_5 from '/Users/hou/work/limeet/src/.umi-production/plugin-model/runtime.tsx';
+import * as Plugin_4 from '/Users/hou/work/limeet/src/.umi-production/plugin-model/runtime.tsx';
 import { PluginManager } from 'umi';
 
 function __defaultExport (obj) {
@@ -35,17 +34,13 @@ export function getPlugins() {
     },
     {
       apply: Plugin_4,
-      path: process.env.NODE_ENV === 'production' ? void 0 : '/Users/hou/work/limeet/src/.umi-production/plugin-locale/runtime.tsx',
-    },
-    {
-      apply: Plugin_5,
       path: process.env.NODE_ENV === 'production' ? void 0 : '/Users/hou/work/limeet/src/.umi-production/plugin-model/runtime.tsx',
     },
   ];
 }
 
 export function getValidKeys() {
-  return ['patchRoutes','patchClientRoutes','modifyContextOpts','modifyClientRenderOpts','rootContainer','innerProvider','i18nProvider','accessProvider','dataflowProvider','outerProvider','render','onRouteChange','antd','dva','getInitialState','locale','qiankun','request',];
+  return ['patchRoutes','patchClientRoutes','modifyContextOpts','modifyClientRenderOpts','rootContainer','innerProvider','i18nProvider','accessProvider','dataflowProvider','outerProvider','render','onRouteChange','antd','dva','getInitialState','qiankun','request',];
 }
 
 let pluginManager = null;

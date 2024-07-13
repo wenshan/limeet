@@ -1,28 +1,30 @@
 .banner-swiper {
   position: relative;
   width: 100%;
-  height: 360px;
+  height: 420px;
   background: #FFF;
   overflow: hidden;
   border-radius: 0;
   margin-top: 15px;
   .swiper-container {
     width: 100%;
-    height: 100%;
-    .swiper-slide {
-      margin-top: 0;
+    height: 420px;
+  }
+  .swiper-wrapper {
+    width: 100%;
+    height: 420px;
+    .adm-swiper-slide {
+      width: 100%;
+      height: 420px;
+      overflow: hidden;
+      img{
+        max-width: 780px;
+      }
     }
-  }
-  .swiper-pagination-bullet {
-    background-color: #fff;
-    width: 10px;
-    height: 10px;
-    opacity: 0.3;
-    border-radius: 0;
-    margin: 0 10px !important;
-  }
-  .swiper-pagination-bullet-active {
-    width: 30px;
-    opacity: 1;
+    .adm-swiper-indicator {
+      .adm-page-indicator-dot {
+        width: 50px;
+      }
+    }
   }
 }

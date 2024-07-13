@@ -12,7 +12,21 @@ export default {
     hotProductList: [],
     productList: [],
     productCategories: [],
-    productDetail: {}
+    productDetail: {
+      product_detail: [
+        {
+          attribute_name: '123123',
+          attribute_value: '456'
+        },
+        {
+          attribute_name: '789',
+          attribute_value: '000'
+        }
+      ],
+      image_link: [],
+      additional_image_link: [],
+      lifestyle_image_link: []
+    }
   },
   effects: {
     *queryProductAll({ payload: data }, { call, put, select }) {

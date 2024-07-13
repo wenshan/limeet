@@ -14,22 +14,9 @@ export default {
         attribute_value: '000'
       }
     ],
-    image_link: [
-      'https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/%E4%B8%BB%E5%9B%BE_1.jpg',
-      'https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/%E4%B8%BB%E5%9B%BE_2.jpg',
-      'https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/%E4%B8%BB%E5%9B%BE_3.jpg',
-      'https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/%E4%B8%BB%E5%9B%BE_4.jpg'
-    ],
-    additional_image_link: [
-      'https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/%E8%AF%A6%E6%83%85%E5%9B%BE_1.png',
-      'https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/%E8%AF%A6%E6%83%85%E5%9B%BE_2.png',
-      'https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/%E8%AF%A6%E6%83%85%E5%9B%BE_3.png',
-      'https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/%E8%AF%A6%E6%83%85%E5%9B%BE_4.png',
-      'https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/%E8%AF%A6%E6%83%85%E5%9B%BE_5.png',
-      'https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/%E8%AF%A6%E6%83%85%E5%9B%BE_6.png',
-      'https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/%E8%AF%A6%E6%83%85%E5%9B%BE_7.png',
-      'https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/%E8%AF%A6%E6%83%85%E5%9B%BE_8.png'
-    ]
+    image_link: [],
+    additional_image_link: [],
+    lifestyle_image_link: []
   },
   effects: {},
   reducers: {

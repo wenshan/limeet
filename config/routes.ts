@@ -1,7 +1,9 @@
 export default {
   routes: [
-    { path: "/", component: "index" },
-    { path: "/docs", component: "docs" },
+    { path: "/",
+      name: 'home',
+      component: 'home/index'
+    },
     {
       name: 'home',
       path: '/index.html',

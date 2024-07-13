@@ -105,9 +105,7 @@ class HomePage extends Component {
       <div className="page clearfix">
         <div className="home-page clearfix">
           <Header navigationCallback={this.handelNavigationHeader} currentPath={this.props.currentPath} goBackCallback={this.handelGoBack} from="home"></Header>
-          <div className="swiper-wrap clearfix">
-            <BannerSwiper swiperBanner={this.props.swiperBanner} callback={this.swpierClick}></BannerSwiper>
-          </div>
+          <BannerSwiper swiperBanner={this.props.swiperBanner} callback={this.swpierClick}></BannerSwiper>
           <Categories productCategories={this.props.productCategories} clickCateCallback={this.handleClickCateCallback}></Categories>
           <Title title="common.title.sales"></Title>
           <List productList={this.props.hotProductList} productToDetailCallback={this.productToDetailCallback}></List>

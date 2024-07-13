@@ -6,6 +6,11 @@ const pxtorem = require('postcss-pxtorem');
 const isDev = process.env.NODE_ENV === 'development';
 
 export default defineConfig({
+  title: 'Limeet - Creating a Warm Home for Pets.',
+  metas: [
+    { name: 'keywords', content: 'Limeet, pet, cat jump, cats as pets' },
+    { name: 'description', content: 'Limeet, We design many creative cat furniture items, allowing cats and people to coexist warmly.' },
+  ],
   outputPath: 'dist',
   model: {},
   antd: {},
@@ -21,14 +26,6 @@ export default defineConfig({
   publicPath: isDev ? '/' : 'https://img.dreamstep.top/limeet/dist/',
   routes: routes.routes,
   // https://umijs.org/zh-CN/plugins/plugin-locale
-  locale: {
-    antd: false, // 如果项目依赖中包含 `antd`，则默认为 true
-    baseNavigator: true,
-    baseSeparator: '-',
-    default: 'zh-CN',
-    title: false,
-    useLocalStorage: true,
-  },
   alias: {
     '@': path.join(__dirname, "./src")
   },

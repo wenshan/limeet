@@ -1,7 +1,7 @@
 export default {
   'site.title': 'Limeet - Creating a Warm Home for Pets.',
-  'site.keywords': 'Limeet',
-  'site.description': '',
+  'site.keywords': 'Limeet, pet, cat jump, cats as pets',
+  'site.description': 'Limeet, We design many creative cat furniture items, allowing cats and people to coexist warmly.',
   'common.header.name': 'Limeet',
   'common.header.name.second': 'Creating a Warm Home for Pets.',
   'common.header.name.des': 'We design many creative cat furniture items, allowing cats and people to coexist warmly.',
