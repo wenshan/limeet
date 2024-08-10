@@ -37,3 +37,12 @@ export const productDetail = (params) =>
       isToast: false
     }
   });
+// 相关组
+export const queryProductGroup = (params) =>
+  Request('api/web/product/queryProductGroup', {
+    method: 'POST',
+    data: params,
+    config: {
+      isToast: false
+    }
+  });

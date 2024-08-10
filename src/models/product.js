@@ -1,4 +1,10 @@
-import { getBanner, queryProductList, queryProductCategories, productDetail } from '@/services/index';
+import {
+  getBanner,
+  queryProductList,
+  queryProductCategories,
+  productDetail,
+  queryProductGroup
+} from '@/services/index';
 
 export default {
   namespace: 'product',
@@ -15,18 +21,20 @@ export default {
     productDetail: {
       product_detail: [
         {
-          attribute_name: '123123',
-          attribute_value: '456'
+          attribute_name: '',
+          attribute_value: ''
         },
         {
-          attribute_name: '789',
-          attribute_value: '000'
+          attribute_name: '',
+          attribute_value: ''
         }
       ],
       image_link: [],
       additional_image_link: [],
-      lifestyle_image_link: []
-    }
+      lifestyle_image_link: [],
+      item_group_id: ''
+    },
+    productItemGroup: {}
   },
   effects: {
     *queryProductAll({ payload: data }, { call, put, select }) {
@@ -68,10 +76,16 @@ export default {
       if (language && userid) {
         const result = yield call(queryProductCategories, { userid, language });
         if (result && result.status && result.status === 200 && result.data.rows) {
+          const productCategories = [];
+          result.data.rows.forEach((item) => {
+            if (item && item.title !== '默认') {
+              productCategories.push(item);
+            }
+          });
           yield put({
             type: 'update',
             payload: {
-              productCategories: result.data.rows
+              productCategories: productCategories
             }
           });
         }
@@ -87,6 +101,36 @@ export default {
             type: 'update',
             payload: {
               productDetail: result.data
+            }
+          });
+          // 获取分组数据
+          if (result && result.data && result.data.item_group_id) {
+            yield put({
+              type: 'queryProductGroup',
+              payload: {
+                item_group_id: result.data.item_group_id,
+                current: 1,
+                pageSize: 4
+              }
+            });
+          }
+        }
+      }
+    },
+    *queryProductGroup({ payload: data }, { call, put, select }) {
+      const { language } = yield select((state) => state.common);
+      const { productDetail } = yield select((state) => state.product);
+      const { item_group_id, pageSize, current } = data;
+      if (language && productDetail && item_group_id) {
+        const result = yield call(queryProductGroup, { language, item_group_id });
+        if (result && result.status && result.status === 200 && result.data) {
+          yield put({
+            type: 'update',
+            payload: {
+              language,
+              productItemGroup: result.data,
+              pageSize,
+              current
             }
           });
         }

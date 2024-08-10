@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Categories from '@/components/Categories';
 import List from '@/components/List';
 import Title from '@/components/Title';
+import ICP from '@/components/Icp';
 
 import './index.less';
 
@@ -111,6 +112,7 @@ class HomePage extends Component {
           <List productList={this.props.hotProductList} productToDetailCallback={this.productToDetailCallback}></List>
           <Footer></Footer>
         </div>
+        <ICP></ICP>
       </div>
     );
   }

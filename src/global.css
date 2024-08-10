@@ -150,7 +150,7 @@ li {
 }
 
 strong {
-  font-weight: normal;
+  font-weight: 600;
 }
 
 .clearfix:after {
@@ -293,4 +293,14 @@ a:hover {
   .adm-page-indicator {
 
   }
+}
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }

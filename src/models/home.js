@@ -20,7 +20,15 @@ export default {
         const channel = 'limeetpet';
         const result = yield call(getBanner, { language, type, channel });
         if (result && result.status == 200 && result.data && result.data && result.data.rows) {
-          yield put({ type: 'update', payload: { swiperBanner: result.data.rows } });
+          const bannerItem = [];
+          if (result.data.rows && result.data.rows.length) {
+            result.data.rows.forEach((item) => {
+              if (item.is_show) {
+                bannerItem.push(item);
+              }
+            });
+          }
+          yield put({ type: 'update', payload: { swiperBanner: bannerItem } });
         } else {
           console.log('数据错误');
         }

@@ -6,6 +6,7 @@ export { defineApp } from './core/defineApp'
 export type { RuntimeConfig } from './core/defineApp'
 // plugins
 export { connect, useDispatch, useStore, useSelector, getDvaApp } from '/Users/hou/work/limeet/src/.umi-production/plugin-dva';
+export { addLocale, setLocale, getLocale, getIntl, useIntl, injectIntl, formatMessage, FormattedMessage, getAllLocales, FormattedDate, FormattedDateParts, FormattedDisplayName, FormattedHTMLMessage, FormattedList, FormattedNumber, FormattedNumberParts, FormattedPlural, FormattedRelativeTime, FormattedTime, FormattedTimeParts, IntlProvider, RawIntlProvider, SelectLang } from '/Users/hou/work/limeet/src/.umi-production/plugin-locale';
 export { Provider, useModel } from '/Users/hou/work/limeet/src/.umi-production/plugin-model';
 export { useRequest, UseRequestProvider, request, getRequestInstance } from '/Users/hou/work/limeet/src/.umi-production/plugin-request';
 // plugins types.d.ts

@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Categories from '@/components/Categories';
 import List from '@/components/List';
 import Title from '@/components/Title';
+import ICP from '@/components/Icp';
 
 import './index.less';
 
@@ -91,6 +92,7 @@ class ProductListPage extends Component {
           <Title title="common.title.list"></Title>
           <List productList={this.props.productList} productToDetailCallback={this.productToDetailCallback}></List>
         </div>
+        <ICP></ICP>
       </div>
     );
   }

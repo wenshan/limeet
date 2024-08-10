@@ -23,8 +23,12 @@ class ProductAttr extends Component {
       product_detail.map((item, idx) => {
         html.push(
           <li key={idx}>
-            <span className='name'>{item.attribute_name}: </span>
-            <span className='value'>{item.attribute_value}</span>
+            <span className='name ellipsis' title={item.attribute_name}>
+              {item.attribute_name || ''}
+            </span>
+            <span className='value ellipsis' title={item.attribute_value}>
+              {item.attribute_value || ''}
+            </span>
           </li>
         );
       });

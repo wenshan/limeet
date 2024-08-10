@@ -5,18 +5,23 @@ import ProductGroup from '@/components/ProductGroup';
 import DetailSwiper from '@/components/DetailSwiper';
 import ProductDetail from '@/components/ProductDetail';
 import ProductAttr from '@/components/ProductAttr';
+import ICP from '@/components/Icp';
+
 
 import './index.less';
 
 @connect((state) => ({
   image_link: state.detail.image_link,
   productDetail: state.product.productDetail,
+  productItemGroup: state.product.productItemGroup,
   currentPath: state.common.currentPath,
 }))
 class DetailPage extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      current: 1,
+    };
   }
   gotoPage = (val) => {
     if (val){
@@ -36,6 +41,40 @@ class DetailPage extends Component {
       }
     });
     history.push('/product.html');
+  }
+  groupPrev = () => {
+    const { current } = this.state;
+    const { item_group_id } = this.props.productDetail;
+    const newCurrent = current - 1;
+    this.setState({
+      current: newCurrent,
+    }, () => {
+      this.props.dispatch({
+        type: 'product/queryProductGroup',
+        payload: {
+          item_group_id,
+          pageSize: 4,
+          current: newCurrent,
+        }
+      });
+    });
+  }
+  groupNext = () => {
+    const { current } = this.state;
+    const { item_group_id } = this.props.productDetail;
+    const newCurrent = current + 1;
+    this.setState({
+      current: newCurrent,
+    }, ()=>{
+      this.props.dispatch({
+        type: 'product/queryProductGroup',
+        payload: {
+          item_group_id,
+          pageSize: 4,
+          current: newCurrent,
+        }
+      });
+    });
   }
   componentDidMount() {
     const search = window.document.location.search;
@@ -57,13 +96,13 @@ class DetailPage extends Component {
   }
 
   render() {
-    const { product_detail, additional_image_link, lifestyle_image_link, image_link, title, link, mobile_link, monetary_unit, sale_price, price} = this.props.productDetail;
+    const { product_detail, additional_image_link, lifestyle_image_link, image_link, title, link, mobile_link, description, monetary_unit, sale_price, price, product_highlight} = this.props.productDetail;
     const mainProductImg = image_link.concat(additional_image_link) || [];
     return (
       <div className="page clearfix">
         <div className="page-detail clearfix">
           <DetailSwiper list={mainProductImg} callback={this.swpierClick} goBackCallback={this.handelGoBack} from="detail"></DetailSwiper>
-          <ProductGroup></ProductGroup>
+          <ProductGroup productItemGroup={this.props.productItemGroup} prevCallback={this.groupPrev} nextCallback={this.groupNext} current={this.state.current}></ProductGroup>
           <div className='price-wrap clearfix'>
             <div className='price'>
               <i className='unit'>{monetary_unit}</i>
@@ -73,14 +112,14 @@ class DetailPage extends Component {
             <div className='title'>
               {title}
             </div>
-
           </div>
           <div className='submit-button clearfix'>
             <a href={`${mobile_link ? mobile_link : link}`} target="_blank" >Go to Amazon to buy</a>
           </div>
-          <ProductAttr product_detail={product_detail}></ProductAttr>
-          <ProductDetail list={lifestyle_image_link}></ProductDetail>
+          <ProductAttr product_detail={product_detail} product_highlight></ProductAttr>
+          <ProductDetail list={lifestyle_image_link} product_highlight={product_highlight} description={description}></ProductDetail>
         </div>
+        <ICP></ICP>
       </div>
     );
   }

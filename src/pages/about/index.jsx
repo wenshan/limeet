@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect, history } from 'umi';
 import { FormattedMessage } from 'umi';
 import Header from '@/components/Header';
+import ICP from '@/components/Icp';
 
 
 import './index.less';
@@ -92,6 +93,7 @@ class About extends Component {
             </div>
           </div>
         </div>
+        <ICP></ICP>
       </div>
     );
   }

@@ -16,19 +16,17 @@ export default {
   },
   subscriptions: {
     setup({ dispatch, history }) {
-      history.listen(({ pathname, search }) => {
-        const query = QueryString.parse(window.location.search);
-        const lang = query.lang || Cookie.get('lang') || 'en-US';
-        if (lang) {
-          setLocale(lang, false);
-          dispatch({
-            type: 'update',
-            payload: {
-              language: lang
-            }
-          });
-        }
-      });
+      const query = QueryString.parse(window.location.search);
+      const lang = query.lang || Cookie.get('lang') || 'en-US';
+      if (lang) {
+        setLocale(lang, false);
+        dispatch({
+          type: 'update',
+          payload: {
+            language: lang
+          }
+        });
+      }
     }
   },
 

@@ -11,7 +11,6 @@ class DetailSwiper extends Component {
   }
 
   UNSAFE_componentWillReceiveProps(nextProps) {
-    console.log('nextProps:', nextProps);
     // eslint-disable-next-line no-empty
     if (this.props.list !== nextProps.list) {
       this.setState({

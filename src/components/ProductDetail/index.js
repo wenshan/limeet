@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Title from '../Title';
+import ProductHighlight from '@/components/ProductHighlight';
+import ProductDescribe from '@/components/ProductDescribe';
 
 import './index.less';
 
@@ -28,7 +30,15 @@ class ProductDetail extends Component {
     return (
       <div className='product-detail clearfix'>
         <Title title='common.title.detail' />
-        <div className='clearfix'>{this.imgList()}</div>
+        <div className='clearfix container'>
+          <div className='rich-text-editor'>
+            <ProductDescribe description={this.props.description} />
+          </div>
+          <div className='rich-text-editor'>
+            <ProductHighlight product_highlight={this.props.product_highlight} />
+          </div>
+          <div>{this.imgList()}</div>
+        </div>
       </div>
     );
   }
