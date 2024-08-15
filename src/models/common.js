@@ -20,6 +20,7 @@ export default {
       const lang = query.lang || Cookie.get('lang') || 'en-US';
       if (lang) {
         setLocale(lang, false);
+        Cookie.set('lang', lang);
         dispatch({
           type: 'update',
           payload: {
