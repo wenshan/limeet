@@ -38,11 +38,11 @@ export default {
   },
   effects: {
     *queryProductAll({ payload: data }, { call, put, select }) {
-      const { userid, language } = yield select((state) => state.common);
+      const { language, user_project_group_id } = yield select((state) => state.common);
       const { pagination } = yield select((state) => state.home);
       const { current, pageSize } = pagination;
-      if (current && pageSize && language && userid) {
-        const result = yield call(queryProductList, { current, pageSize, language, userid, ...data });
+      if (current && pageSize && language && user_project_group_id) {
+        const result = yield call(queryProductList, { current, pageSize, language, user_project_group_id, ...data });
         if (result && result.status && result.status === 200 && result.data.rows) {
           const updatePagination = Object.assign({}, pagination, { total: result.data.count });
           if (data.from && data.from === 'home') {
@@ -72,9 +72,9 @@ export default {
       }
     },
     *queryProductCategories({ payload: data }, { call, put, select }) {
-      const { userid, language } = yield select((state) => state.common);
-      if (language && userid) {
-        const result = yield call(queryProductCategories, { userid, language });
+      const { user_project_group_id, language } = yield select((state) => state.common);
+      if (language && user_project_group_id) {
+        const result = yield call(queryProductCategories, { user_project_group_id, language });
         if (result && result.status && result.status === 200 && result.data.rows) {
           const productCategories = [];
           result.data.rows.forEach((item) => {
@@ -92,10 +92,10 @@ export default {
       }
     },
     *queryProductDetail({ payload: data }, { call, put, select }) {
-      const { userid, language } = yield select((state) => state.common);
+      const { user_project_group_id, language } = yield select((state) => state.common);
       const { id } = data;
-      if (language && userid && id) {
-        const result = yield call(productDetail, { userid, language, id: Number(id) });
+      if (language && user_project_group_id && id) {
+        const result = yield call(productDetail, { user_project_group_id, language, id: Number(id) });
         if (result && result.status && result.status === 200 && result.data) {
           yield put({
             type: 'update',
@@ -118,11 +118,11 @@ export default {
       }
     },
     *queryProductGroup({ payload: data }, { call, put, select }) {
-      const { language } = yield select((state) => state.common);
+      const { language, user_project_group_id } = yield select((state) => state.common);
       const { productDetail } = yield select((state) => state.product);
       const { item_group_id, pageSize, current } = data;
       if (language && productDetail && item_group_id) {
-        const result = yield call(queryProductGroup, { language, item_group_id });
+        const result = yield call(queryProductGroup, { language, user_project_group_id, item_group_id });
         if (result && result.status && result.status === 200 && result.data) {
           yield put({
             type: 'update',

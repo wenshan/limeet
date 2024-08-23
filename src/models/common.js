@@ -8,10 +8,11 @@ const DEV_ENV = process.env.DEV_ENV;
 export default {
   namespace: 'common',
   state: {
-    userid: 277,
+    userid: 217,
     language: 'en-US',
     fromType: 0,
     platform: 'wap',
+    user_project_group_id: 1,
     currentPath: '/index.html'
   },
   subscriptions: {
