@@ -12,7 +12,7 @@ export default {
     language: 'en-US',
     fromType: 0,
     platform: 'wap',
-    user_project_group_id: 1,
+    projectId: '1747727677',
     currentPath: '/index.html'
   },
   subscriptions: {
