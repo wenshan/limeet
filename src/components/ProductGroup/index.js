@@ -27,7 +27,7 @@ class ProductGroup extends Component {
           <li key={`${item.id}_${idx}`}>
             <div className='item'>
               <div className='img-box'>
-                <img src={item.image_link[0]} />
+                <img src={item.image_link} />
               </div>
               <div className='title'>{item.title}</div>
               <div className='price'>

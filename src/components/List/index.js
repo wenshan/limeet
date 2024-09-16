@@ -32,7 +32,7 @@ class List extends Component {
           <li key={idx}>
             <div className='item' onClick={() => this.handleProductToDetail(item.id)}>
               <div className='img-box'>
-                <img src={item.image_link[0]} />
+                <img src={item.image_link} />
               </div>
               <div className='title' title={item.title}>
                 {item.title && item.title.length > 60 ? `${item.title.substring(0, 60)}...` : item.title}

@@ -97,7 +97,7 @@ class DetailPage extends Component {
 
   render() {
     const { product_detail, additional_image_link, lifestyle_image_link, image_link, title, link, mobile_link, description, monetary_unit, sale_price, price, product_highlight} = this.props.productDetail;
-    const mainProductImg = image_link.concat(additional_image_link) || [];
+    const mainProductImg = image_link && image_link.split().concat(additional_image_link) || [];
     return (
       <div className="page clearfix">
         <div className="page-detail clearfix">

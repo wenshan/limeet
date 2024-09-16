@@ -14,7 +14,7 @@ export default {
         attribute_value: '000'
       }
     ],
-    image_link: [],
+    image_link: '',
     additional_image_link: [],
     lifestyle_image_link: []
   },

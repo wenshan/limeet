@@ -29,7 +29,7 @@ export default {
           attribute_value: ''
         }
       ],
-      image_link: [],
+      image_link: '',
       additional_image_link: [],
       lifestyle_image_link: [],
       item_group_id: ''
