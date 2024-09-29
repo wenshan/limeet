@@ -11,16 +11,17 @@
   },
   "dependencies": {
     "@umijs/max": "^4.3.1",
+    "ahooks": "^3.8.1",
     "antd-mobile": "^5.37.1",
     "axios": "^1.7.2",
+    "bootstrap": "^5.3.3",
     "js-cookie": "^3.0.5",
     "moment": "^2.29.1",
+    "react": "^17.0.2",
+    "react-bootstrap": "^2.10.4",
+    "react-dom": "^17.0.2",
     "store2": "^2.14.3",
-    "swiper": "^11.1.4",
-    "bootstrap": "^5.2.2",
-    "react": "^18.2.0",
-    "react-bootstrap": "^2.6.0",
-    "react-dom": "^18.2.0"
+    "swiper": "^11.1.4"
   },
   "devDependencies": {
     "@types/react": "^18.0.33",

@@ -1,98 +1,75 @@
-import React, { Component } from 'react';
-import { FormattedMessage } from 'umi';
 import Title from '../Title';
 import Tool from '@/utils/tool';
+import { useEffect, useState } from 'react';
+import { Row, Col, Container, Image } from 'react-bootstrap';
+import ResponsiveImage from '@/components/ResponsiveImage';
+import { useModel, history, FormattedMessage, Link } from 'umi';
+
 import './index.less';
 
-class Categories extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      product_type_id: 19681319,
-      productCategories: []
-    };
-  }
-
-  handleCategoryClick = (key) => {
-    const { productCategories } = this.state;
+function Categories() {
+  const { categories, setCategories, product_type_id, setProductTypeId } = useModel('categories');
+  const handleCategoryClick = (key) => {
     const newProductCategories = [];
-    // eslint-disable-next-line no-unused-expressions
-    productCategories &&
-      productCategories.length &&
-      productCategories.map((item) => {
+    categories &&
+      categories.length &&
+      categories.map((item) => {
         if (item.key === key) {
           newProductCategories.push(Object.assign({}, item, { action: true }));
         } else {
           newProductCategories.push(Object.assign({}, item, { action: false }));
         }
       });
-    this.setState({
-      product_type_id: key,
-      productCategories: newProductCategories
-    });
-    if (this.props.clickCateCallback) {
-      this.props.clickCateCallback(key);
-    }
+    setCategories(newProductCategories);
+    setProductTypeId(key);
+    // history.push(`/product/list.html?key=${key}`);
   };
-
-  listHtml = () => {
+  const listHtml = () => {
     const html = [];
-    const { productCategories, product_type_id } = this.state;
-    // eslint-disable-next-line no-unused-expressions
-    productCategories &&
-      productCategories.length &&
-      productCategories.map((item, idx) => {
-        if (item.key === product_type_id) {
+    categories &&
+      categories.length &&
+      categories.map((item, idx) => {
+        if (item.action) {
           html.push(
-            <li
-              className={`action ${Tool.isOdd(idx) ? 'ml20' : ''}`}
-              key={item.key}
-              onClick={() => this.handleCategoryClick(item.key)}
-            >
-              <span className='text ellipsis'>{item.title}</span> <i className='icon arrow-tx-right' />
-            </li>
+            <Col sm={6} key={item.key}>
+              <div className='item action' onClick={() => handleCategoryClick(item.key)}>
+                <Link to={`/product/list.html?key=${item.key}`}>
+                  <span className='text ellipsis'>{item.title}</span> <i className='icon arrow-tx-right' />
+                </Link>
+              </div>
+            </Col>
           );
         } else {
           html.push(
-            <li
-              className={`${Tool.isOdd(idx) ? 'ml20' : ''}`}
-              key={item.key}
-              onClick={() => this.handleCategoryClick(item.key)}
-            >
-              <span className='text ellipsis'>{item.title}</span> <i className='icon arrow-tx-right' />
-            </li>
+            <Col sm={6} key={item.key}>
+              <div className='item' onClick={() => handleCategoryClick(item.key)}>
+                <Link to={`/product/list.html?key=${item.key}`}>
+                  <span className='text ellipsis'>{item.title}</span> <i className='icon arrow-tx-right' />
+                </Link>
+              </div>
+            </Col>
           );
         }
       });
     return html;
   };
-
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    // eslint-disable-next-line no-empty
-    if (this.props.productCategories !== nextProps.productCategories) {
-      this.setState({
-        productCategories: nextProps.productCategories
-      });
-    }
-  }
-
-  render() {
-    return (
+  return (
+    <Container fluid>
       <div className='categories clearfix'>
         <Title title='common.title.categories' />
         <div className='menu clearfix'>
-          <ul className='clearfix'>{this.listHtml()}</ul>
+          <Row>{listHtml()}</Row>
         </div>
         <div className='describe clearfix'>
           <p>
             <img src='https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/jiaozhang.png' />
             <FormattedMessage id='common.about.des' />
-            <a harf='#'>See More</a>
+            <a href='#'>See More</a>
           </p>
         </div>
       </div>
-    );
-  }
+    </Container>
+  );
 }
 
 export default Categories;

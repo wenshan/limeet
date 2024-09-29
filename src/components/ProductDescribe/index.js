@@ -1,28 +1,19 @@
-import React, { Component } from 'react';
+import { useEffect, useState } from 'react';
+import { useModel } from 'umi';
+import { Row, Col, Container } from 'react-bootstrap';
 import Title from '../Title';
 
 import './index.less';
 
-class ProductHighlight extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      description: ''
-    };
-  }
-
-  componentDidMount() {}
-
-  render() {
-    return (
-      <div className='product-describe clearfix'>
-        <div
-          className='clearfix container'
-          dangerouslySetInnerHTML={{ __html: this.props.description ? this.props.description : '' }}
-        />
-      </div>
-    );
-  }
+function ProductHighlight() {
+  const { id, setProductId, product_detail } = useModel('productDetail');
+  const { description } = product_detail;
+  return (
+    <Container className='product-describe clearfix'>
+      <Title title='common.title.detail' />
+      <div className='clearfix container' dangerouslySetInnerHTML={{ __html: description ? description : '' }} />
+    </Container>
+  );
 }
 
 export default ProductHighlight;

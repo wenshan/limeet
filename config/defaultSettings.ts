@@ -4,7 +4,7 @@ const Settings = {
   logo: 'https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/gtraffic/gtraffic_500_260.png',
   iconfontUrl: '',
   token: '',
-  userid: '277',
+  userid: '277'
 };
 
 export default Settings;

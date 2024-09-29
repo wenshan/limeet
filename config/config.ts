@@ -6,8 +6,7 @@ const pxtorem = require('postcss-pxtorem');
 const isDev = process.env.NODE_ENV === 'development';
 
 export default defineConfig({
-  // title: 'Limeet - Creating a Warm Home for Pets.',
-  title: '宠物用品',
+  title: 'Limeet - Creating a Warm Home for Pets.',
   metas: [
     { name: 'keywords', content: 'Limeet, pet, cat jump, cats as pets' },
     { name: 'description', content: 'Limeet, We design many creative cat furniture items, allowing cats and people to coexist warmly.' },
@@ -41,5 +40,16 @@ export default defineConfig({
       propList: ['*'],
     }),
   ],
-  // styles: [`html, body { font-size: 16px !important; }`],
+  analytics: {
+    ga_v2: 'GTM-MBQ58SPM',
+    baidu: 'e3e4ff6865d2ba690ff30184ec5758e8',
+  },
+  crossorigin: true,
+  scripts: [
+    { src: 'https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js', defer: true, crossorigin: 'anonymous' },
+    { src: 'https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js', defer: true, crossorigin: 'anonymous' },
+    { src: 'https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/react-bootstrap/react-bootstrap.min.js', defer: true, crossorigin: 'anonymous' },
+  ],
+  headScripts: [{src:'https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/supportImageType.js', defer: true, crossOrigin: 'anonymous'},{ src: 'https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/react-bootstrap/react-bootstrap.min.js', defer: true, crossorigin: true }],
+  styles: [`html, body { font-size: 16px !important; }`],
 });

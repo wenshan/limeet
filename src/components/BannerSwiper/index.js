@@ -1,53 +1,67 @@
-import React, { Component } from 'react';
-import { Swiper } from 'antd-mobile';
+import React, { useEffect, useState } from 'react';
+import { Carousel, Container, Image } from 'react-bootstrap';
+import ResponsiveImage from '@/components/ResponsiveImage';
+import { useModel, history } from 'umi';
+import {
+  getBanner,
+  queryProductList,
+  queryProductCategories,
+  productDetail,
+  queryProductGroup
+} from '@/services/index';
+
 import './index.less';
 
-class Banner extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      list: props.swiperBanner
-    };
-  }
+const whereParams = {
+  channel: 'limeetpet',
+  type: 'home'
+};
 
-  bannerClick = (e) => {
-    console.log(e);
-    // this.props.callback(val);
+function Banner() {
+  const { initialState } = useModel('@@initialState');
+  console.log('initialState:', initialState);
+  const { projectId } = initialState;
+  const [ swiperBanner, setSwiperBanner ] = useState([]);
+  const getBannerFetch = async () => {
+    const result = await getBanner({ projectId, ...whereParams });
+    if (result && result.status == 200 && result.data && result.data && result.data.rows) {
+      setSwiperBanner(result.data.rows);
+    }
   };
-
-  renderSwiperHtml = () => {
+  useEffect(() => {
+    getBannerFetch();
+  }, []);
+  const bannerClick = (item) => {
+    if (item && item.url) {
+      if (item.url.indexOf('http') > 0) {
+        window.location.href = item.url;
+      } else {
+        history.push(item.url);
+      }
+    }
+  };
+  const renderSwiperHtml = () => {
     const html = [];
-    const { swiperBanner } = this.props;
     swiperBanner &&
       swiperBanner.length &&
       swiperBanner.map((item, idx) => {
-        html.push(
-          <Swiper.Item key={idx} onClick={this.bannerClick}>
-            <div className='swiper-slide' key={idx}>
-              <img src={item.src} />
-            </div>
-          </Swiper.Item>
-        );
+        if (item.is_show && item.src) {
+          html.push(
+            <Carousel.Item key={idx} onClick={() => bannerClick(item)} title={item.name}>
+              <Image src={item.src} fluid />
+            </Carousel.Item>
+          );
+        }
       });
     return html;
   };
 
-  render() {
-    const { swiperBanner } = this.props;
-    return (
-      <div className='banner-swiper clearfix'>
-        <section className='swiper-container'>
-          <div className='swiper-wrapper'>
-            {swiperBanner && swiperBanner.length > 0 ? (
-              <Swiper autoplay={true} autoplayInterval={6000} loop={true} defaultIndex={0}>
-                {this.renderSwiperHtml()}
-              </Swiper>
-            ) : null}
-          </div>
-        </section>
-      </div>
-    );
-  }
+  return (
+    <Container fluid>
+      <Carousel data-bs-theme='dark' interval={3000}>
+        {renderSwiperHtml()}
+      </Carousel>
+    </Container>
+  );
 }
-
 export default Banner;

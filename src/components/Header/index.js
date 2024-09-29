@@ -1,109 +1,192 @@
-import React, { Component } from 'react';
-import { Button, Popup } from 'antd-mobile';
-import { FormattedMessage } from 'umi';
+import { useEffect, useState } from 'react';
+import { FormattedMessage, history } from 'umi';
 import Cookie from 'js-cookie';
 import languageObj from '@/constant/language';
 import { setLocale, getAllLocales, getLocale } from 'umi';
+import { Dropdown, Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import listToTreeSelf from '@/utils/listToTreeSelf';
+
 import './index.less';
 
-class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentAction: 'Home',
-      popupVisible: false,
-      language: getLocale(),
-      menu: [
-        {
-          name: <FormattedMessage id='common.nav.home' />,
-          value: 'home',
-          path: '/index.html'
-        },
-        {
-          name: <FormattedMessage id='common.nav.products' />,
-          value: 'product',
-          path: '/product.html'
-        },
-        {
-          name: <FormattedMessage id='common.nav.factory' />,
-          value: 'about',
-          path: '/about.html'
-        }
-      ]
-    };
+const menuInit = [
+  {
+    name: <FormattedMessage id='common.nav.home' />,
+    value: 'home',
+    path: '/index.html',
+    key: 'home'
+  },
+  {
+    name: <FormattedMessage id='common.nav.products' />,
+    value: 'product',
+    key: 'product'
+  },
+  {
+    name: <FormattedMessage id='common.nav.category.gamesToys' />,
+    value: '33381771',
+    path: '/product/list.html',
+    key: '33381771',
+    father_key: 'product'
+  },
+  {
+    name: <FormattedMessage id='common.nav.category.catBed' />,
+    value: '12771663',
+    path: '/product/list.html',
+    key: '12771663',
+    father_key: 'product'
+  },
+  {
+    name: <FormattedMessage id='common.nav.category.furniture' />,
+    value: '97974047',
+    path: '/product/list.html',
+    key: '97974047',
+    father_key: 'product'
+  },
+  {
+    name: <FormattedMessage id='common.nav.category.foodBox' />,
+    value: '18885882',
+    path: '/product/list.html',
+    key: '18885882',
+    father_key: 'product'
+  },
+  {
+    name: <FormattedMessage id='common.nav.category.all' />,
+    value: 'all',
+    path: '/product/list.html',
+    key: 'all',
+    father_key: 'product'
+  },
+  {
+    name: <FormattedMessage id='common.nav.brand' />,
+    value: 'brand',
+    path: '/brand.html',
+    key: 'brand'
+  },
+  {
+    name: <FormattedMessage id='common.nav.factory' />,
+    value: 'about',
+    path: '/about.html',
+    key: 'about'
   }
+];
 
-  goToBack = () => {
-    if (this.props.goBackCallback) {
-      this.props.goBackCallback();
+function Header(props) {
+  const languageInit = getLocale();
+  const [ menu, setMenu ] = useState(menuInit);
+  const [ language, setLanguage ] = useState(languageInit);
+  const [ currentAction, setCurrentAction ] = useState(menu);
+
+  const goToBack = () => {
+    if (props.goBackCallback) {
+      props.goBackCallback();
     }
   };
 
-  gotoPage = (val) => {
-    if (val && this.props.navigationCallback) {
-      this.props.navigationCallback(val);
+  const gotoPage = (path, key) => {
+    const objMenu = [];
+    if (path && key) {
+      menu &&
+        menu.forEach((item, idx) => {
+          objMenu[item.key] = Object.assign({}, item, { active: false });
+        });
+      menu &&
+        menu.forEach((item, idx) => {
+          if (item.key === key) {
+            objMenu[item.key] = Object.assign({}, item, { active: true });
+            if (item.father_key) {
+              objMenu[item.father_key] = Object.assign({}, objMenu[item.father_key], { active: true });
+            }
+          } else {
+            objMenu[item.key] = Object.assign({}, item, { active: false });
+          }
+        });
+      const newMenu = Object.values(objMenu);
+      setMenu(newMenu);
+      history.push(`${path}?key=${key}`);
     }
   };
 
-  menuNav = () => {
+  const menuNav = () => {
     const html = [];
-    const { menu } = this.state;
-    const { currentPath } = this.props;
-    menu.map((item, idx) => {
-      if (currentPath === item.path) {
-        html.push(
-          <li key={idx} onClick={() => this.gotoPage(item.path)} className='action'>
-            {item.name}
-          </li>
-        );
-      } else {
-        html.push(
-          <li key={idx} onClick={() => this.gotoPage(item.path)}>
-            {item.name}
-          </li>
-        );
-      }
-    });
+    const { rowsTree } = listToTreeSelf(menu);
+    rowsTree &&
+      rowsTree.map((item, idx) => {
+        if (item.children && item.children.length > 0) {
+          const htmlDropdown = [];
+          item.children.map((list, indx) => {
+            if (list.active) {
+              htmlDropdown.push(
+                <NavDropdown.Item key={list.key} onClick={() => gotoPage(list.path, list.key)} active>
+                  {list.name}
+                </NavDropdown.Item>
+              );
+            } else {
+              htmlDropdown.push(
+                <NavDropdown.Item key={list.key} onClick={() => gotoPage(list.path, list.key)}>
+                  {list.name}
+                </NavDropdown.Item>
+              );
+            }
+          });
+          if (item.active) {
+            html.push(
+              <NavDropdown title={item.name} id='basic-nav-dropdown' active>
+                {htmlDropdown}
+              </NavDropdown>
+            );
+          } else {
+            html.push(
+              <NavDropdown title={item.name} id='basic-nav-dropdown' active>
+                {htmlDropdown}
+              </NavDropdown>
+            );
+          }
+        } else {
+          if (item.active) {
+            html.push(
+              <Nav.Link key={item.key} onClick={() => gotoPage(item.path, item.key)} active>
+                {item.name}
+              </Nav.Link>
+            );
+          } else {
+            html.push(
+              <Nav.Link key={item.key} onClick={() => gotoPage(item.path, item.key)}>
+                {item.name}
+              </Nav.Link>
+            );
+          }
+        }
+      });
     return html;
   };
-  popupColumns = () => {
+  const popupColumns = () => {
     const html = [];
     const data = Object.values(languageObj);
     data.map((item, idx) => {
-      html.push(<li onClick={() => this.popupSelectValue(item.value)}>{item.label}</li>);
+      html.push(
+        <Dropdown.Item onClick={() => popupSelectValue(item.value)} eventKey={item.value}>
+          {item.label}
+        </Dropdown.Item>
+      );
     });
     return <ul className='lan-list'>{html}</ul>;
   };
-  languageCurrent = () => {
-    const { language } = this.state;
-    return languageObj[language].label;
+  const languageCurrent = () => {
+    if (language) {
+      return languageObj[language].label;
+    }
   };
-  popupButtonShow = () => {
-    this.setState({
-      popupVisible: true
-    });
-  };
-  popupButtonClose = () => {
-    this.setState({
-      popupVisible: false
-    });
-  };
-  popupSelectValue = (value) => {
-    this.setState({
-      language: value,
-      popupVisible: false
-    });
+  const popupSelectValue = (value) => {
+    setLanguage(value);
     Cookie.set('lang', value);
     setLocale(value, true);
   };
-  componentDidMount() {}
 
-  render() {
-    return (
+  return (
+    <Container fluid>
       <div className='header-warp clearfix'>
         <div className='mask' />
         <div className='header'>
-          {this.props.from !== 'home' && <div className='arrow-left' onClick={this.goToBack} />}
+          <div className='arrow-left' onClick={goToBack} />
           <div className='main'>
             <div className='logo'>
               <img src='https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/limeet_logo.png' />
@@ -120,27 +203,25 @@ class Header extends Component {
               </p>
             </div>
           </div>
-        </div>
-        {this.props.from === 'home' && (
           <div className='locale'>
-            <Button onClick={this.popupButtonShow}>{this.languageCurrent()}</Button>
+            <Dropdown>
+              <Dropdown.Toggle variant='secondary' id='dropdown-basic'>
+                {languageCurrent()}
+              </Dropdown.Toggle>
+              <Dropdown.Menu>{popupColumns()}</Dropdown.Menu>
+            </Dropdown>
           </div>
-        )}
-        <div className='nav'>
-          <div className='mask-sub' />
-          <ul>{this.menuNav()}</ul>
         </div>
-        <Popup
-          visible={this.state.popupVisible}
-          onMaskClick={this.popupButtonClose}
-          value={this.state.language}
-          onConfirm={this.popupSelectValue}
-        >
-          {this.popupColumns()}
-        </Popup>
+        <div className='nav-sub'>
+          <div className='mask-sub' />
+          <Navbar expand='sm'>
+            <Navbar.Toggle aria-controls='basic-navbar-nav' sm />
+            <Nav className='me-auto'>{menuNav()}</Nav>
+          </Navbar>
+        </div>
       </div>
-    );
-  }
+    </Container>
+  );
 }
 
 export default Header;

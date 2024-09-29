@@ -1,73 +1,76 @@
 
 .list-wrap {
- width: 100%;
- margin: 0 auto;
- ul {
-  padding: 0;
-  width: 730px;
-  clear: both;
-  li {
-    width: 345px;
-    float: left;
-    margin-left: 20px;
+  width: 100%;
+  margin: 0 auto;
+  .title-wrap {
+    margin-bottom: 15px;
+  }
+  .item {
     background-color: #fff;
     margin-bottom: 15px;
     margin-top: 15px;
     overflow: hidden;
-  }
- }
- .item {
-  width: 343px;
-  border: 1px solid #fff;
-  .img-box {
-    width: 340px;
-    height: 340px;
-    overflow: hidden;
-    img {
-      max-width: 340px;
-      max-height: 340px;
+    border: 1px solid #fff;
+    .img-box {
+      overflow: hidden;
+      padding: 10px;
+      img {
+        overflow: hidden;
+      }
+    }
+    .title {
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      height: 120px;
       overflow: hidden;
     }
-  }
-  .title {
-    width: 320px;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 24px;
-    line-height: 28px;
-    font-weight: 200;
-    height: 90px;
-    overflow: hidden;
-  }
-  .price {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-    line-height: 40px;
-    i.unit {
-      color: #EE4D2D;
-      font-size: 24px;
+    .price {
+      padding-top: 0px;
+      padding-bottom: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      line-height: 75px;
+      height: 75px;
+      overflow: hidden;
       vertical-align: bottom;
-      padding-right: 5px;
-    }
-    span.value {
-      color: #EE4D2D;
-      font-size: 32px;
-      vertical-align: bottom;
-    }
-    span.original-value{
-      color: #EE4D2D;
-      font-size: 16px;
-      vertical-align: bottom;
-      background-color: #FFF5E2;
-      padding: 2px 5px;
-      margin-left: 20px;
+      i.unit {
+        color: #EE4D2D;
+        font-size: 24px;
+        padding-right: 5px;
+        display: inline-block;
+        overflow: hidden;
+        height: 24px;
+        line-height: 24px;
+        vertical-align: sub;
+      }
+      span.value {
+        color: #EE4D2D;
+        font-size: 48px;
+        vertical-align: bottom;
+      }
+      span.original-value{
+        color: #EE4D2D;
+        vertical-align: bottom;
+        background-color: #FFF5E2;
+        padding: 2px 5px;
+        margin-left: 20px;
+        padding-right: 10px;
+      }
+      span.del-value{
+        text-decoration: line-through;
+        color: #999;
+        vertical-align: bottom;
+        display: inline-block;
+        overflow: hidden;
+        height: 24px;
+        line-height: 24px;
+        vertical-align: sub;
+        margin-left: 15px;
+      }
     }
   }
- }
- .item:hover{
-  border: 1px solid #F6912D;
- }
+  .item:hover{
+    border: 1px solid #F6912D;
+  }
 }

@@ -1,128 +1,55 @@
-import React, { Component } from 'react';
-import { connect, history } from 'umi';
+import { useEffect, useState } from 'react';
+import { Dropdown, Navbar, Container, Nav, NavDropdown, Row, Col } from 'react-bootstrap';
+import { useModel, history } from 'umi';
 import QueryString from 'query-string';
 import ProductGroup from '@/components/ProductGroup';
 import DetailSwiper from '@/components/DetailSwiper';
 import ProductDetail from '@/components/ProductDetail';
 import ProductAttr from '@/components/ProductAttr';
+import ProductHighlight from '@/components/ProductHighlight';
+import ProductDescribe from '@/components/ProductDescribe';
 import ICP from '@/components/Icp';
 
 
 import './index.less';
 
-@connect((state) => ({
-  image_link: state.detail.image_link,
-  productDetail: state.product.productDetail,
-  productItemGroup: state.product.productItemGroup,
-  currentPath: state.common.currentPath,
-}))
-class DetailPage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      current: 1,
-    };
+function DetailPage() {
+  const { projectId, currentPath, setCurrentPath } = useModel('common');
+  const { product_detail, setProductId } = useModel('productDetail');
+  const query = QueryString.parse(window.location.search);
+  if (!query || !(query && query.id) || !product_detail) {
+    return false;
   }
-  gotoPage = (val) => {
-    if (val){
-      history.push(val);
-    }
-  }
-  swpierClick = (val) => {
-    if (val){
-      history.push(val);
-    }
-  }
-  handelGoBack = () => {
-    this.props.dispatch({
-      type: 'common/update',
-      payload: {
-        currentPath: '/product.html',
-      }
-    });
-    history.push('/product.html');
-  }
-  groupPrev = () => {
-    const { current } = this.state;
-    const { item_group_id } = this.props.productDetail;
-    const newCurrent = current - 1;
-    this.setState({
-      current: newCurrent,
-    }, () => {
-      this.props.dispatch({
-        type: 'product/queryProductGroup',
-        payload: {
-          item_group_id,
-          pageSize: 4,
-          current: newCurrent,
-        }
-      });
-    });
-  }
-  groupNext = () => {
-    const { current } = this.state;
-    const { item_group_id } = this.props.productDetail;
-    const newCurrent = current + 1;
-    this.setState({
-      current: newCurrent,
-    }, ()=>{
-      this.props.dispatch({
-        type: 'product/queryProductGroup',
-        payload: {
-          item_group_id,
-          pageSize: 4,
-          current: newCurrent,
-        }
-      });
-    });
-  }
-  componentDidMount() {
-    const search = window.document.location.search;
-    const query = QueryString.parse(search);
-    if (query && query.id) {
-      this.props.dispatch({
-        type: 'product/update',
-        payload: {
-          id: query.id
-        }
-      });
-      this.props.dispatch({
-        type: 'product/queryProductDetail',
-        payload: {
-          id: query.id
-        }
-      });
-    }
-  }
+  console.log('product_detail:', product_detail);
+  const { title, link, mobile_link, monetary_unit, discount, sale_price, price, image_link, additional_image_link} = product_detail;
 
-  render() {
-    const { product_detail, additional_image_link, lifestyle_image_link, image_link, title, link, mobile_link, description, monetary_unit, sale_price, price, product_highlight} = this.props.productDetail;
-    const mainProductImg = image_link && image_link.split().concat(additional_image_link) || [];
-    return (
-      <div className="page clearfix">
-        <div className="page-detail clearfix">
-          <DetailSwiper list={mainProductImg} callback={this.swpierClick} goBackCallback={this.handelGoBack} from="detail"></DetailSwiper>
-          <ProductGroup productItemGroup={this.props.productItemGroup} prevCallback={this.groupPrev} nextCallback={this.groupNext} current={this.state.current}></ProductGroup>
-          <div className='price-wrap clearfix'>
-            <div className='price'>
-              <i className='unit'>{monetary_unit}</i>
-              <span className='value'>{sale_price}</span>
-              <span className='original-value'>-{((price - sale_price) / price).toFixed(2) * 100}%</span>
-            </div>
-            <div className='title'>
-              {title}
-            </div>
+  return (
+  <>
+      <DetailSwiper from="detail" image_link={image_link} additional_image_link={additional_image_link}></DetailSwiper>
+      {false && (<ProductGroup></ProductGroup>)}
+      <Container className='page-detail'>
+        <div className='price-wrap clearfix'>
+          <div className='price'>
+            <i className='unit'>{monetary_unit}</i>
+            <span className='value'>{sale_price}</span>
+            <span className='del-value'>{price}</span>
+            <span className='original-value'>-{discount}%</span>
           </div>
-          <div className='submit-button clearfix'>
-            <a href={`${mobile_link ? mobile_link : link}`} target="_blank" >Go to Amazon to buy</a>
+          <div className='title'>
+            {title}
           </div>
-          <ProductAttr product_detail={product_detail} product_highlight></ProductAttr>
-          <ProductDetail list={lifestyle_image_link} product_highlight={product_highlight} description={description}></ProductDetail>
         </div>
-        <ICP></ICP>
-      </div>
-    );
-  }
+        <div className='submit-button clearfix'>
+          <a href={`${mobile_link ? mobile_link : link}`} target="_blank" >Go to Amazon to buy</a>
+        </div>
+      </Container>
+      <ProductAttr></ProductAttr>
+      <ProductDescribe />
+      <ProductHighlight />
+      <ProductDetail></ProductDetail>
+      <ICP></ICP>
+  </>
+  );
 }
 
 export default DetailPage;

@@ -1,63 +1,54 @@
 .categories {
-  padding-top: 30px;
+  padding: 20px;
   background-color: #fff;
   margin-top: 15px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
   .menu {
     padding-top: 0px;
     clear: both;
-    ul{
-      padding: 10px;
-      margin: 0 auto;
-      display: block;
-      width: 720px;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      li{
+      .item{
         padding: 0 0 0 30px;
         margin: 0 0 10px 0px;
-        width: 340px;
-        height: 45px;
-        line-height: 45px;
+        line-height: 65px;
         background-color: #FFF5E2;
         overflow: hidden;
-        float: left;
+        a{
+          color: #000;
+        }
         .text {
           display: inline-block;
-          width: 270px;
           vertical-align: middle;
         }
         .arrow-tx-right {
           background-image: url('https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/arrow-right.png');
           background-repeat: no-repeat;
-          background-size: 80%;
-          width: 16px;
-          height: 16px;
+          background-size: 120%;
+          width: 24px;
+          height: 24px;
           vertical-align: middle;
+          float: right;
+          margin-right: 20px;
+          margin-top: 20px;
         }
       }
-      li.action {
+      .item:hover {
         background-color: #F6912D;
         font-weight: 500;
         color: #fff;
+        a{
+          color: #fff;
+        }
       }
-      li.ml20 {
-        margin-left: 20px;
-      }
-    }
   }
   .describe {
-    width: 720px;
     margin: 0 auto;
     padding: 20px;
-    height: 80px;
     p {
       padding: 10px 20px;
-      font-size: 16px;
-      line-height: 24px;
       img {
         display: inline-block;
-        width: 20px;
+        width: 40px;
         padding-right: 5px;
       }
     }

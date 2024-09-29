@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect, history, FormattedMessage } from 'umi';
+import { Dropdown, Navbar, Container, Nav, NavDropdown, Row, Col } from 'react-bootstrap';
 import BannerSwiper from '@/components/BannerSwiper';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
@@ -10,112 +11,17 @@ import ICP from '@/components/Icp';
 
 import './index.less';
 
-@connect((state) => ({
-  swiperBanner: state.home.swiperBanner,
-  hotProductList: state.product.hotProductList,
-  productCategories: state.product.productCategories,
-  currentPath: state.common.currentPath,
-}))
-class HomePage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      activeKey: 'home',
-      product_type_id: 0
-    };
-  }
-
-  swpierClick = (val) => {
-    if (val){
-      if (val.indexOf('http') > -1) {
-        window.document.location.href = val;
-      } else {
-        history.push(val);
-      }
-    }
-  }
-
-  gotoPage = (val) => {
-    if (val){
-      history.push(val);
-    }
-  }
-  handelNavigationHeader = (val) => {
-    if (val){
-      this.props.dispatch({
-        type: 'common/update',
-        payload: {
-          currentPath: val,
-        }
-      });
-      history.push(val);
-    }
-  }
-  handleClickCateCallback = (key) => {
-    this.setState({
-      product_type_id: key
-    });
-    this.props.dispatch({
-      type: 'product/queryProductAll',
-      payload: {
-        current: 1,
-        pageSize: 100,
-        product_type_id: key,
-        from: 'home',
-      }
-    });
-  }
-  productToDetailCallback = (id) => {
-    this.props.dispatch({
-      type: 'product/update',
-      payload: {
-        id
-      }
-    });
-    history.push(`/detail.html?id=${id}`);
-  }
-  handelGoBack = () => {
-    this.props.dispatch({
-      type: 'common/update',
-      payload: {
-        currentPath: '/index.html',
-      }
-    });
-    history.push('/index.html');
-  }
-  componentDidMount() {
-    this.props.dispatch({
-      type: 'home/getBanner',
-    });
-    this.props.dispatch({
-      type: 'product/queryProductCategories',
-    });
-    this.props.dispatch({
-      type: 'product/queryProductAll',
-      payload: {
-        current: 1,
-        pageSize: 10,
-        limit: 10,
-        from: 'home'
-      }
-    });
-  }
-
-  render() {
-    return (
-      <div className="page clearfix">
-        <div className="home-page clearfix">
-          <Header navigationCallback={this.handelNavigationHeader} currentPath={this.props.currentPath} goBackCallback={this.handelGoBack} from="home"></Header>
-          <BannerSwiper swiperBanner={this.props.swiperBanner} callback={this.swpierClick}></BannerSwiper>
-          <Categories productCategories={this.props.productCategories} clickCateCallback={this.handleClickCateCallback}></Categories>
-          <Title title="common.title.sales"></Title>
-          <List productList={this.props.hotProductList} productToDetailCallback={this.productToDetailCallback}></List>
-          <Footer></Footer>
-        </div>
-        <ICP></ICP>
-      </div>
-    );
-  }
+function HomePage (){
+  return (
+    <>
+      <Header from="home"></Header>
+      <BannerSwiper></BannerSwiper>
+      <Categories></Categories>
+      <List></List>
+      <Footer></Footer>
+      <ICP></ICP>
+    </>
+  );
 }
 
 export default HomePage;
