@@ -19,8 +19,7 @@ const whereParams = {
 
 function Banner() {
   const { initialState } = useModel('@@initialState');
-  console.log('initialState:', initialState);
-  const { projectId } = initialState;
+  const projectId = initialState.projectId || '1747727677';
   const [ swiperBanner, setSwiperBanner ] = useState([]);
   const getBannerFetch = async () => {
     const result = await getBanner({ projectId, ...whereParams });
@@ -57,7 +56,7 @@ function Banner() {
   };
 
   return (
-    <Container fluid>
+    <Container fluid className='banner-swiper'>
       <Carousel data-bs-theme='dark' interval={3000}>
         {renderSwiperHtml()}
       </Carousel>

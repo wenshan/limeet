@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Dropdown, Navbar, Container, Nav, NavDropdown, Row, Col } from 'react-bootstrap';
-import { useModel } from 'umi';
 import { getBanner, queryProductList, queryProductCategories, productDetail, queryProductGroup} from '@/services/index';
 import { useRequest } from 'ahooks';
+import { useModel, history, FormattedMessage, Link } from 'umi';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import CategoriesSide from '@/components/CategoriesSide';
@@ -13,15 +13,15 @@ import './index.less';
 function ProductList (props) {
   return (<>
     <Header></Header>
-    <Container fluid>
-      <div className='product-list-wrap'>
-        <div className="categories-list">
+    <Container fluid className='list-wrap'>
+      <Row>
+        <Col sm={4} md={3} lg={2}>
           <CategoriesSide></CategoriesSide>
-        </div>
-        <div className="product-list">
+        </Col>
+        <Col>
           <List></List>
-        </div>
-      </div>
+        </Col>
+      </Row>
     </Container>
     <Footer></Footer>
     </>

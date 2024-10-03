@@ -8,6 +8,7 @@ import ProductDetail from '@/components/ProductDetail';
 import ProductAttr from '@/components/ProductAttr';
 import ProductHighlight from '@/components/ProductHighlight';
 import ProductDescribe from '@/components/ProductDescribe';
+import Footer from '@/components/Footer';
 import ICP from '@/components/Icp';
 
 
@@ -20,7 +21,6 @@ function DetailPage() {
   if (!query || !(query && query.id) || !product_detail) {
     return false;
   }
-  console.log('product_detail:', product_detail);
   const { title, link, mobile_link, monetary_unit, discount, sale_price, price, image_link, additional_image_link} = product_detail;
 
   return (
@@ -47,6 +47,7 @@ function DetailPage() {
       <ProductDescribe />
       <ProductHighlight />
       <ProductDetail></ProductDetail>
+      <Footer></Footer>
       <ICP></ICP>
   </>
   );

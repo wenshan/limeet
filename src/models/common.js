@@ -2,18 +2,17 @@
 import QueryString from 'query-string';
 import Cookie from 'js-cookie';
 import { useEffect, useState } from 'react';
-import { setLocale, getAllLocales, getLocale } from 'umi';
-import { useModel, history } from 'umi';
+import { setLocale, getAllLocales, getLocale, useModel, history } from 'umi';
 
 function Common() {
   const projectId = '1747727677';
-  const [ lang, setLang ] = useState('en-US');
+  const [ language, setLanguage ] = useState('');
   const [ currentPath, setCurrentPath ] = useState('index.html');
   const getUrlLang = async () => {
     const query = QueryString.parse(window.location.search);
-    const lang = query.lang || Cookie.get('lang') || 'en-US';
+    const lang = query.lang || Cookie.get('lang') || getLocale() || 'en-US';
     if (lang) {
-      setLang(lang);
+      setLanguage(lang);
       setLocale(lang, false);
       Cookie.set('lang', lang);
     }
@@ -22,7 +21,8 @@ function Common() {
     getUrlLang();
   }, []);
   return {
-    language: lang,
+    language,
+    setLanguage,
     projectId,
     currentPath,
     setCurrentPath

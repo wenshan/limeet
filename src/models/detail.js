@@ -28,8 +28,6 @@ export default {
     setup({ dispatch, history }) {
       history.listen(({ pathname, search }) => {
         const query = QueryString.parse(search);
-        console.log('query:', query);
-        console.log('pathname:', pathname);
       });
     }
   }

@@ -10,14 +10,9 @@ export default {
       component: 'home/index'
     },
     {
-      path: '/product',
-      routes: [
-        {
-          name: 'product-list',
-          path: '/product/list.html',
-          component: './productList/index'
-        }
-      ],
+      name: 'product-list',
+      path: '/product/list.html',
+      component: './productList/index'
     },
     {
       name: 'detail',

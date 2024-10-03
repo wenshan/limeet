@@ -3,7 +3,7 @@ import QueryString from 'query-string';
 import Cookie from 'js-cookie';
 import { useEffect, useState } from 'react';
 import { useRequest } from 'ahooks';
-import { useModel, history } from 'umi';
+import { useModel, history, FormattedMessage } from 'umi';
 import {
   getBanner,
   queryProductList,
@@ -12,18 +12,27 @@ import {
   queryProductGroup
 } from '@/services/index';
 
-const allCategories = {
+const allCategoriesInit = {
   key: 'all',
-  title: 'All'
+  title: 'All Product'
+};
+
+const allTitle = {
+  'en-US': 'All Product',
+  'ja-JP': 'すべて',
+  'zh-CN': '所有商品',
+  'zh-TW': '所有商品'
 };
 
 function Categories() {
   const projectId = '1747727677';
+  const { language } = useModel('common');
   const [ categories, setCategories ] = useState([]);
   const [ product_type_id, setProductTypeId ] = useState([]);
   const getCategories = async () => {
     const result = await queryProductCategories({ projectId });
     if (result && result.status && result.status === 200 && result.data.rows) {
+      const allCategories = Object.assign({}, allCategoriesInit, { title: allTitle[language] });
       const rows = [];
       rows.push(allCategories);
       result.data.rows.length && result.data.rows.forEach((row) => rows.push(row));
@@ -31,9 +40,12 @@ function Categories() {
       setProductTypeId(rows[0].key);
     }
   };
-  useEffect(() => {
-    getCategories();
-  }, []);
+  useEffect(
+    () => {
+      getCategories();
+    },
+    [ language ]
+  );
   return {
     categories,
     setCategories,

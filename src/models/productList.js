@@ -3,7 +3,7 @@ import QueryString from 'query-string';
 import Cookie from 'js-cookie';
 import { useEffect, useState } from 'react';
 import { useRequest } from 'ahooks';
-import { useModel, history } from 'umi';
+import { useModel, history, useParams } from 'umi';
 
 import {
   getBanner,

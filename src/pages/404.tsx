@@ -1,6 +1,6 @@
 import { Link } from 'umi';
 import React from 'react';
-import { Button, ErrorBlock } from 'antd-mobile';
+import { Dropdown, Navbar, Container, Nav, NavDropdown, Row, Col, Button } from 'react-bootstrap';
 import { history } from 'umi';
 
 export default function IndexPage() {
@@ -9,7 +9,7 @@ export default function IndexPage() {
   };
   return (
     <div>
-      <ErrorBlock
+      <div
         status="default"
         style={{
           '--image-height': '150px',
@@ -19,7 +19,7 @@ export default function IndexPage() {
         <Button color="primary" onClick={backClick}>
           返回主页
         </Button>
-      </ErrorBlock>
+      </div>
     </div>
   );
 }

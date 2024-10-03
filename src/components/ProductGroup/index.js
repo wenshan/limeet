@@ -51,7 +51,6 @@ function ProductGroup() {
   };
   const listAttr = () => {
     const html = [];
-    console.log('itemGroupList:', itemGroupList);
     if (itemGroupList && itemGroupList.length) {
       itemGroupList.map((item, idx) => {
         html.push(

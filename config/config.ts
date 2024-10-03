@@ -45,6 +45,7 @@ export default defineConfig({
     baidu: 'e3e4ff6865d2ba690ff30184ec5758e8',
   },
   crossorigin: true,
+  esbuildMinifyIIFE: true,
   scripts: [
     { src: 'https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js', defer: true, crossorigin: 'anonymous' },
     { src: 'https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js', defer: true, crossorigin: 'anonymous' },

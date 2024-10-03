@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Carousel, Container, Image } from 'react-bootstrap';
-import { Swiper } from 'antd-mobile';
 import './index.less';
 
 function DetailSwiper(props) {
-  console.log('props:', props);
   if (!props || !(props.image_link || props.additional_image_link)) {
     return false;
   }
@@ -18,7 +16,6 @@ function DetailSwiper(props) {
   const bannerClick = (val) => {
     this.props.callback(val);
   };
-  console.log('list:', list);
   const renderSwiperHtml = (list) => {
     const html = [];
     if (list && list.length > 0) {

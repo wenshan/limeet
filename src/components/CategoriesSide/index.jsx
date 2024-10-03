@@ -1,15 +1,15 @@
 import { Nav } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
-import { useModel, history } from 'umi';
+import { useModel, history, useSelectedRoutes } from 'umi';
 import QueryString from 'query-string';
 
 import './index.less';
 
 function CategoriesSide() {
+  const routes = useSelectedRoutes();
   const { categories, setCategories, product_type_id, setProductTypeId } = useModel('categories');
   const { queryParams, setQueryParams } = useModel('productList');
   const setCurrentCategoriesHandler = (key) => {
-    console.log(key);
     const list = [];
     if(key){
       categories && categories.length && categories.map(item => {
@@ -21,7 +21,6 @@ function CategoriesSide() {
           list.push(Object.assign({}, item, {active: false}));
         }
       });
-      console.log(list);
       setCategories(list);
     }
   };
@@ -38,9 +37,9 @@ function CategoriesSide() {
     const html = [];
     categories && categories.length && categories.map(item => {
       if (item && item.active) {
-        html.push(<Nav.Link key={item.key} href={`/detail.html?id=${item.key}`} onClick={()=>setCurrentCategoriesHandler(item.key)} active>{item.title}</Nav.Link>);
+        html.push(<Nav.Link key={item.key} href={`/product/list.html?id=${item.key}`} onClick={()=>setCurrentCategoriesHandler(item.key)} active>{item.title}</Nav.Link>);
       } else {
-        html.push(<Nav.Link key={item.key} href={`/detail.html?id=${item.key}`} onClick={()=>setCurrentCategoriesHandler(item.key)}>{item.title}</Nav.Link>);
+        html.push(<Nav.Link key={item.key} href={`/product/list.html?id=${item.key}`} onClick={()=>setCurrentCategoriesHandler(item.key)}>{item.title}</Nav.Link>);
       }
     });
     return html;

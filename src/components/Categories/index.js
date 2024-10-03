@@ -64,7 +64,7 @@ function Categories() {
           <p>
             <img src='https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/jiaozhang.png' />
             <FormattedMessage id='common.about.des' />
-            <a href='#'>See More</a>
+            <Link to='/brand.html?key=brand'>See More</Link>
           </p>
         </div>
       </div>

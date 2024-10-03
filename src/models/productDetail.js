@@ -16,7 +16,6 @@ import {
 function ProductDetail() {
   const projectId = '1747727677';
   const query = QueryString.parse(window.location.search);
-  console.log(query);
   if (!query || !(query && query.id)) {
     return false;
   }
@@ -29,7 +28,6 @@ function ProductDetail() {
       setProductDetail(result.data);
     }
   };
-  console.log('id', id);
   useEffect(
     () => {
       getProductDetail();

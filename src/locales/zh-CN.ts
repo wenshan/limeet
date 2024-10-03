@@ -48,4 +48,10 @@ export default {
   'brand.page.strength.list02':'•  2014年，在上海金山，建设占地3前多平方米生成基地，拥有行业先进的3D打印机设备、雕刻机设备等，包括一体化的设计软件，实现了高速的设计和生产迭代，满足消费需求。',
   'brand.page.strength.list03':'•  2018年，随着国内电商企业蓬勃发展，我们发展了淘宝天猫店铺，线上月销量达到20W，线下销量30W。',
   'brand.page.strength.list04':'•  2023年，经过3年疫情艰辛的煎熬，我们保持国内市场稳定，继续不断地新产品迭代，我们决定开创海外销售渠道，把我们的产品带给更多的用户。',
+  'footer.product.category.title': '产品分类',
+  'footer.product.brand.title': '关于品牌',
+  'footer.product.factory.title': '关于工厂',
+  'footer.product.factory.product': '关于产品',
+  'footer.product.we': '我们',
+  'footer.product.contact': '联系',
 };

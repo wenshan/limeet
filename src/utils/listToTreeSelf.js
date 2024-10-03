@@ -5,41 +5,18 @@ export default (list, currentItem = {}) => {
   const map = new Map();
   const result = [];
   const rowsList = [];
-  const father_key = [];
 
   newList.forEach((item) => {
-    const temp = Object.assign({}, item, { active: 0 });
+    const temp = Object.assign({}, item);
     map.set(item.key, temp);
   });
 
-  if (currentItem && currentItem.key) {
-    father_key.push(currentItem.key);
-    if (currentItem.father_key) {
-      const father01 = map.get(currentItem.father_key);
-      if (father01) {
-        father_key.push(father01.key);
-        if (father01.father_key) {
-          const father02 = map.get(father01.father_key);
-          father_key.push(father02.key);
-          if (father02.father_key) {
-            const father03 = map.get(father02.father_key);
-            father_key.push(father03.key);
-            if (father03.father_key) {
-              const father04 = map.get(father02.father_key);
-              father_key.push(father04.key);
-            }
-          }
-        }
-      }
+  newList.forEach((item) => {
+    if (item.active && item.father_key && map.get(item.father_key)) {
+      const temp = Object.assign({}, map.get(item.father_key), { active: true });
+      map.set(item.father_key, temp);
     }
-    father_key.forEach((itemKey) => {
-      const currentMap = map.get(itemKey);
-      if (currentMap) {
-        const tempObj = Object.assign({}, currentMap, { active: 1 });
-        map.set(itemKey, tempObj);
-      }
-    });
-  }
+  });
 
   map.forEach((value, key) => {
     rowsList.push(Object.assign({}, value));

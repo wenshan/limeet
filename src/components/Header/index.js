@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { FormattedMessage, history } from 'umi';
 import Cookie from 'js-cookie';
+import QueryString from 'query-string';
 import languageObj from '@/constant/language';
-import { setLocale, getAllLocales, getLocale } from 'umi';
+import { setLocale, getAllLocales, getLocale, useSelectedRoutes, useModel, FormattedMessage, history } from 'umi';
 import { Dropdown, Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import listToTreeSelf from '@/utils/listToTreeSelf';
 
@@ -13,7 +13,8 @@ const menuInit = [
     name: <FormattedMessage id='common.nav.home' />,
     value: 'home',
     path: '/index.html',
-    key: 'home'
+    key: 'home',
+    active: true
   },
   {
     name: <FormattedMessage id='common.nav.products' />,
@@ -70,16 +71,33 @@ const menuInit = [
 ];
 
 function Header(props) {
-  const languageInit = getLocale();
+  const { language, setLanguage } = useModel('common');
   const [ menu, setMenu ] = useState(menuInit);
-  const [ language, setLanguage ] = useState(languageInit);
-  const [ currentAction, setCurrentAction ] = useState(menu);
-
-  const goToBack = () => {
-    if (props.goBackCallback) {
-      props.goBackCallback();
+  console.log('language:', language);
+  console.log('menu:', menu);
+  const initCurrentSetActive = () => {
+    const menuCurrent = [];
+    const query = QueryString.parse(window.location.search);
+    console.log(query);
+    let key = 'home';
+    if (query && query.key) {
+      key = query.key;
+    } else {
+      key = 'home';
     }
+    menu.forEach((item, idx) => {
+      if (item.key === key) {
+        menuCurrent.push(Object.assign({}, item, { active: true }));
+      } else {
+        menuCurrent.push(Object.assign({}, item, { active: false }));
+      }
+    });
+    console.log('menu:', menuCurrent);
+    setMenu(menuCurrent);
   };
+  useEffect(() => {
+    initCurrentSetActive();
+  }, []);
 
   const gotoPage = (path, key) => {
     const objMenu = [];
@@ -135,7 +153,7 @@ function Header(props) {
             );
           } else {
             html.push(
-              <NavDropdown title={item.name} id='basic-nav-dropdown' active>
+              <NavDropdown title={item.name} id='basic-nav-dropdown'>
                 {htmlDropdown}
               </NavDropdown>
             );
@@ -186,7 +204,6 @@ function Header(props) {
       <div className='header-warp clearfix'>
         <div className='mask' />
         <div className='header'>
-          <div className='arrow-left' onClick={goToBack} />
           <div className='main'>
             <div className='logo'>
               <img src='https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/limeet_logo.png' />
@@ -197,7 +214,7 @@ function Header(props) {
                 <FormattedMessage id='common.header.name.second' />
                 <img src='https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/maogou.png' />
               </h2>
-              <p>
+              <p className='clearfix'>
                 <img src='https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/xin.png' />
                 <FormattedMessage id='common.header.name.des' />
               </p>
@@ -215,8 +232,11 @@ function Header(props) {
         <div className='nav-sub'>
           <div className='mask-sub' />
           <Navbar expand='sm'>
+            <Navbar.Brand />
             <Navbar.Toggle aria-controls='basic-navbar-nav' sm />
-            <Nav className='me-auto'>{menuNav()}</Nav>
+            <Navbar.Collapse id='basic-navbar-nav'>
+              <Nav className='me-auto'>{menuNav()}</Nav>
+            </Navbar.Collapse>
           </Navbar>
         </div>
       </div>

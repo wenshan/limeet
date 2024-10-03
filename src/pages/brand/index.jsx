@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect, history } from 'umi';
 import { FormattedMessage } from 'umi';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import ICP from '@/components/Icp';
 import { Row, Col, Container, Image } from 'react-bootstrap';
 import { useRequest } from 'ahooks';
@@ -67,6 +68,7 @@ function Brand (){
         </div>
 
       </Container>
+      <Footer></Footer>
     </>
   );
 }

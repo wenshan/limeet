@@ -29,8 +29,6 @@ function ResponsiveImage(props: Props) {
   if(isWebp) {
     realSrc = `${props.src}?x-oss-process=image/format,webp`;
   }
-  console.log('isWebp:', isWebp);
-  console.log('realSrc:', realSrc);
   if (props.srcSet && props.sizes) {
     const arraySrcSet = props.srcSet?.split(',') || [840,1280,1500,1920,3000];
     const arrTemp: string[] = [];

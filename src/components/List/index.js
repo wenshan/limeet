@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import { FormattedMessage, history } from 'umi';
-import { Row, Col, Container, Image, Link } from 'react-bootstrap';
+import { FormattedMessage, history, Link } from 'umi';
+import { Row, Col, Container, Image } from 'react-bootstrap';
 import { useModel } from 'umi';
 import Title from '@/components/Title';
 import './index.less';
 
-function List() {
+function List(props) {
   const { productList } = useModel('productList');
   const handleProductToDetail = (id) => {
     if (id) {
@@ -43,12 +43,7 @@ function List() {
     return html;
   };
 
-  return (
-    <Container fluid className='list-wrap'>
-      <Title title='common.title.sales' />
-      <Row>{listHtml()}</Row>
-    </Container>
-  );
+  return <Row>{listHtml()}</Row>;
 }
 
 export default List;

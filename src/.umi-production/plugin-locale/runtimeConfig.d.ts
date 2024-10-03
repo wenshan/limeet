@@ -3,7 +3,7 @@
 import {
   IntlCache,
   createIntl,
-} from '/Users/hou/work/limeet/node_modules/react-intl';
+} from '/Users/hou/work/limeet/node_modules/@umijs/plugins/node_modules/react-intl';
 type OptionalIntlConfig = Omit<Parameters<typeof createIntl>[0], 'locale' | 'defaultLocale'>;
 export interface IRuntimeConfig {
     locale?: {

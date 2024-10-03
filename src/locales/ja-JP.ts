@@ -48,4 +48,10 @@ export default {
   'brand.page.strength.list01': '•  2014年、上海金山に3平方メートル以上の生産拠点を建設。統合設計ソフトをはじめ、業界トップクラスの3Dプリンター設備、彫刻機設備等を備え、高速化を実現。消費者のニーズを満たすために設計と生産を繰り返します。',
   'brand.page.strength.list02': '•  2018年、国内の電子商取引企業の活発な発展に伴い、タオバオと天猫のストアを開発し、月間オンライン売上高は20W、オフライン売上高は30Wに達しました。',
   'brand.page.strength.list03': '•  2023年、感染症流行による3年間の苦難を経て、国内市場の安定を維持し、新製品を継続的に投入し、より多くのユーザーに製品を提供することを決定しました。',
+  'footer.product.category.title': '製品分類',
+  'footer.product.brand.title': 'ブランドについて',
+  'footer.product.factory.title': '工場について',
+  'footer.product.factory.product': '製品について',
+  'footer.product.we': '私たち',
+  'footer.product.contact': '接続する',
 };
