@@ -52,6 +52,7 @@ export default {
   'footer.product.brand.title': 'About Brand',
   'footer.product.factory.title': 'About Factory',
   'footer.product.factory.product': 'About Product',
+  'footer.product.factory.address': 'Address',
   'footer.product.we': 'We',
   'footer.product.contact': 'Connect',
 };

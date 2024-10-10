@@ -22,6 +22,7 @@ function CategoriesSide() {
         }
       });
       setCategories(list);
+      history.push(`/product/list.html?key=${key}`);
     }
   };
   const initCurrentKey = ()=>{
@@ -37,9 +38,9 @@ function CategoriesSide() {
     const html = [];
     categories && categories.length && categories.map(item => {
       if (item && item.active) {
-        html.push(<Nav.Link key={item.key} href={`/product/list.html?id=${item.key}`} onClick={()=>setCurrentCategoriesHandler(item.key)} active>{item.title}</Nav.Link>);
+        html.push(<Nav.Link key={item.key} onClick={()=>setCurrentCategoriesHandler(item.key)} active>{item.title}</Nav.Link>);
       } else {
-        html.push(<Nav.Link key={item.key} href={`/product/list.html?id=${item.key}`} onClick={()=>setCurrentCategoriesHandler(item.key)}>{item.title}</Nav.Link>);
+        html.push(<Nav.Link key={item.key} onClick={()=>setCurrentCategoriesHandler(item.key)}>{item.title}</Nav.Link>);
       }
     });
     return html;

@@ -73,12 +73,9 @@ const menuInit = [
 function Header(props) {
   const { language, setLanguage } = useModel('common');
   const [ menu, setMenu ] = useState(menuInit);
-  console.log('language:', language);
-  console.log('menu:', menu);
   const initCurrentSetActive = () => {
     const menuCurrent = [];
     const query = QueryString.parse(window.location.search);
-    console.log(query);
     let key = 'home';
     if (query && query.key) {
       key = query.key;
@@ -92,7 +89,6 @@ function Header(props) {
         menuCurrent.push(Object.assign({}, item, { active: false }));
       }
     });
-    console.log('menu:', menuCurrent);
     setMenu(menuCurrent);
   };
   useEffect(() => {

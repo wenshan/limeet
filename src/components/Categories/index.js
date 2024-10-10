@@ -22,7 +22,7 @@ function Categories() {
       });
     setCategories(newProductCategories);
     setProductTypeId(key);
-    // history.push(`/product/list.html?key=${key}`);
+    history.push(`/product/list.html?key=${key}`);
   };
   const listHtml = () => {
     const html = [];
@@ -33,9 +33,7 @@ function Categories() {
           html.push(
             <Col sm={6} key={item.key}>
               <div className='item action' onClick={() => handleCategoryClick(item.key)}>
-                <Link to={`/product/list.html?key=${item.key}`}>
-                  <span className='text ellipsis'>{item.title}</span> <i className='icon arrow-tx-right' />
-                </Link>
+                <span className='text ellipsis'>{item.title}</span> <i className='icon arrow-tx-right' />
               </div>
             </Col>
           );
@@ -43,9 +41,7 @@ function Categories() {
           html.push(
             <Col sm={6} key={item.key}>
               <div className='item' onClick={() => handleCategoryClick(item.key)}>
-                <Link to={`/product/list.html?key=${item.key}`}>
-                  <span className='text ellipsis'>{item.title}</span> <i className='icon arrow-tx-right' />
-                </Link>
+                <span className='text ellipsis'>{item.title}</span> <i className='icon arrow-tx-right' />
               </div>
             </Col>
           );

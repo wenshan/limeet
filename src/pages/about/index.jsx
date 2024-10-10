@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { connect, history } from 'umi';
 import { FormattedMessage } from 'umi';
 import { useEffect, useState } from 'react';
 import { Row, Col, Container, Image, Modal, Button } from 'react-bootstrap';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import ICP from '@/components/Icp';
 
 
@@ -22,15 +22,17 @@ function About(){
           <h1><FormattedMessage id="common.about.name" /></h1>
           <p><FormattedMessage id="common.about.tip" /></p>
           <img src="https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/factory.png"></img>
+          <p></p>
           <p>
-            <img src="https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/jiaozhang.png"/> <FormattedMessage id='common.about.des' />
+            <img src="https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/jiaozhang.png"/>
+            <FormattedMessage id='common.about.des' />
           </p>
         </div>
         <div className='company clearfix'>
           <h1>Shanghai Erka International Trade Co., Ltd</h1>
           <ul>
-            <li><span>Address: </span>2nd Floor, 1270 Luofen Road, Baoshan District, Shanghai, China</li>
-            <li><span>Email: </span><a href="mailto:hangzhououhao@limeet.com">hangzhououhao@limeet.com</a></li>
+            <li><span><FormattedMessage id="footer.product.factory.address" />：</span>2nd Floor, 1270 Luofen Road, Baoshan District, Shanghai, China</li>
+            <li><span>Email：</span><a href="mailto:hangzhououhao@limeet.com">hangzhououhao@limeet.com</a></li>
           </ul>
         </div>
         <div className='contact clearfix'>
@@ -52,6 +54,7 @@ function About(){
         </div>
       </div>
     </Container>
+    <Footer></Footer>
     <ICP></ICP>
     </>
   );

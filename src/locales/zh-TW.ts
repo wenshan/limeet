@@ -52,6 +52,7 @@ export default {
   'footer.product.brand.title': '关于品牌',
   'footer.product.factory.title': '关于工厂',
   'footer.product.factory.product': '关于产品',
+  'footer.product.factory.address': '地址',
   'footer.product.we': '我们',
   'footer.product.contact': '联系',
 };

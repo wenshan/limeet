@@ -73,10 +73,12 @@ function Layout() {
           <div className='company clearfix'>
             <ul className='list'>
               <li>
-                <span>Address: </span>2nd Floor, 1270 Luofen Road, Baoshan District, Shanghai, China
+                <span>
+                  <FormattedMessage id='footer.product.factory.address' />：
+                </span>2nd Floor, 1270 Luofen Road, Baoshan District, Shanghai, China
               </li>
               <li>
-                <span>Email: </span>
+                <span>Email：</span>
                 <a href='mailto:hangzhououhao@limeet.com'>hangzhououhao@limeet.com</a>
               </li>
             </ul>

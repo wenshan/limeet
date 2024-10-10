@@ -52,6 +52,7 @@ export default {
   'footer.product.brand.title': 'ブランドについて',
   'footer.product.factory.title': '工場について',
   'footer.product.factory.product': '製品について',
+  'footer.product.factory.address': '住所',
   'footer.product.we': '私たち',
   'footer.product.contact': '接続する',
 };
