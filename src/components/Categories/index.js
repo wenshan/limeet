@@ -58,7 +58,7 @@ function Categories() {
         </div>
         <div className='describe clearfix'>
           <p>
-            <img src='https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/jiaozhang.png' />
+            <img src='https://img.limeetpet.com/limeet/jiaozhang.png' />
             <FormattedMessage id='common.about.des' />
             <Link to='/brand.html?key=brand'>See More</Link>
           </p>

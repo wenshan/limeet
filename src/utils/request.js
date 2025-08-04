@@ -4,14 +4,14 @@ import { message } from 'antd';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 
-const limeet = 'https://api.limeetpet.com';
-const dreamstep = 'https://www.dreamstep.top';
+const proUrl = 'https://api.limeetpet.com';
 const devUrl = 'http://127.0.0.1:7001/';
+// const devUrl = 'https://api.limeetpet.com';
 
 const isDev = process.env.NODE_ENV === 'development';
 
 const API_DEV = `${devUrl}/`;
-const API_PRO = `${limeet}/`;
+const API_PRO = `${proUrl}/`;
 
 const instance = axios.create({
   baseURL: isDev ? API_DEV : API_PRO,

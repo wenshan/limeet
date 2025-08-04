@@ -1,11 +1,15 @@
 import React from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
+import { useModel, history, setLocale } from 'umi';
 import './index.less';
 
-function ICP(){
+function ICP() {
+  const { language } = useModel('common');
   return (
     <Container className='footer-icp'>
-      <p>© 2024, Limeet - OuhaoTrading <a href='https://beian.miit.gov.cn/#/Integrated/index' target='_blank'>浙ICP备2023008986号</a> </p>
+      {language === 'zh-CN' && (
+        <p>© 2025, Limeet - OuhaoTrading <a href='https://beian.miit.gov.cn/#/Integrated/index' target='_blank' rel="noopener noreferrer">浙ICP备2023008986号</a></p>
+      )}
     </Container>
   );
 }

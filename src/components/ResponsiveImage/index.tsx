@@ -13,7 +13,7 @@ function ResponsiveImage(props: Props) {
    https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/d84cfb9a-033e-4270-8018-903058ef3f38._CR0%2C0%2C3000%2C1500_SX1920_.jpg 1920w,
    https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/d84cfb9a-033e-4270-8018-903058ef3f38._CR0%2C0%2C3000%2C1500_SX3000_.jpg 3000w"
    sizes="(max-width: 840px) 100vw,(max-width: 1500px) 100vw,1500px" />
-   https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/banner2tobg.png,1/resize,m_lfit,w_480/quality,q_90
+   https://img.limeetpet.com/limeet/banner2tobg.png,1/resize,m_lfit,w_480/quality,q_90
    */
   if (!props.src) {
     return false;
@@ -26,11 +26,11 @@ function ResponsiveImage(props: Props) {
   if (isAvif) {
     realSrc = `${props.src}?x-oss-process=image/format,avif`;
   }
-  if(isWebp) {
+  if (isWebp) {
     realSrc = `${props.src}?x-oss-process=image/format,webp`;
   }
   if (props.srcSet && props.sizes) {
-    const arraySrcSet = props.srcSet?.split(',') || [840,1280,1500,1920,3000];
+    const arraySrcSet = props.srcSet?.split(',') || [840, 1280, 1500, 1920, 3000];
     const arrTemp: string[] = [];
     arraySrcSet.map((item: any) => {
       if (realSrc.indexOf('?x-oss-process=image') > 0) {
@@ -46,9 +46,9 @@ function ResponsiveImage(props: Props) {
 
   return (
     <>
-      {(props.sizes && props.srcSet)? (<img src={realSrc} srcSet={srcSet} sizes={sizes} />) : (<img src={realSrc} />)}
+      {(props.sizes && props.srcSet) ? (<img src={realSrc} srcSet={srcSet} sizes={sizes} />) : (<img src={realSrc} />)}
     </>
   );
- };
+};
 
- export default ResponsiveImage;
+export default ResponsiveImage;

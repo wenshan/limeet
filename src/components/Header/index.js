@@ -143,13 +143,13 @@ function Header(props) {
           });
           if (item.active) {
             html.push(
-              <NavDropdown title={item.name} id='basic-nav-dropdown' active>
+              <NavDropdown key={item.name} title={item.name} id='basic-nav-dropdown' active>
                 {htmlDropdown}
               </NavDropdown>
             );
           } else {
             html.push(
-              <NavDropdown title={item.name} id='basic-nav-dropdown'>
+              <NavDropdown key={item.name} title={item.name} id='basic-nav-dropdown'>
                 {htmlDropdown}
               </NavDropdown>
             );
@@ -177,7 +177,7 @@ function Header(props) {
     const data = Object.values(languageObj);
     data.map((item, idx) => {
       html.push(
-        <Dropdown.Item onClick={() => popupSelectValue(item.value)} eventKey={item.value}>
+        <Dropdown.Item key={item.value} onClick={() => popupSelectValue(item.value)} eventKey={item.value}>
           {item.label}
         </Dropdown.Item>
       );
@@ -202,16 +202,16 @@ function Header(props) {
         <div className='header'>
           <div className='main'>
             <div className='logo'>
-              <img src='https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/limeet_logo.png' />
+              <img src='https://img.limeetpet.com/limeet/limeet_logo.png' />
             </div>
             <div className='des'>
-              <h1>Limeet</h1>
+              <h1>LIMEET</h1>
               <h2>
                 <FormattedMessage id='common.header.name.second' />
-                <img src='https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/maogou.png' />
+                <img src='https://img.limeetpet.com/limeet/maogou.png' />
               </h2>
               <p className='clearfix'>
-                <img src='https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/xin.png' />
+                <img src='https://img.limeetpet.com/limeet/xin.png' />
                 <FormattedMessage id='common.header.name.des' />
               </p>
             </div>
@@ -229,7 +229,7 @@ function Header(props) {
           <div className='mask-sub' />
           <Navbar expand='sm'>
             <Navbar.Brand />
-            <Navbar.Toggle aria-controls='basic-navbar-nav' sm />
+            <Navbar.Toggle aria-controls='basic-navbar-nav' />
             <Navbar.Collapse id='basic-navbar-nav'>
               <Nav className='me-auto'>{menuNav()}</Nav>
             </Navbar.Collapse>

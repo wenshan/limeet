@@ -1,30 +1,43 @@
-
 .list-wrap {
   width: 100%;
   margin: 0 auto;
+
   .title-wrap {
     margin-bottom: 15px;
   }
+
   .item {
     background-color: #fff;
     margin-bottom: 15px;
     margin-top: 15px;
     overflow: hidden;
     border: 1px solid #fff;
+    min-height: 860px;
+
     .img-box {
       overflow: hidden;
       padding: 10px;
+
       img {
         overflow: hidden;
       }
     }
+
     .title {
       padding-top: 10px;
-      padding-left: 10px;
-      padding-right: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
       height: 120px;
       overflow: hidden;
+      color: #333;
+      text-decoration: none;
     }
+
+    .title:hover {
+      text-decoration: underline;
+      color: #F6912D !important;
+    }
+
     .price {
       padding-top: 0px;
       padding-bottom: 10px;
@@ -34,6 +47,7 @@
       height: 75px;
       overflow: hidden;
       vertical-align: bottom;
+
       i.unit {
         color: #EE4D2D;
         font-size: 24px;
@@ -44,12 +58,14 @@
         line-height: 24px;
         vertical-align: sub;
       }
+
       span.value {
         color: #EE4D2D;
         font-size: 48px;
         vertical-align: bottom;
       }
-      span.original-value{
+
+      span.original-value {
         color: #EE4D2D;
         vertical-align: bottom;
         background-color: #FFF5E2;
@@ -57,7 +73,8 @@
         margin-left: 20px;
         padding-right: 10px;
       }
-      span.del-value{
+
+      span.del-value {
         text-decoration: line-through;
         color: #999;
         vertical-align: bottom;
@@ -70,9 +87,11 @@
       }
     }
   }
-  .item:hover{
+
+  .item:hover {
     border: 1px solid #F6912D;
   }
+
   .more-wrap {
     clear: both;
     font-size: 32px;
@@ -83,6 +102,9 @@
     color: #F6912D;
     text-align: center;
     display: block;
-  }
 
+    a {
+      color: #F6912D;
+    }
+  }
 }

@@ -82,6 +82,7 @@ interface IConfigTypes {
 
 };
     writeToDisk: boolean;
+    transformRuntime: { [x: string]: any };
     theme: { [x: string]: any };
     targets: { [x: string]: any };
     svgr: { [x: string]: any };
@@ -216,7 +217,8 @@ interface IConfigTypes {
     imports?: (Array<string> | undefined);
 };
     routePrefetch: {
-
+    defaultPrefetch?: ("none" | "intent" | "render" | "viewport" | undefined);
+    defaultPrefetchTimeout?: (number | undefined);
 };
     terminal: {
 
@@ -237,6 +239,7 @@ interface IConfigTypes {
     pureApp?: (boolean | undefined);
     pureHtml?: (boolean | undefined);
 } | undefined);
+    useStream?: (boolean | undefined);
 };
     lowImport: {
     libs?: (Array<any> | undefined);
@@ -278,6 +281,21 @@ interface IConfigTypes {
     load?: (((...args: any[]) => unknown) | undefined);
     generateEnd?: (((...args: any[]) => unknown) | undefined);
 }> | undefined);
+    px2rem?: ({
+    root?: (number | undefined);
+    propBlackList?: (Array<string> | undefined);
+    propWhiteList?: (Array<string> | undefined);
+    selectorBlackList?: (Array<string> | undefined);
+    selectorWhiteList?: (Array<string> | undefined);
+    selectorDoubleList?: (Array<string> | undefined);
+} | undefined);
+    experimental?: ({
+    webpackSyntaxValidate?: (Array<string> | undefined);
+} | undefined);
+    flexBugs?: (boolean | undefined);
+    optimization?: ({
+    skipModules?: (boolean | undefined);
+} | undefined);
 };
     hmrGuardian: boolean;
     forget: {
@@ -339,6 +357,7 @@ interface IConfigTypes {
 };
     model: {
     extraModels?: (Array<string> | undefined);
+    sort?: ((((...args: any[]) => unknown) | undefined) | undefined);
 };
     moment2dayjs: {
     preset?: ("antd" | "antdv3" | "none" | undefined);

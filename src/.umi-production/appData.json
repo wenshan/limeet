@@ -1,0 +1,2676 @@
+{
+  "cwd": "/Users/hou/work/limeet",
+  "pkg": {
+    "private": true,
+    "author": "wenshan <hou_ve@hotmail.com>",
+    "scripts": {
+      "dev": "export NODE_OPTIONS=--openssl-legacy-provider && max dev",
+      "build": "export NODE_OPTIONS=--openssl-legacy-provider && max build",
+      "postinstall": "export NODE_OPTIONS=--openssl-legacy-provider && max setup",
+      "setup": "max setup",
+      "start": "max dev",
+      "server": "npm run build && node server.js",
+      "publish": "node uploadOSS"
+    },
+    "dependencies": {
+      "@umijs/max": "^4.4.12",
+      "ahooks": "^3.9.0",
+      "axios": "^1.7.2",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "bootstrap": "^5.3.7",
+      "js-cookie": "^3.0.5",
+      "moment": "^2.29.1",
+      "react-bootstrap": "^2.10.10",
+      "store2": "^2.14.3",
+      "swiper": "^11.1.4",
+      "umi-server": "^1.2.3"
+    },
+    "devDependencies": {
+      "@types/react": "^18.3.12",
+      "@types/react-dom": "^18.3.1",
+      "@umijs/max": "^4.4.12",
+      "ali-oss": "^6.20.0",
+      "detect-port": "^1.6.1",
+      "koa": "^2.15.3",
+      "koa-static-router": "^1.5.0",
+      "postcss": "^8.4.39",
+      "postcss-plugin-px2rem": "^0.8.1",
+      "postcss-px-to-viewport": "^1.1.1",
+      "postcss-px2rem": "^0.3.0",
+      "postcss-pxtorem": "^6.1.0",
+      "scp2": "^0.5.0",
+      "ssh2": "^1.15.0",
+      "typescript": "^5.0.3"
+    }
+  },
+  "pkgPath": "/Users/hou/work/limeet/package.json",
+  "plugins": {
+    "./node_modules/@umijs/core/dist/service/servicePlugin": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "enableBy": "register",
+      "type": "preset",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/core/dist/service/servicePlugin.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/core/dist/service/servicePlugin",
+      "key": "servicePlugin"
+    },
+    "@umijs/preset-umi": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 44
+      },
+      "enableBy": "register",
+      "type": "preset",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/index.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "@umijs/preset-umi",
+      "key": "umi"
+    },
+    "./node_modules/@umijs/max/dist/preset": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 5
+      },
+      "enableBy": "register",
+      "type": "preset",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/max/dist/preset.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/max/dist/preset",
+      "key": "preset"
+    },
+    "./node_modules/@umijs/preset-umi/dist/registerMethods": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "onStart": [
+            0
+          ]
+        },
+        "register": 8
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/registerMethods.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/registerMethods",
+      "key": "registerMethods"
+    },
+    "@umijs/did-you-know": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "onStart": [
+            5
+          ]
+        },
+        "register": 8
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/did-you-know/dist/plugin.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "@umijs/did-you-know",
+      "key": "umijsDidYouKnow"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/404/404": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "modifyRoutes": [
+            0
+          ]
+        },
+        "register": 2
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/404/404.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/404/404",
+      "key": "404"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/aiDev/aiDev": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/aiDev/aiDev.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/aiDev/aiDev",
+      "key": "aiDev"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/appData/appData": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "modifyAppData": [
+            41
+          ]
+        },
+        "register": 43
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/appData/appData.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/appData/appData",
+      "key": "appData"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/appData/umiInfo": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 3
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/appData/umiInfo.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/appData/umiInfo",
+      "key": "umiInfo"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/check/check": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "onCheckConfig": [
+            0
+          ],
+          "onCheck": [
+            0
+          ]
+        },
+        "register": 2
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/check/check.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/check/check",
+      "key": "check"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/check/babel722": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "onCheck": [
+            0
+          ]
+        },
+        "register": 2
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/check/babel722.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/check/babel722",
+      "key": "babel722"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/codeSplitting/codeSplitting": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/codeSplitting/codeSplitting.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/codeSplitting/codeSplitting",
+      "key": "codeSplitting"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/configPlugins/configPlugins": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "modifyConfig": [
+            1
+          ]
+        },
+        "register": 18
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/configPlugins/configPlugins.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/configPlugins/configPlugins",
+      "key": "configPlugins"
+    },
+    "virtual: config-title": {
+      "id": "virtual: config-title",
+      "key": "title",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-styles": {
+      "id": "virtual: config-styles",
+      "key": "styles",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-scripts": {
+      "id": "virtual: config-scripts",
+      "key": "scripts",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-routes": {
+      "id": "virtual: config-routes",
+      "key": "routes",
+      "config": {
+        "onChange": "regenerateTmpFiles"
+      },
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-routeLoader": {
+      "id": "virtual: config-routeLoader",
+      "key": "routeLoader",
+      "config": {
+        "default": {
+          "moduleType": "esm"
+        }
+      },
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-reactRouter5Compat": {
+      "id": "virtual: config-reactRouter5Compat",
+      "key": "reactRouter5Compat",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-presets": {
+      "id": "virtual: config-presets",
+      "key": "presets",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-plugins": {
+      "id": "virtual: config-plugins",
+      "key": "plugins",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-npmClient": {
+      "id": "virtual: config-npmClient",
+      "key": "npmClient",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-mountElementId": {
+      "id": "virtual: config-mountElementId",
+      "key": "mountElementId",
+      "config": {
+        "default": "root"
+      },
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-metas": {
+      "id": "virtual: config-metas",
+      "key": "metas",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-links": {
+      "id": "virtual: config-links",
+      "key": "links",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-historyWithQuery": {
+      "id": "virtual: config-historyWithQuery",
+      "key": "historyWithQuery",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-history": {
+      "id": "virtual: config-history",
+      "key": "history",
+      "config": {
+        "default": {
+          "type": "browser"
+        }
+      },
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-headScripts": {
+      "id": "virtual: config-headScripts",
+      "key": "headScripts",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-esbuildMinifyIIFE": {
+      "id": "virtual: config-esbuildMinifyIIFE",
+      "key": "esbuildMinifyIIFE",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-conventionRoutes": {
+      "id": "virtual: config-conventionRoutes",
+      "key": "conventionRoutes",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-conventionLayout": {
+      "id": "virtual: config-conventionLayout",
+      "key": "conventionLayout",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-base": {
+      "id": "virtual: config-base",
+      "key": "base",
+      "config": {
+        "default": "/"
+      },
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-analyze": {
+      "id": "virtual: config-analyze",
+      "key": "analyze",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-writeToDisk": {
+      "id": "virtual: config-writeToDisk",
+      "key": "writeToDisk",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-transformRuntime": {
+      "id": "virtual: config-transformRuntime",
+      "key": "transformRuntime",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-theme": {
+      "id": "virtual: config-theme",
+      "key": "theme",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-targets": {
+      "id": "virtual: config-targets",
+      "key": "targets",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-svgr": {
+      "id": "virtual: config-svgr",
+      "key": "svgr",
+      "config": {
+        "default": {}
+      },
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-svgo": {
+      "id": "virtual: config-svgo",
+      "key": "svgo",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-stylusLoader": {
+      "id": "virtual: config-stylusLoader",
+      "key": "stylusLoader",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-styleLoader": {
+      "id": "virtual: config-styleLoader",
+      "key": "styleLoader",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-srcTranspilerOptions": {
+      "id": "virtual: config-srcTranspilerOptions",
+      "key": "srcTranspilerOptions",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-srcTranspiler": {
+      "id": "virtual: config-srcTranspiler",
+      "key": "srcTranspiler",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-sassLoader": {
+      "id": "virtual: config-sassLoader",
+      "key": "sassLoader",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-runtimePublicPath": {
+      "id": "virtual: config-runtimePublicPath",
+      "key": "runtimePublicPath",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-purgeCSS": {
+      "id": "virtual: config-purgeCSS",
+      "key": "purgeCSS",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-publicPath": {
+      "id": "virtual: config-publicPath",
+      "key": "publicPath",
+      "config": {
+        "default": "/"
+      },
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-proxy": {
+      "id": "virtual: config-proxy",
+      "key": "proxy",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-postcssLoader": {
+      "id": "virtual: config-postcssLoader",
+      "key": "postcssLoader",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-outputPath": {
+      "id": "virtual: config-outputPath",
+      "key": "outputPath",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-normalCSSLoaderModules": {
+      "id": "virtual: config-normalCSSLoaderModules",
+      "key": "normalCSSLoaderModules",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-mfsu": {
+      "id": "virtual: config-mfsu",
+      "key": "mfsu",
+      "config": {
+        "default": {
+          "strategy": "eager"
+        }
+      },
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-mdx": {
+      "id": "virtual: config-mdx",
+      "key": "mdx",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-manifest": {
+      "id": "virtual: config-manifest",
+      "key": "manifest",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-lessLoader": {
+      "id": "virtual: config-lessLoader",
+      "key": "lessLoader",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-jsMinifierOptions": {
+      "id": "virtual: config-jsMinifierOptions",
+      "key": "jsMinifierOptions",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-jsMinifier": {
+      "id": "virtual: config-jsMinifier",
+      "key": "jsMinifier",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-inlineLimit": {
+      "id": "virtual: config-inlineLimit",
+      "key": "inlineLimit",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-ignoreMomentLocale": {
+      "id": "virtual: config-ignoreMomentLocale",
+      "key": "ignoreMomentLocale",
+      "config": {
+        "default": true
+      },
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-https": {
+      "id": "virtual: config-https",
+      "key": "https",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-hash": {
+      "id": "virtual: config-hash",
+      "key": "hash",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-forkTSChecker": {
+      "id": "virtual: config-forkTSChecker",
+      "key": "forkTSChecker",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-fastRefresh": {
+      "id": "virtual: config-fastRefresh",
+      "key": "fastRefresh",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-extraPostCSSPlugins": {
+      "id": "virtual: config-extraPostCSSPlugins",
+      "key": "extraPostCSSPlugins",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-extraBabelPresets": {
+      "id": "virtual: config-extraBabelPresets",
+      "key": "extraBabelPresets",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-extraBabelPlugins": {
+      "id": "virtual: config-extraBabelPlugins",
+      "key": "extraBabelPlugins",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-extraBabelIncludes": {
+      "id": "virtual: config-extraBabelIncludes",
+      "key": "extraBabelIncludes",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-externals": {
+      "id": "virtual: config-externals",
+      "key": "externals",
+      "config": {
+        "default": {}
+      },
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-esm": {
+      "id": "virtual: config-esm",
+      "key": "esm",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-devtool": {
+      "id": "virtual: config-devtool",
+      "key": "devtool",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-depTranspiler": {
+      "id": "virtual: config-depTranspiler",
+      "key": "depTranspiler",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-define": {
+      "id": "virtual: config-define",
+      "key": "define",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-deadCode": {
+      "id": "virtual: config-deadCode",
+      "key": "deadCode",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-cssPublicPath": {
+      "id": "virtual: config-cssPublicPath",
+      "key": "cssPublicPath",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-cssMinifierOptions": {
+      "id": "virtual: config-cssMinifierOptions",
+      "key": "cssMinifierOptions",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-cssMinifier": {
+      "id": "virtual: config-cssMinifier",
+      "key": "cssMinifier",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-cssLoaderModules": {
+      "id": "virtual: config-cssLoaderModules",
+      "key": "cssLoaderModules",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-cssLoader": {
+      "id": "virtual: config-cssLoader",
+      "key": "cssLoader",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-copy": {
+      "id": "virtual: config-copy",
+      "key": "copy",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-checkDepCssModules": {
+      "id": "virtual: config-checkDepCssModules",
+      "key": "checkDepCssModules",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-chainWebpack": {
+      "id": "virtual: config-chainWebpack",
+      "key": "chainWebpack",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-cacheDirectoryPath": {
+      "id": "virtual: config-cacheDirectoryPath",
+      "key": "cacheDirectoryPath",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-babelLoaderCustomize": {
+      "id": "virtual: config-babelLoaderCustomize",
+      "key": "babelLoaderCustomize",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-autoprefixer": {
+      "id": "virtual: config-autoprefixer",
+      "key": "autoprefixer",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-autoCSSModules": {
+      "id": "virtual: config-autoCSSModules",
+      "key": "autoCSSModules",
+      "config": {
+        "default": true
+      },
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-alias": {
+      "id": "virtual: config-alias",
+      "key": "alias",
+      "config": {
+        "default": {
+          "umi": "@@/exports",
+          "react": "/Users/hou/work/limeet/node_modules/react",
+          "react-dom": "/Users/hou/work/limeet/node_modules/react-dom",
+          "react-router": "/Users/hou/work/limeet/node_modules/react-router",
+          "react-router-dom": "/Users/hou/work/limeet/node_modules/react-router-dom"
+        }
+      },
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/crossorigin/crossorigin": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/crossorigin/crossorigin.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/crossorigin/crossorigin",
+      "key": "crossorigin"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/depsOnDemand/depsOnDemand": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "onStart": [
+            1
+          ]
+        },
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/depsOnDemand/depsOnDemand.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/depsOnDemand/depsOnDemand",
+      "key": "depsOnDemand"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/devTool/devTool": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/devTool/devTool.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/devTool/devTool",
+      "key": "devTool"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/esbuildHelperChecker/esbuildHelperChecker": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 174
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/esbuildHelperChecker/esbuildHelperChecker.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/esbuildHelperChecker/esbuildHelperChecker",
+      "key": "esbuildHelperChecker"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/esmi/esmi": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 229
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/esmi/esmi.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/esmi/esmi",
+      "key": "esmi"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/exportStatic/exportStatic": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 37
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/exportStatic/exportStatic.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/exportStatic/exportStatic",
+      "key": "exportStatic"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/favicons/favicons": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "modifyAppData": [
+            0
+          ]
+        },
+        "register": 2
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/favicons/favicons.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/favicons/favicons",
+      "key": "favicons"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/helmet/helmet": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/helmet/helmet.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/helmet/helmet",
+      "key": "helmet"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/icons/icons": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 3
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/icons/icons.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/icons/icons",
+      "key": "icons"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/mock/mock": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 68
+      },
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/mock/mock.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/mock/mock",
+      "key": "mock"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/mpa/mpa": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/mpa/mpa.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/mpa/mpa",
+      "key": "mpa"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/okam/okam": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/okam/okam.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/okam/okam",
+      "key": "okam"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/overrides/overrides": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 0
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/overrides/overrides.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/overrides/overrides",
+      "key": "overrides"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/phantomDependency/phantomDependency": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/phantomDependency/phantomDependency.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/phantomDependency/phantomDependency",
+      "key": "phantomDependency"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/polyfill/polyfill": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "modifyConfig": [
+            0
+          ]
+        },
+        "register": 5
+      },
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/polyfill/polyfill.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/polyfill/polyfill",
+      "key": "polyfill"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/polyfill/publicPathPolyfill": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/polyfill/publicPathPolyfill.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/polyfill/publicPathPolyfill",
+      "key": "publicPathPolyfill"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/prepare/prepare": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/prepare/prepare.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/prepare/prepare",
+      "key": "prepare"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/routePrefetch/routePrefetch": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/routePrefetch/routePrefetch.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/routePrefetch/routePrefetch",
+      "key": "routePrefetch"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/stagewise/stagewise": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/stagewise/stagewise.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/stagewise/stagewise",
+      "key": "stagewise"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/terminal/terminal": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/terminal/terminal.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/terminal/terminal",
+      "key": "terminal"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/tmpFiles/tmpFiles": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 9
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/tmpFiles/tmpFiles.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/tmpFiles/tmpFiles",
+      "key": "tmpFiles"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/clientLoader/clientLoader": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 3
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/clientLoader/clientLoader.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/clientLoader/clientLoader",
+      "key": "clientLoader"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/routeProps/routeProps": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/routeProps/routeProps.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/routeProps/routeProps",
+      "key": "routeProps"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/ssr/ssr": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 5
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/ssr/ssr.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/ssr/ssr",
+      "key": "ssr"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/tmpFiles/configTypes": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 7
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/tmpFiles/configTypes.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/tmpFiles/configTypes",
+      "key": "configTypes"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/transform/transform": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 6
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/transform/transform.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/transform/transform",
+      "key": "transform"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/lowImport/lowImport": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 6
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/lowImport/lowImport.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/lowImport/lowImport",
+      "key": "lowImport"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/vite/vite": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/vite/vite.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/vite/vite",
+      "key": "vite"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/apiRoute/apiRoute": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 10
+      },
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/apiRoute/apiRoute.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/apiRoute/apiRoute",
+      "key": "apiRoute"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/monorepo/redirect": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 44
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/monorepo/redirect.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/monorepo/redirect",
+      "key": "monorepoRedirect"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/test/test": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/test/test.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/test/test",
+      "key": "test"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/clickToComponent/clickToComponent": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/clickToComponent/clickToComponent.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/clickToComponent/clickToComponent",
+      "key": "clickToComponent"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/legacy/legacy": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/legacy/legacy.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/legacy/legacy",
+      "key": "legacy"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/classPropertiesLoose/classPropertiesLoose": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/classPropertiesLoose/classPropertiesLoose.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/classPropertiesLoose/classPropertiesLoose",
+      "key": "classPropertiesLoose"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/webpack/webpack": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/webpack/webpack.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/webpack/webpack",
+      "key": "preset-umi:webpack"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/swc/swc": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "addOnDemandDeps": [
+            1
+          ]
+        },
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/swc/swc.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/swc/swc",
+      "key": "swc"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/ui/ui": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 15
+      },
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/ui/ui.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/ui/ui",
+      "key": "ui"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/mako/mako": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 13
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/mako/mako.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/mako/mako",
+      "key": "mako"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/hmrGuardian/hmrGuardian": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 7
+      },
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/hmrGuardian/hmrGuardian.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/hmrGuardian/hmrGuardian",
+      "key": "hmrGuardian"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/routePreloadOnLoad/routePreloadOnLoad": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 17
+      },
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/routePreloadOnLoad/routePreloadOnLoad.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/routePreloadOnLoad/routePreloadOnLoad",
+      "key": "routePreloadOnLoad"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/forget/forget": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 8
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/forget/forget.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/forget/forget",
+      "key": "forget"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/bundler/bundler": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 6
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/bundler/bundler.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/bundler/bundler",
+      "key": "preset-umi:bundler"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/build": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 169
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/commands/build.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/build",
+      "key": "build"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/config/config": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 95
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/commands/config/config.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/config/config",
+      "key": "config"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/dev/dev": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 134
+      },
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/commands/dev/dev.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/dev/dev",
+      "key": "dev"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/help": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/commands/help.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/help",
+      "key": "help"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/lint": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/commands/lint.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/lint",
+      "key": "lint"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/setup": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 3
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/commands/setup.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/setup",
+      "key": "setup"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/deadcode": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 6
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/commands/deadcode.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/deadcode",
+      "key": "deadcode"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/version": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/commands/version.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/version",
+      "key": "version"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/generators/page": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 4
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/commands/generators/page.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/generators/page",
+      "key": "generator:page"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/generators/prettier": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/commands/generators/prettier.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/generators/prettier",
+      "key": "generator:prettier"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/generators/tsconfig": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/commands/generators/tsconfig.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/generators/tsconfig",
+      "key": "generator:tsconfig"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/generators/jest": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/commands/generators/jest.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/generators/jest",
+      "key": "generator:jest"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/generators/tailwindcss": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 6
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/commands/generators/tailwindcss.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/generators/tailwindcss",
+      "key": "generator:tailwindcss"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/generators/dva": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/commands/generators/dva.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/generators/dva",
+      "key": "generator:dva"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/generators/component": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/commands/generators/component.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/generators/component",
+      "key": "generator:component"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/generators/mock": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/commands/generators/mock.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/generators/mock",
+      "key": "generator:mock"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/generators/cypress": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/commands/generators/cypress.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/generators/cypress",
+      "key": "generator:cypress"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/generators/api": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/commands/generators/api.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/generators/api",
+      "key": "generator:api"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/generators/precommit": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/commands/generators/precommit.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/generators/precommit",
+      "key": "generator:precommit"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/plugin": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/commands/plugin.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/plugin",
+      "key": "command:plugin"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/verify-commit": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 7
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/commands/verify-commit.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/verify-commit",
+      "key": "verifyCommit"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/preview": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 91
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/commands/preview.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/preview",
+      "key": "preview"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/mfsu/mfsu": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 12
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/commands/mfsu/mfsu.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/mfsu/mfsu",
+      "key": "mfsu-cli"
+    },
+    "@umijs/plugin-run": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 3
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/plugin-run/dist/index.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "@umijs/plugin-run",
+      "key": "run"
+    },
+    "./node_modules/@umijs/plugins/dist/access": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 12
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/plugins/dist/access.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/plugins/dist/access",
+      "key": "access"
+    },
+    "./node_modules/@umijs/plugins/dist/analytics": {
+      "config": {
+        "onChange": "reload"
+      },
+      "time": {
+        "hooks": {},
+        "register": 3
+      },
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/plugins/dist/analytics.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/plugins/dist/analytics",
+      "key": "analytics"
+    },
+    "./node_modules/@umijs/plugins/dist/antd": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "modifyConfig": [
+            0
+          ],
+          "modifyAppData": [
+            0
+          ]
+        },
+        "register": 38
+      },
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/plugins/dist/antd.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/plugins/dist/antd",
+      "key": "antd"
+    },
+    "./node_modules/@umijs/plugins/dist/dva": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "modifyConfig": [
+            0
+          ],
+          "modifyAppData": [
+            278
+          ]
+        },
+        "register": 14
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/plugins/dist/dva.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/plugins/dist/dva",
+      "key": "dva"
+    },
+    "./node_modules/@umijs/plugins/dist/initial-state": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/plugins/dist/initial-state.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/plugins/dist/initial-state",
+      "key": "initialState"
+    },
+    "./node_modules/@umijs/plugins/dist/layout": {
+      "config": {
+        "onChange": "regenerateTmpFiles"
+      },
+      "time": {
+        "hooks": {},
+        "register": 10
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/plugins/dist/layout.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/plugins/dist/layout",
+      "key": "layout"
+    },
+    "./node_modules/@umijs/plugins/dist/locale": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 5
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/plugins/dist/locale.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/plugins/dist/locale",
+      "key": "locale"
+    },
+    "./node_modules/@umijs/plugins/dist/mf": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 14
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/plugins/dist/mf.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/plugins/dist/mf",
+      "key": "mf"
+    },
+    "./node_modules/@umijs/plugins/dist/model": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 4
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/plugins/dist/model.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/plugins/dist/model",
+      "key": "model"
+    },
+    "./node_modules/@umijs/plugins/dist/moment2dayjs": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 7
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/plugins/dist/moment2dayjs.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/plugins/dist/moment2dayjs",
+      "key": "moment2dayjs"
+    },
+    "./node_modules/@umijs/plugins/dist/qiankun": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 3
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/plugins/dist/qiankun.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/plugins/dist/qiankun",
+      "key": "qiankun"
+    },
+    "./node_modules/@umijs/plugins/dist/qiankun/master": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/plugins/dist/qiankun/master.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/plugins/dist/qiankun/master",
+      "key": "qiankun-master"
+    },
+    "./node_modules/@umijs/plugins/dist/qiankun/slave": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/plugins/dist/qiankun/slave.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/plugins/dist/qiankun/slave",
+      "key": "qiankun-slave"
+    },
+    "./node_modules/@umijs/plugins/dist/react-query": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/plugins/dist/react-query.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/plugins/dist/react-query",
+      "key": "reactQuery"
+    },
+    "./node_modules/@umijs/plugins/dist/request": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/plugins/dist/request.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/plugins/dist/request",
+      "key": "request"
+    },
+    "./node_modules/@umijs/plugins/dist/styled-components": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 5
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/plugins/dist/styled-components.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/plugins/dist/styled-components",
+      "key": "styledComponents"
+    },
+    "./node_modules/@umijs/plugins/dist/tailwindcss": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/plugins/dist/tailwindcss.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/plugins/dist/tailwindcss",
+      "key": "tailwindcss"
+    },
+    "./node_modules/@umijs/plugins/dist/valtio": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/plugins/dist/valtio.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/plugins/dist/valtio",
+      "key": "valtio"
+    },
+    "./node_modules/@umijs/max/dist/plugins/maxAlias": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "modifyConfig": [
+            0
+          ]
+        },
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/max/dist/plugins/maxAlias.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/max/dist/plugins/maxAlias",
+      "key": "maxAlias"
+    },
+    "./node_modules/@umijs/max/dist/plugins/maxAppData": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "modifyAppData": [
+            0
+          ]
+        },
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/max/dist/plugins/maxAppData.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/max/dist/plugins/maxAppData",
+      "key": "maxAppData"
+    },
+    "./node_modules/@umijs/max/dist/plugins/maxChecker": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "onCheckPkgJSON": [
+            1
+          ]
+        },
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/max/dist/plugins/maxChecker.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/max/dist/plugins/maxChecker",
+      "key": "maxChecker"
+    },
+    "./node_modules/@umijs/core/dist/service/generatePlugin": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "/Users/hou/work/limeet/node_modules/@umijs/core/dist/service/generatePlugin.js",
+      "cwd": "/Users/hou/work/limeet",
+      "id": "./node_modules/@umijs/core/dist/service/generatePlugin",
+      "key": "generatePlugin"
+    }
+  },
+  "presets": [],
+  "name": "build",
+  "args": {
+    "_": []
+  },
+  "userConfig": {
+    "title": "Limeet - Creating a Warm Home for Pets.",
+    "metas": [
+      {
+        "name": "keywords",
+        "content": "Limeet, pet, cat jump, cats as pets"
+      },
+      {
+        "name": "description",
+        "content": "Limeet, We design many creative cat furniture items, allowing cats and people to coexist warmly."
+      }
+    ],
+    "outputPath": "dist",
+    "model": {},
+    "antd": {},
+    "request": {},
+    "initialState": {},
+    "fastRefresh": true,
+    "history": {
+      "type": "browser"
+    },
+    "mock": {
+      "include": [
+        "src/pages/**/_mock.ts"
+      ]
+    },
+    "dva": {},
+    "devtool": false,
+    "publicPath": "https://img.limeetpet.com/limeet/dist/",
+    "routes": [
+      {
+        "path": "/",
+        "name": "home",
+        "component": "home/index"
+      },
+      {
+        "name": "home",
+        "path": "/index.html",
+        "component": "home/index"
+      },
+      {
+        "name": "product-list",
+        "path": "/product/list.html",
+        "component": "./productList/index"
+      },
+      {
+        "name": "detail",
+        "path": "/detail.html",
+        "component": "detail/index"
+      },
+      {
+        "name": "brand",
+        "path": "/brand.html",
+        "component": "brand/index"
+      },
+      {
+        "name": "about",
+        "path": "/about.html",
+        "component": "about/index"
+      },
+      {
+        "name": "demo",
+        "path": "/demo.html",
+        "component": "demo/index"
+      },
+      {
+        "name": "404",
+        "path": "/*",
+        "component": "@/pages/404.tsx"
+      },
+      {
+        "name": "404",
+        "path": "/*",
+        "component": "@/pages/404.tsx"
+      }
+    ],
+    "locale": {
+      "default": "zh-CN",
+      "baseSeparator": "-"
+    },
+    "alias": {
+      "@": "/Users/hou/work/limeet/config/src"
+    },
+    "extraPostCSSPlugins": [
+      {
+        "postcssPlugin": "postcss-pxtorem"
+      }
+    ],
+    "analytics": {
+      "ga_v2": "GTM-MBQ58SPM",
+      "baidu": "e3e4ff6865d2ba690ff30184ec5758e8"
+    },
+    "crossorigin": true,
+    "esbuildMinifyIIFE": true,
+    "scripts": [],
+    "headScripts": [
+      {
+        "src": "https://img.limeetpet.com/limeet/supportImageType.js",
+        "defer": true,
+        "crossOrigin": "anonymous"
+      }
+    ],
+    "styles": [
+      "html, body { font-size: 16px !important; }"
+    ]
+  },
+  "mainConfigFile": "/Users/hou/work/limeet/config/config.ts",
+  "config": {
+    "routeLoader": {
+      "moduleType": "esm"
+    },
+    "mountElementId": "root",
+    "history": {
+      "type": "browser"
+    },
+    "base": "/",
+    "svgr": {},
+    "publicPath": "https://img.limeetpet.com/limeet/dist/",
+    "mfsu": {
+      "strategy": "eager"
+    },
+    "ignoreMomentLocale": true,
+    "externals": {},
+    "autoCSSModules": true,
+    "alias": {
+      "umi": "@@/exports",
+      "react": "/Users/hou/work/limeet/node_modules/react",
+      "react-dom": "/Users/hou/work/limeet/node_modules/react-dom",
+      "react-router": "/Users/hou/work/limeet/node_modules/react-router",
+      "react-router-dom": "/Users/hou/work/limeet/node_modules/react-router-dom",
+      "@": "/Users/hou/work/limeet/src",
+      "@@": "/Users/hou/work/limeet/src/.umi-production",
+      "regenerator-runtime": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/node_modules/regenerator-runtime",
+      "antd": "/Users/hou/work/limeet/node_modules/antd",
+      "dva$": "/Users/hou/work/limeet/node_modules/@umijs/plugins/libs/dva.tsx",
+      "@umijs/max": "@@/exports"
+    },
+    "title": "Limeet - Creating a Warm Home for Pets.",
+    "metas": [
+      {
+        "name": "keywords",
+        "content": "Limeet, pet, cat jump, cats as pets"
+      },
+      {
+        "name": "description",
+        "content": "Limeet, We design many creative cat furniture items, allowing cats and people to coexist warmly."
+      }
+    ],
+    "outputPath": "dist",
+    "model": {},
+    "antd": {},
+    "request": {},
+    "initialState": {},
+    "fastRefresh": true,
+    "mock": {
+      "include": [
+        "src/pages/**/_mock.ts"
+      ]
+    },
+    "dva": {},
+    "devtool": false,
+    "routes": [
+      {
+        "path": "/",
+        "name": "home",
+        "component": "home/index"
+      },
+      {
+        "name": "home",
+        "path": "/index.html",
+        "component": "home/index"
+      },
+      {
+        "name": "product-list",
+        "path": "/product/list.html",
+        "component": "./productList/index"
+      },
+      {
+        "name": "detail",
+        "path": "/detail.html",
+        "component": "detail/index"
+      },
+      {
+        "name": "brand",
+        "path": "/brand.html",
+        "component": "brand/index"
+      },
+      {
+        "name": "about",
+        "path": "/about.html",
+        "component": "about/index"
+      },
+      {
+        "name": "demo",
+        "path": "/demo.html",
+        "component": "demo/index"
+      },
+      {
+        "name": "404",
+        "path": "/*",
+        "component": "@/pages/404.tsx"
+      },
+      {
+        "name": "404",
+        "path": "/*",
+        "component": "@/pages/404.tsx"
+      }
+    ],
+    "locale": {
+      "default": "zh-CN",
+      "baseSeparator": "-"
+    },
+    "extraPostCSSPlugins": [
+      {
+        "postcssPlugin": "postcss-pxtorem"
+      }
+    ],
+    "analytics": {
+      "ga_v2": "GTM-MBQ58SPM",
+      "baidu": "e3e4ff6865d2ba690ff30184ec5758e8"
+    },
+    "crossorigin": true,
+    "esbuildMinifyIIFE": true,
+    "scripts": [],
+    "headScripts": [
+      {
+        "src": "https://img.limeetpet.com/limeet/supportImageType.js",
+        "defer": true,
+        "crossOrigin": "anonymous"
+      }
+    ],
+    "styles": [
+      "html, body { font-size: 16px !important; }"
+    ],
+    "targets": {
+      "chrome": 80
+    },
+    "theme": {
+      "root-entry-name": "default"
+    }
+  },
+  "routes": {
+    "1": {
+      "path": "/",
+      "name": "home",
+      "file": "@/pages/home/index.jsx",
+      "id": "1",
+      "absPath": "/",
+      "__content": "import React, { Component } from 'react';\nimport { connect, history, FormattedMessage, Link } from 'umi';\nimport { Dropdown, Navbar, Container, Nav, NavDropdown, Row, Col } from 'react-bootstrap';\nimport BannerSwiper from '@/components/BannerSwiper';\nimport Header from '@/components/Header';\nimport Categories from '@/components/Categories';\nimport List from '@/components/List';\nimport Title from '@/components/Title';\nimport Footer from '@/components/Footer';\nimport ICP from '@/components/Icp';\n\nimport './index.less';\n\nfunction HomePage (){\n  return (\n    <>\n      <Header from=\"home\"></Header>\n      <BannerSwiper></BannerSwiper>\n      <Categories></Categories>\n      <Container fluid className='list-wrap'>\n        <Title title='common.title.sales' />\n        <List from=\"home\"></List>\n        <Row>\n          <Col>\n            <div className='more-wrap clearfix'>\n              <Link to='/product/list.html?key=all'> See more… </Link>\n            </div>\n          </Col>\n        </Row>\n      </Container>\n      <Footer></Footer>\n      <ICP></ICP>\n    </>\n  );\n}\n\nexport default HomePage;\n",
+      "__isJSFile": true,
+      "__absFile": "/Users/hou/work/limeet/src/pages/home/index.jsx"
+    },
+    "2": {
+      "name": "home",
+      "path": "/index.html",
+      "file": "@/pages/home/index.jsx",
+      "id": "2",
+      "absPath": "/index.html",
+      "__content": "import React, { Component } from 'react';\nimport { connect, history, FormattedMessage, Link } from 'umi';\nimport { Dropdown, Navbar, Container, Nav, NavDropdown, Row, Col } from 'react-bootstrap';\nimport BannerSwiper from '@/components/BannerSwiper';\nimport Header from '@/components/Header';\nimport Categories from '@/components/Categories';\nimport List from '@/components/List';\nimport Title from '@/components/Title';\nimport Footer from '@/components/Footer';\nimport ICP from '@/components/Icp';\n\nimport './index.less';\n\nfunction HomePage (){\n  return (\n    <>\n      <Header from=\"home\"></Header>\n      <BannerSwiper></BannerSwiper>\n      <Categories></Categories>\n      <Container fluid className='list-wrap'>\n        <Title title='common.title.sales' />\n        <List from=\"home\"></List>\n        <Row>\n          <Col>\n            <div className='more-wrap clearfix'>\n              <Link to='/product/list.html?key=all'> See more… </Link>\n            </div>\n          </Col>\n        </Row>\n      </Container>\n      <Footer></Footer>\n      <ICP></ICP>\n    </>\n  );\n}\n\nexport default HomePage;\n",
+      "__isJSFile": true,
+      "__absFile": "/Users/hou/work/limeet/src/pages/home/index.jsx"
+    },
+    "3": {
+      "name": "product-list",
+      "path": "/product/list.html",
+      "file": "@/pages/productList/index.jsx",
+      "id": "3",
+      "absPath": "/product/list.html",
+      "__content": "import { useEffect, useState } from 'react';\nimport { Dropdown, Navbar, Container, Nav, NavDropdown, Row, Col } from 'react-bootstrap';\nimport { getBanner, queryProductList, queryProductCategories, productDetail, queryProductGroup} from '@/services/index';\nimport { useRequest } from 'ahooks';\nimport { useModel, history, FormattedMessage, Link } from 'umi';\nimport Footer from '@/components/Footer';\nimport Header from '@/components/Header';\nimport CategoriesSide from '@/components/CategoriesSide';\nimport List from '@/components/List';\n\nimport './index.less';\n\nfunction ProductList (props) {\n  return (<>\n    <Header></Header>\n    <Container fluid className='list-wrap'>\n      <Row>\n        <Col sm={4} md={3} lg={2}>\n          <CategoriesSide></CategoriesSide>\n        </Col>\n        <Col>\n          <List></List>\n        </Col>\n      </Row>\n    </Container>\n    <Footer></Footer>\n    </>\n  );\n};\n\nexport default ProductList;\n",
+      "__isJSFile": true,
+      "__absFile": "/Users/hou/work/limeet/src/pages/productList/index.jsx"
+    },
+    "4": {
+      "name": "detail",
+      "path": "/detail.html",
+      "file": "@/pages/detail/index.jsx",
+      "id": "4",
+      "absPath": "/detail.html",
+      "__content": "import { useEffect, useState } from 'react';\nimport { Dropdown, Navbar, Container, Nav, NavDropdown, Row, Col } from 'react-bootstrap';\nimport { useModel, history } from 'umi';\nimport QueryString from 'query-string';\nimport ProductGroup from '@/components/ProductGroup';\nimport DetailSwiper from '@/components/DetailSwiper';\nimport ProductDetail from '@/components/ProductDetail';\nimport ProductAttr from '@/components/ProductAttr';\nimport ProductHighlight from '@/components/ProductHighlight';\nimport ProductDescribe from '@/components/ProductDescribe';\nimport Footer from '@/components/Footer';\nimport ICP from '@/components/Icp';\n\n\nimport './index.less';\n\nfunction DetailPage() {\n  const { projectId, currentPath, setCurrentPath } = useModel('common');\n  const { product_detail, setProductId } = useModel('productDetail');\n  const query = QueryString.parse(window.location.search);\n  if (!query || !(query && query.id) || !product_detail) {\n    return false;\n  }\n  const { title, link, mobile_link, monetary_unit, discount, sale_price, price, image_link, additional_image_link} = product_detail;\n\n  return (\n  <>\n      <DetailSwiper from=\"detail\" image_link={image_link} additional_image_link={additional_image_link}></DetailSwiper>\n      {false && (<ProductGroup></ProductGroup>)}\n      <Container className='page-detail'>\n        <div className='price-wrap clearfix'>\n          <div className='price'>\n            <i className='unit'>{monetary_unit}</i>\n            <span className='value'>{sale_price}</span>\n            <span className='del-value'>{price}</span>\n            <span className='original-value'>-{discount}%</span>\n          </div>\n          <div className='title'>\n            {title}\n          </div>\n        </div>\n        <div className='submit-button clearfix'>\n          <a href={`${mobile_link ? mobile_link : link}`} target=\"_blank\" >Go to Amazon to buy</a>\n        </div>\n      </Container>\n      <ProductAttr></ProductAttr>\n      <ProductDescribe />\n      <ProductHighlight />\n      <ProductDetail></ProductDetail>\n      <Footer></Footer>\n      <ICP></ICP>\n  </>\n  );\n}\n\nexport default DetailPage;\n",
+      "__isJSFile": true,
+      "__absFile": "/Users/hou/work/limeet/src/pages/detail/index.jsx"
+    },
+    "5": {
+      "name": "brand",
+      "path": "/brand.html",
+      "file": "@/pages/brand/index.jsx",
+      "id": "5",
+      "absPath": "/brand.html",
+      "__content": "import React, { Component } from 'react';\nimport { connect, history } from 'umi';\nimport { FormattedMessage } from 'umi';\nimport Header from '@/components/Header';\nimport Footer from '@/components/Footer';\nimport ICP from '@/components/Icp';\nimport { Row, Col, Container, Image } from 'react-bootstrap';\nimport { useRequest } from 'ahooks';\n\nimport './index.less';\n\nfunction Brand() {\n  return (\n    <>\n      <Header from=\"home\"></Header>\n      <Container fluid>\n        <div className='brand-wrapper'>\n          <h2><FormattedMessage id='common.nav.brand.story' /></h2>\n          <div className='text'>\n            <p><FormattedMessage id='brand.page.story.list01' /></p>\n            <p><FormattedMessage id='brand.page.story.list02' /></p>\n            <Image src=\"https://img.limeetpet.com/limeet/brand/brand.jpeg\" fluid></Image>\n            <p></p>\n            <p><FormattedMessage id='brand.page.story.list03' /></p>\n            <p><FormattedMessage id='brand.page.story.list04' /></p>\n            <p></p>\n          </div>\n        </div>\n        <div className='brand-wrapper'>\n          <h2><FormattedMessage id='common.nav.brand.idea' /></h2>\n          <div className='text'>\n            <p><FormattedMessage id='brand.page.idea' /></p>\n            <p></p>\n          </div>\n        </div>\n        <div className='brand-wrapper'>\n          <h2><FormattedMessage id='common.nav.brand.keywords' /></h2>\n          <div className='text'>\n            <p><FormattedMessage id='brand.page.keywords.list01' /></p>\n            <p><FormattedMessage id='brand.page.keywords.list02' /></p>\n            <p><FormattedMessage id='brand.page.keywords.list03' /></p>\n            <p><FormattedMessage id='brand.page.keywords.list04' /></p>\n            <p></p>\n          </div>\n        </div>\n        <div className='brand-wrapper'>\n          <h2><FormattedMessage id='common.nav.brand.image' /></h2>\n          <div className='text'>\n            <p><FormattedMessage id='brand.page.image.list01' /></p>\n            <h4><FormattedMessage id='brand.page.image.list02' /></h4>\n            <p><FormattedMessage id='brand.page.image.list03' /></p>\n            <Image src=\"https://img.limeetpet.com/limeet/brand/158813789963349rwvw%20.jpeg\" fluid></Image>\n            <p></p>\n          </div>\n        </div>\n        <div className='brand-wrapper'>\n          <h2><FormattedMessage id='common.nav.brand.strength' /></h2>\n          <div className='text'>\n            <p><FormattedMessage id='brand.page.strength.list01' /></p>\n            <p><FormattedMessage id='brand.page.strength.list02' /></p>\n            <p><FormattedMessage id='brand.page.strength.list03' /></p>\n            <p><FormattedMessage id='brand.page.strength.list04' /></p>\n            <Image src=\"https://img.limeetpet.com/limeet/factory.png\" fluid></Image>\n            <p></p>\n            <p></p>\n          </div>\n        </div>\n\n      </Container>\n      <Footer></Footer>\n    </>\n  );\n}\n\nexport default Brand;\n",
+      "__isJSFile": true,
+      "__absFile": "/Users/hou/work/limeet/src/pages/brand/index.jsx"
+    },
+    "6": {
+      "name": "about",
+      "path": "/about.html",
+      "file": "@/pages/about/index.jsx",
+      "id": "6",
+      "absPath": "/about.html",
+      "__content": "import React, { Component } from 'react';\nimport { FormattedMessage } from 'umi';\nimport { useEffect, useState } from 'react';\nimport { Row, Col, Container, Image, Modal, Button } from 'react-bootstrap';\nimport Header from '@/components/Header';\nimport Footer from '@/components/Footer';\nimport ICP from '@/components/Icp';\n\n\nimport './index.less';\n\nfunction About() {\n  const [wechatStatus, setWechatStatus] = useState(false);\n  const handleClose = () => setWechatStatus(false);\n  const handleShow = () => setWechatStatus(true);\n  return (\n    <>\n      <Header from=\"about\"></Header>\n      <Container fluid>\n        <div className=\"about-page clearfix\">\n          <div className=\"des-tx clearfix\">\n            <h1><FormattedMessage id=\"common.about.name\" /></h1>\n            <p><FormattedMessage id=\"common.about.tip\" /></p>\n            <img src=\"https://img.limeetpet.com/limeet/factory.png\"></img>\n            <p></p>\n            <p>\n              <img src=\"https://img.limeetpet.com/limeet/jiaozhang.png\" />\n              <FormattedMessage id='common.about.des' />\n            </p>\n          </div>\n          <div className='company clearfix'>\n            <h1>Shanghai Erka International Trade Co., Ltd</h1>\n            <ul>\n              <li><span><FormattedMessage id=\"footer.product.factory.address\" />：</span>2nd Floor, 1270 Luofen Road, Baoshan District, Shanghai, China</li>\n              <li><span>Email：</span><a href=\"mailto:hangzhououhao@limeet.com\">hangzhououhao@limeet.com</a></li>\n            </ul>\n          </div>\n          <div className='contact clearfix'>\n            <div className='youtube'><a href=\"https://www.youtube.com/channel/UCoIs9wNHv3RFkB5Wm6KEHCA\"><img src=\"https://img.limeetpet.com/limeet/youtube-filled.png\" /></a></div>\n            <div className='wechat' onClick={handleShow}><img src=\"https://img.limeetpet.com/limeet/wechat-filled.png\" /></div>\n            <Modal show={wechatStatus} onHide={handleClose}>\n              <Modal.Header closeButton>\n                <Modal.Title></Modal.Title>\n              </Modal.Header>\n              <Modal.Body>\n                <Image thumbnail src=\"https://img.limeetpet.com/limeet/wechat.png\"></Image>\n              </Modal.Body>\n              <Modal.Footer>\n                <Button variant=\"secondary\" onClick={handleClose}>\n                  Close\n                </Button>\n              </Modal.Footer>\n            </Modal>\n          </div>\n        </div>\n      </Container>\n      <Footer></Footer>\n      <ICP></ICP>\n    </>\n  );\n}\n\nexport default About;\n",
+      "__isJSFile": true,
+      "__absFile": "/Users/hou/work/limeet/src/pages/about/index.jsx"
+    },
+    "7": {
+      "name": "demo",
+      "path": "/demo.html",
+      "file": "@/pages/demo/index.tsx",
+      "id": "7",
+      "absPath": "/demo.html",
+      "__content": "import ResponsiveImage from '@/components/ResponsiveImage';\n\nimport './index.less';\n\nfunction demo() {\n  return (\n    <>\n      <header className='header'>\n        <div className='main'>\n          <div className='logo'>\n            <a href=\"#\"><img alt=\"Orion Motor Tech home page\" className=\"image square\" src=\"https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/f/AmazonStores/ATVPDKIKX0DER/da80fa3d14fd85de22eb80ebd395962f.w400.h400._CR0%2C0%2C400%2C400_SX100_.jpg\" srcSet=\"https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/f/AmazonStores/ATVPDKIKX0DER/da80fa3d14fd85de22eb80ebd395962f.w400.h400._CR0%2C0%2C400%2C400_SX56_.jpg 56w, https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/f/AmazonStores/ATVPDKIKX0DER/da80fa3d14fd85de22eb80ebd395962f.w400.h400._CR0%2C0%2C400%2C400_SX86_.jpg 86w, https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/f/AmazonStores/ATVPDKIKX0DER/da80fa3d14fd85de22eb80ebd395962f.w400.h400._CR0%2C0%2C400%2C400_SX100_.jpg 100w, https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/f/AmazonStores/ATVPDKIKX0DER/da80fa3d14fd85de22eb80ebd395962f.w400.h400._CR0%2C0%2C400%2C400_SX128_.jpg 128w, https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/f/AmazonStores/ATVPDKIKX0DER/da80fa3d14fd85de22eb80ebd395962f.w400.h400._CR0%2C0%2C400%2C400_SX200_.jpg 200w, https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/f/AmazonStores/ATVPDKIKX0DER/da80fa3d14fd85de22eb80ebd395962f.w400.h400._CR0%2C0%2C400%2C400_SX400_.jpg 400w\" sizes=\"(max-width: 840px) 200px, 200px\" /></a>\n          </div>\n        </div>\n        <div className='navbar'>\n          <h2>Orion Motor Tech</h2>\n          <nav className=\"nav\">\n            <ul className=\"Navigation__navList__HrEra\">\n              <li className=\"Navigation__navItem__bakjf Navigation__isCurrent__Sv_Xw Navigation__isHeading__ArXQd\">\n                <a href=\"#\">\n                  <span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\"><span>Home</span></span></a>\n              </li>\n              <li className=\"Navigation__navItem__bakjf\"><a href=\"#\">\n                <span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Deals</span>\n              </a>\n              </li>\n              <li className=\"Navigation__navItem__bakjf Navigation__hasChildren__jSUsH\">\n                <a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Shop By Vehicle</span></a>\n                <div className=\"Navigation__navList__HrEra level2 Navigation__subnav__CkMUI\">\n                  <ul>\n                    <li className=\"Navigation__navItem__bakjf Navigation__back__IqAlh\"><button type=\"button\"><span>Back</span></button></li>\n\n                    <li className=\"Navigation__navItem__bakjf Navigation__isHeading__ArXQd\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Shop By Vehicle</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">All</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Tesla</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Ford</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Toyota</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Chevrolet</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Motorcycles & ATVs</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Jeep</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Ram</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">GMC</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Dodge</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Honda</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Audi</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Acura</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Mini</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Volkswagen</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">BMW</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Subaru</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Hyundai</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Cadillac</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Chrysler</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Mercedes-Benz</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Kia</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Volvo</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Mitsubishi</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Hummer</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Saturn</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Nissan</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Mazda</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Lexus</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Alfa</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Infiniti</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Land Rover</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Buick</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Lincoln</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Porsche</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">RV & Trailer</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Daihatsu</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Jaguar</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Mercury</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Skoda</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Suzuki</span></a></li>\n                  </ul>\n                </div>\n              </li>\n              <li className=\"Navigation__navItem__bakjf Navigation__hasChildren__jSUsH\">\n                <a href=\"category\" aria-haspopup=\"true\" role=\"button\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Wheels & Brakes</span></a>\n                <div className=\"Navigation__navList__HrEra level2 Navigation__subnav__CkMUI\">\n                  <ul>\n                    <li className=\"Navigation__navItem__bakjf Navigation__back__IqAlh\"><button type=\"button\" ><span>Back</span></button></li>\n                    <li className=\"Navigation__navItem__bakjf Navigation__isHeading__ArXQd\">\n                      <a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Wheels & Brakes</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Bearing Tools</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Brake Tools</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Lug Nut Sockets</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Brake Bleeder Tools</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Wheel Lug Nuts</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Wheel Hub Removal Tools</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Wheel Spacers</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Torque Extension Bars</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Tire Repair Tools</span></a></li>\n                  </ul>\n                </div>\n              </li>\n              <li className=\"Navigation__navItem__bakjf Navigation__hasChildren__jSUsH\"><a href=\"#\" aria-haspopup=\"true\" role=\"button\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Engine</span></a>\n                <div className=\"Navigation__navList__HrEra level2 Navigation__subnav__CkMUI\">\n                  <ul>\n                    <li className=\"Navigation__navItem__bakjf Navigation__back__IqAlh\"><button type=\"button\" ><span>Back</span></button></li>\n                    <li className=\"Navigation__navItem__bakjf Navigation__isHeading__ArXQd\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Engine</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Gear Pullers</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Timing Tools</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Harmonic Balancer Pullers & Installers</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Valve Spring Compressors</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#n\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Pressure Gauge Tools</span></a></li>\n                  </ul>\n                </div>\n              </li>\n              <li className=\"Navigation__navItem__bakjf Navigation__hasChildren__jSUsH\"><a href=\"#\" aria-haspopup=\"true\" role=\"button\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Air Conditioning</span></a>\n                <div className=\"Navigation__navList__HrEra level2 Navigation__subnav__CkMUI\">\n                  <ul>\n                    <li className=\"Navigation__navItem__bakjf Navigation__back__IqAlh\"><button type=\"button\" ><span>Back</span></button></li>\n                    <li className=\"Navigation__navItem__bakjf Navigation__isHeading__ArXQd\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Air Conditioning</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">AC Gauges</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Vacuum Pumps</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">AC Gauge & Pump Kits</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">AC Gauge Adapters</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Vacuum Chamber Kits</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Tube Flaring Tools</span></a></li>\n                  </ul>\n                </div>\n              </li>\n              <li className=\"Navigation__navItem__bakjf Navigation__hasChildren__jSUsH Navigation__isInvisible__boabX\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Steering & Suspension</span></a>\n                <div className=\"Navigation__navList__HrEra level2 Navigation__subnav__CkMUI\">\n                  <ul>\n                    <li className=\"Navigation__navItem__bakjf Navigation__back__IqAlh\"><button type=\"button\" ><span>Back</span></button></li>\n                    <li className=\"Navigation__navItem__bakjf Navigation__isInvisible__boabX Navigation__isHeading__ArXQd\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Steering & Suspension</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf Navigation__isInvisible__boabX\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Ball Joint Tools</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf Navigation__isInvisible__boabX\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Spring Compressor Tools</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf Navigation__isInvisible__boabX\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Inner Tie Rod Tools</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf Navigation__isInvisible__boabX\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">CV Joint Pullers</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf Navigation__isInvisible__boabX\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Torsion Key Bar Tools</span></a></li>\n                  </ul>\n                </div>\n              </li>\n              <li className=\"Navigation__navItem__bakjf Navigation__hasChildren__jSUsH Navigation__isInvisible__boabX\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Body · Bed · Roof</span></a>\n                <div className=\"Navigation__navList__HrEra level2 Navigation__subnav__CkMUI\"><ul><li className=\"Navigation__navItem__bakjf Navigation__back__IqAlh\"><button type=\"button\" ><span>Back</span></button></li>\n                  <li className=\"Navigation__navItem__bakjf Navigation__isInvisible__boabX Navigation__isHeading__ArXQd\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Body · Bed · Roof</span></a></li>\n                  <li className=\"Navigation__navItem__bakjf Navigation__isInvisible__boabX\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Cargo Nets</span></a></li>\n                  <li className=\"Navigation__navItem__bakjf Navigation__isInvisible__boabX\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Tailgate Assists</span></a></li>\n                  <li className=\"Navigation__navItem__bakjf Navigation__isInvisible__boabX\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Trailer Hitches</span></a></li>\n                  <li className=\"Navigation__navItem__bakjf Navigation__isInvisible__boabX\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Dent Pullers</span></a></li>\n                </ul>\n                </div>\n              </li>\n              <li className=\"Navigation__navItem__bakjf Navigation__hasChildren__jSUsH Navigation__isInvisible__boabX\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Trucks, Motorcycles, & ATVs</span></a>\n                <div className=\"Navigation__navList__HrEra level2 Navigation__subnav__CkMUI\">\n                  <ul>\n                    <li className=\"Navigation__navItem__bakjf Navigation__back__IqAlh\"><button type=\"button\" ><span>Back</span></button></li>\n                    <li className=\"Navigation__navItem__bakjf Navigation__isInvisible__boabX Navigation__isHeading__ArXQd\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Trucks, Motorcycles, & ATVs</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf Navigation__isInvisible__boabX\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Maintenance & Repair</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf Navigation__isInvisible__boabX\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Cargo Nets</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf Navigation__isInvisible__boabX\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Tailgate Assists</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf Navigation__isInvisible__boabX\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Trailer Hitches</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf Navigation__isInvisible__boabX\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Wire Connectors</span></a></li>\n                    <li className=\"Navigation__navItem__bakjf Navigation__isInvisible__boabX\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Battery Chargers</span></a></li>\n                  </ul>\n                </div>\n              </li>\n              <li className=\"Navigation__navItem__bakjf Navigation__isInvisible__boabX\"><a href=\"#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Mechanic's Top Choice</span></a></li>\n              <li className=\"Navigation__navItem__bakjf Navigation__isInvisible__boabX\"><a href=\"9F06#\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\">Posts</span></a></li>\n              <li className=\"Navigation__navItem__bakjf Navigation__more__jp3zs\"><button type=\"button\"><span className=\"Navigation__linkText__LoQD4 Navigation__en-US__YUfTQ\"><span>More</span></span></button></li>\n            </ul>\n          </nav>\n        </div>\n        <div className='other'>1</div>\n      </header>\n      <section className='banner'>\n        <div className=\"img-box-wrap\">\n          <div className='img-column'>\n            <div className='img-box'>\n              <div className='img-box-position'>\n                <div className='box'>\n                  <a href=\"084D4B5F-17E8-4C44-91DB-EC879030D96E?ingress=2&visitId=e07fd4f4-c31b-4b9e-9380-888c7449139b#\" aria-label=\"learn more\" role=\"link\"></a>\n                  <div className='relative-box'>\n                    <ResponsiveImage src='https://img.limeetpet.com/limeet/banner2tobg.png'></ResponsiveImage>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </section>\n      <section className='category'>\n        <div className='container'>\n\n        </div>\n      </section>\n    </>\n  );\n}\nexport default demo;\n",
+      "__isJSFile": true,
+      "__absFile": "/Users/hou/work/limeet/src/pages/demo/index.tsx"
+    },
+    "8": {
+      "name": "404",
+      "path": "/*",
+      "file": "@/pages/404.tsx",
+      "id": "8",
+      "absPath": "/*",
+      "__content": "import { Link } from 'umi';\nimport React from 'react';\nimport { Dropdown, Navbar, Container, Nav, NavDropdown, Row, Col, Button } from 'react-bootstrap';\nimport { history } from 'umi';\n\nexport default function IndexPage() {\n  const backClick = () => {\n    history.push('/');\n  };\n  return (\n    <div>\n      <div\n        status=\"default\"\n        style={{\n          '--image-height': '150px',\n        }}\n        description={<span>No Page</span>}\n      >\n        <Button color=\"primary\" onClick={backClick}>\n          Callback Home\n        </Button>\n      </div>\n    </div>\n  );\n}\n",
+      "__isJSFile": true,
+      "__absFile": "/Users/hou/work/limeet/src/pages/404.tsx"
+    },
+    "9": {
+      "name": "404",
+      "path": "/*",
+      "file": "@/pages/404.tsx",
+      "id": "9",
+      "absPath": "/*",
+      "__content": "import { Link } from 'umi';\nimport React from 'react';\nimport { Dropdown, Navbar, Container, Nav, NavDropdown, Row, Col, Button } from 'react-bootstrap';\nimport { history } from 'umi';\n\nexport default function IndexPage() {\n  const backClick = () => {\n    history.push('/');\n  };\n  return (\n    <div>\n      <div\n        status=\"default\"\n        style={{\n          '--image-height': '150px',\n        }}\n        description={<span>No Page</span>}\n      >\n        <Button color=\"primary\" onClick={backClick}>\n          Callback Home\n        </Button>\n      </div>\n    </div>\n  );\n}\n",
+      "__isJSFile": true,
+      "__absFile": "/Users/hou/work/limeet/src/pages/404.tsx"
+    }
+  },
+  "apiRoutes": {},
+  "hasSrcDir": true,
+  "npmClient": "cnpm",
+  "umi": {
+    "version": "4.4.12",
+    "name": "Umi Max",
+    "importSource": "@umijs/max",
+    "cliName": "max"
+  },
+  "bundleStatus": {
+    "done": false
+  },
+  "mfsuBundleStatus": {
+    "done": false
+  },
+  "react": {
+    "version": "18.3.1",
+    "path": "/Users/hou/work/limeet/node_modules/react"
+  },
+  "react-dom": {
+    "version": "18.3.1",
+    "path": "/Users/hou/work/limeet/node_modules/react-dom"
+  },
+  "appJS": {
+    "path": "/Users/hou/work/limeet/src/app.ts",
+    "exports": [
+      "getInitialState"
+    ]
+  },
+  "locale": "zh-CN",
+  "globalCSS": [
+    "/Users/hou/work/limeet/src/global.css"
+  ],
+  "globalJS": [],
+  "overridesCSS": [],
+  "bundler": "webpack",
+  "git": {
+    "originUrl": "git@github.com:wenshan/limeet.git"
+  },
+  "framework": "react",
+  "typescript": {
+    "tsVersion": "5.9.2",
+    "tslibVersion": "2.8.1"
+  },
+  "faviconFiles": [],
+  "antd": {
+    "pkgPath": "/Users/hou/work/limeet/node_modules/antd",
+    "version": "4.24.16"
+  },
+  "pluginDva": {
+    "pkgPath": "/Users/hou/work/limeet/node_modules/@umijs/plugins/libs/dva.tsx",
+    "models": [
+      {
+        "file": "/Users/hou/work/limeet/src/models/detail.js",
+        "id": "model_1",
+        "namespace": "detail",
+        "exportName": "default",
+        "deps": []
+      },
+      {
+        "file": "/Users/hou/work/limeet/src/models/home.js",
+        "id": "model_2",
+        "namespace": "home",
+        "exportName": "default",
+        "deps": []
+      },
+      {
+        "file": "/Users/hou/work/limeet/src/models/product.js",
+        "id": "model_3",
+        "namespace": "product",
+        "exportName": "default",
+        "deps": []
+      }
+    ]
+  }
+}

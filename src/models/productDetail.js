@@ -3,7 +3,7 @@ import QueryString from 'query-string';
 import Cookie from 'js-cookie';
 import { useEffect, useState } from 'react';
 import { useRequest } from 'ahooks';
-import { useModel, history } from 'umi';
+import { useModel, history, setLocale } from 'umi';
 
 import {
   getBanner,
@@ -15,15 +15,21 @@ import {
 
 function ProductDetail() {
   const projectId = '1747727677';
+  const { language, setLanguage } = useModel('common');
   const query = QueryString.parse(window.location.search);
-  if (!query || !(query && query.id)) {
+  if (!query || !(query && query.id && query.product_id && query.projectId && query.language)) {
     return false;
   }
   const [ id, setProductId ] = useState(query.id);
   const [ product_detail, setProductDetail ] = useState();
 
   const getProductDetail = async () => {
-    const result = await productDetail({ id, projectId });
+    if (query.language) {
+      setLanguage(query.language);
+      setLocale(query.language);
+    }
+    const { id, product_id, projectId, language} = query;
+    const result = await productDetail({ id, product_id, projectId, language });
     if (result && result.status === 200 && result.data) {
       setProductDetail(result.data);
     }
@@ -32,7 +38,7 @@ function ProductDetail() {
     () => {
       getProductDetail();
     },
-    [ id ]
+    [ id, query.product_id]
   );
   return {
     product_detail,

@@ -27,7 +27,7 @@
         "src/.umi/*"
       ],
       "@umijs/max": [
-        "/Users/hou/work/limeet/node_modules/umi"
+        "../../node_modules/umi"
       ],
       "@umijs/max/typings": [
         "src/.umi/typings"

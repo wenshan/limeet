@@ -1,5 +1,5 @@
 import { defineConfig } from 'umi';
-import routes  from './routes';
+import routes from './routes';
 
 const path = require("path");
 const pxtorem = require('postcss-pxtorem');
@@ -12,6 +12,11 @@ export default defineConfig({
     { name: 'description', content: 'Limeet, We design many creative cat furniture items, allowing cats and people to coexist warmly.' },
   ],
   outputPath: 'dist',
+  /*
+  ssr: {
+    serverBuildPath: './dist/umi.server.js'
+  },
+  */
   model: {},
   antd: {},
   request: {},
@@ -23,7 +28,7 @@ export default defineConfig({
   },
   dva: {},
   devtool: process.env.NODE_ENV === 'development' ? 'eval' : false,
-  publicPath: isDev ? '/' : 'https://img.dreamstep.top/limeet/dist/',
+  publicPath: isDev ? '/' : 'https://img.limeetpet.com/limeet/dist/',
   routes: routes.routes,
   // https://umijs.org/zh-CN/plugins/plugin-locale
   locale: {
@@ -46,11 +51,9 @@ export default defineConfig({
   },
   crossorigin: true,
   esbuildMinifyIIFE: true,
-  scripts: [
-    { src: 'https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js', defer: true, crossorigin: 'anonymous' },
-    { src: 'https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js', defer: true, crossorigin: 'anonymous' },
-    { src: 'https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/react-bootstrap/react-bootstrap.min.js', defer: true, crossorigin: 'anonymous' },
+  scripts: [],
+  headScripts: [
+    { src: 'https://img.limeetpet.com/limeet/supportImageType.js', defer: true, crossOrigin: 'anonymous' },
   ],
-  headScripts: [{src:'https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/supportImageType.js', defer: true, crossOrigin: 'anonymous'},{ src: 'https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/react-bootstrap/react-bootstrap.min.js', defer: true, crossorigin: true }],
   styles: [`html, body { font-size: 16px !important; }`],
 });

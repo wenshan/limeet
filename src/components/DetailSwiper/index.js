@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Carousel, Container, Image } from 'react-bootstrap';
+// import { useNavigate } from 'umi';
+import { useNavigate } from 'react-router-dom';
 import './index.less';
 
 function DetailSwiper(props) {
@@ -13,9 +15,7 @@ function DetailSwiper(props) {
   if (props.additional_image_link) {
     list = list.concat(props.additional_image_link);
   }
-  const bannerClick = (val) => {
-    this.props.callback(val);
-  };
+  const navigate = useNavigate();
   const renderSwiperHtml = (list) => {
     const html = [];
     if (list && list.length > 0) {
@@ -30,9 +30,7 @@ function DetailSwiper(props) {
     return html;
   };
   const goToBack = () => {
-    if (this.props.goBackCallback) {
-      this.props.goBackCallback();
-    }
+    navigate(-1);
   };
   return (
     <Container className='detail-swiper clearfix'>

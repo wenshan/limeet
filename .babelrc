@@ -7,17 +7,11 @@
       "transform-es2015-classes",
       "transform-react-jsx"
     ],
-    ["import",
-      {
-        "libraryName": "antd-mobile",
-        "style": "css"
-      }
-    ],
     [
       "@babel/plugin-proposal-decorators",
       {
         "legacy": true,
-        "decoratorsBeforeExport":true
+        "decoratorsBeforeExport": true
       }
     ]
   ]

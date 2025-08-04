@@ -1,6 +1,7 @@
 export default {
   routes: [
-    { path: "/",
+    {
+      path: "/",
       name: 'home',
       component: 'home/index'
     },
@@ -33,6 +34,8 @@ export default {
       name: 'demo',
       path: '/demo.html',
       component: 'demo/index'
-    }
+    },
+    { name: '404', path: '/*', component: '@/pages/404.tsx' },
+    { name: '404', path: '/*', component: '@/pages/404.tsx' }
   ],
 };

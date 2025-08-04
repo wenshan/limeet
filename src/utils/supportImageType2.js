@@ -3,9 +3,9 @@ async function supportImageType() {
   let isWebp = false;
   let isAvif = false;
   const webpSrc =
-    'https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/1px.jpg?x-oss-process=image/format,webp';
+    'https://img.limeetpet.com/limeet/1px.jpg?x-oss-process=image/format,webp';
   const avifSrc =
-    'https://affiliate-traffic.oss-cn-hongkong.aliyuncs.com/limeet/1px.jpg?x-oss-process=image/format,avif';
+    'https://img.limeetpet.com/limeet/1px.jpg?x-oss-process=image/format,avif';
   const loadImg = (imgSrc) => {
     return new Promise((resolve, reject) => {
       const image = new Image();

@@ -19,7 +19,7 @@ class ProductListPage extends Component {
     this.state = {};
   }
   gotoPage = (val) => {
-    if (val){
+    if (val) {
       history.push(val);
     }
   }
@@ -34,7 +34,7 @@ class ProductListPage extends Component {
   }
   handelNavigationHeader = (val) => {
     console.log(val);
-    if (val){
+    if (val) {
       this.props.dispatch({
         type: 'common/update',
         payload: {
@@ -87,7 +87,7 @@ class ProductListPage extends Component {
     return (
       <div className="page clearfix">
         <div className="page-list clearfix">
-          <Header navigationCallback={this.handelNavigationHeader} currentPath={this.props.currentPath} goBackCallback={this.handelGoBack} from="product"></Header>
+          <Header navigationCallback={this.handelNavigationHeader} currentPath={this.props.currentPath} from="product"></Header>
           <Categories productCategories={this.props.productCategories} clickCateCallback={this.handleClickCateCallback}></Categories>
           <Title title="common.title.list"></Title>
           <List productList={this.props.productList} productToDetailCallback={this.productToDetailCallback}></List>

@@ -11,7 +11,7 @@ import { createHistory } from './core/history';
 import { ApplyPluginsType } from 'umi';
 
 
-const publicPath = "https://img.dreamstep.top/limeet/dist/";
+const publicPath = "https://img.limeetpet.com/limeet/dist/";
 const runtimePublicPath = false;
 
 async function render() {
@@ -48,6 +48,7 @@ async function render() {
     type: ApplyPluginsType.compose,
     initialValue() {
       const context = {
+        useStream: true,
         routes,
         routeComponents,
         pluginManager,
@@ -76,6 +77,6 @@ render();
 
     if (typeof window !== 'undefined') {
       window.g_umi = {
-        version: '4.3.1',
+        version: '4.4.12',
       };
     }

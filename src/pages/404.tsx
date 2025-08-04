@@ -14,10 +14,10 @@ export default function IndexPage() {
         style={{
           '--image-height': '150px',
         }}
-        description={<span>页面丢失了</span>}
+        description={<span>No Page</span>}
       >
         <Button color="primary" onClick={backClick}>
-          返回主页
+          Callback Home
         </Button>
       </div>
     </div>
