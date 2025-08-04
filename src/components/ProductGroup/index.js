@@ -2,10 +2,6 @@ import { useEffect, useState } from 'react';
 import { useModel } from 'umi';
 import { Row, Col, Container } from 'react-bootstrap';
 import {
-  getBanner,
-  queryProductList,
-  queryProductCategories,
-  productDetail,
   queryProductGroup
 } from '@/services/index';
 

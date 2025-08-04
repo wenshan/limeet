@@ -6,7 +6,6 @@ import Cookies from 'js-cookie';
 
 const proUrl = 'https://api.limeetpet.com';
 const devUrl = 'http://127.0.0.1:7001/';
-// const devUrl = 'https://api.limeetpet.com';
 
 const isDev = process.env.NODE_ENV === 'development';
 

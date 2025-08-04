@@ -6,7 +6,6 @@ import { useRequest } from 'ahooks';
 import { useModel, history, FormattedMessage } from 'umi';
 import {
   getBanner,
-  queryProductList,
   queryProductCategories,
   productDetail,
   queryProductGroup

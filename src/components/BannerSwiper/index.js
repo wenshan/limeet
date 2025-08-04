@@ -3,11 +3,7 @@ import { Carousel, Container, Image } from 'react-bootstrap';
 import ResponsiveImage from '@/components/ResponsiveImage';
 import { useModel, history } from 'umi';
 import {
-  getBanner,
-  queryProductList,
-  queryProductCategories,
-  productDetail,
-  queryProductGroup
+  getBanner
 } from '@/services/index';
 
 import './index.less';

@@ -1,5 +1,5 @@
 import QueryString from 'query-string';
-import { getBanner, queryProductList } from '@/services/index';
+import { getBanner } from '@/services/index';
 
 export default {
   namespace: 'detail',
