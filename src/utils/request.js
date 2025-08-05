@@ -17,7 +17,7 @@ const instance = axios.create({
   timeout: 1000 * 60,
   headers: {
     'Access-Control-Allow-Credentials': true,
-    'Access-Control-Allow-Origin': `${isDev ? API_DEV : limeet}`,
+    'Access-Control-Allow-Origin': `${isDev ? API_DEV: API_PRO}`,
     'Access-Control-Allow-Methods': 'DELETE, HEAD, GET, OPTIONS, POST, PUT',
     'Content-Type': 'application/json; charset=utf-8',
     'Access-Control-Allow-Headers': 'Content-Type, Content-Range, Content-Disposition, Content-Description',

@@ -4,7 +4,7 @@
 import React from 'react';
 
 export async function getRoutes() {
-  const routes = {"1":{"path":"/","name":"home","id":"1"},"2":{"name":"home","path":"/index.html","id":"2"},"3":{"name":"product-list","path":"/product/list.html","id":"3"},"4":{"name":"detail","path":"/detail.html","id":"4"},"5":{"name":"brand","path":"/brand.html","id":"5"},"6":{"name":"about","path":"/about.html","id":"6"},"7":{"name":"demo","path":"/demo.html","id":"7"},"8":{"name":"404","path":"/*","id":"8"},"9":{"name":"404","path":"/*","id":"9"}} as const;
+  const routes = {"1":{"path":"/","name":"home","id":"1"},"2":{"name":"home","path":"/index.html","id":"2"},"3":{"name":"product-list","path":"/product/list.html","id":"3"},"4":{"name":"detail","path":"/detail.html","id":"4"},"5":{"name":"brand","path":"/brand.html","id":"5"},"6":{"name":"about","path":"/about.html","id":"6"},"7":{"name":"demo","path":"/demo.html","id":"7"},"8":{"name":"404","path":"/404.html","id":"8"},"9":{"name":"404","path":"/*","id":"9"}} as const;
   return {
     routes,
     routeComponents: {

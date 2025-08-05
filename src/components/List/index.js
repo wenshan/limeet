@@ -31,9 +31,9 @@ function List(props) {
                 </div>
                 <div className='price'>
                   <i className='unit'>{item.monetary_unit}</i>
-                  <span className='value'>{item.sale_price ? item.sale_price : item.price}</span>
-                  <span className='del-value'>{item.price}</span>
-                  <span className='original-value'>-{item.discount}%</span>
+                  <span className='value'>{item.sale_price_value.min ? item.sale_price_value.min  : 0}</span>
+                  <span className='del-value'>{item.price_value.max ? item.price_value.max : 0}</span>
+                  <span className='original-value'>-{item.discount_value.max ? item.discount_value.max : 0}%</span>
                 </div>
               </a>
             </div>

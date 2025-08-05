@@ -35,7 +35,7 @@ export default {
       path: '/demo.html',
       component: 'demo/index'
     },
-    { name: '404', path: '/*', component: '@/pages/404.tsx' },
-    { name: '404', path: '/*', component: '@/pages/404.tsx' }
+    { name: '404', path: '/404.html', component: '@/pages/404' },
+    { name: '404', path: '/*', component: '@/pages/404' }
   ],
 };

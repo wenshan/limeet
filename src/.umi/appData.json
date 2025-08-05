@@ -50,7 +50,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 4
       },
       "enableBy": "register",
       "type": "preset",
@@ -63,7 +63,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 27
+        "register": 9
       },
       "enableBy": "register",
       "type": "preset",
@@ -76,7 +76,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 7
+        "register": 8
       },
       "enableBy": "register",
       "type": "preset",
@@ -93,7 +93,7 @@
             0
           ]
         },
-        "register": 6
+        "register": 17
       },
       "enableBy": "register",
       "type": "plugin",
@@ -107,10 +107,10 @@
       "time": {
         "hooks": {
           "onStart": [
-            2
+            11
           ]
         },
-        "register": 5
+        "register": 6
       },
       "enableBy": "register",
       "type": "plugin",
@@ -142,13 +142,10 @@
       "time": {
         "hooks": {
           "onDevCompileDone": [
-            66,
-            18,
-            86,
-            19,
-            31,
-            32,
-            23
+            38,
+            16,
+            48,
+            29
           ]
         },
         "register": 2
@@ -165,14 +162,14 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            28
+            54
           ],
           "onGenerateFiles": [
             2,
-            40
+            19
           ]
         },
-        "register": 215
+        "register": 51
       },
       "enableBy": "register",
       "type": "plugin",
@@ -190,7 +187,7 @@
             0
           ]
         },
-        "register": 7
+        "register": 1
       },
       "enableBy": "register",
       "type": "plugin",
@@ -204,15 +201,13 @@
       "time": {
         "hooks": {
           "onCheckConfig": [
+            0,
             0
           ],
           "onCheck": [
-            0
+            1
           ],
           "onPrepareBuildSuccess": [
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -238,6 +233,7 @@
             0,
             0,
             0,
+            1,
             0,
             0,
             0,
@@ -251,6 +247,42 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
             0,
             0,
             0,
@@ -258,7 +290,7 @@
             0
           ]
         },
-        "register": 15
+        "register": 2
       },
       "enableBy": "register",
       "type": "plugin",
@@ -275,7 +307,7 @@
             0
           ]
         },
-        "register": 4
+        "register": 1
       },
       "enableBy": "register",
       "type": "plugin",
@@ -288,7 +320,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 6
+        "register": 2
       },
       "enableBy": "config",
       "type": "plugin",
@@ -302,10 +334,11 @@
       "time": {
         "hooks": {
           "modifyConfig": [
+            0,
             0
           ]
         },
-        "register": 108
+        "register": 19
       },
       "enableBy": "register",
       "type": "plugin",
@@ -773,7 +806,7 @@
       "enableBy": "register",
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       }
     },
     "virtual: config-manifest": {
@@ -1161,12 +1194,124 @@
             0
           ],
           "modifyHTML": [
-            2,
+            3,
+            0,
             1,
+            11,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            1,
+            0,
+            0,
+            1,
+            2,
+            13,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
             0
           ]
         },
-        "register": 2
+        "register": 1
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1180,10 +1325,10 @@
       "time": {
         "hooks": {
           "onStart": [
-            1
+            0
           ]
         },
-        "register": 1
+        "register": 2
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1197,10 +1342,10 @@
       "time": {
         "hooks": {
           "addBeforeMiddlewares": [
-            39
+            23
           ]
         },
-        "register": 1
+        "register": 6
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1213,7 +1358,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 519
+        "register": 419
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1226,7 +1371,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 510
+        "register": 211
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1239,7 +1384,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 45
+        "register": 47
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1253,12 +1398,170 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            1
-          ],
-          "addBeforeMiddlewares": [
             0
           ],
+          "addBeforeMiddlewares": [
+            1
+          ],
           "modifyHTMLFavicon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1267,7 +1570,7 @@
             0
           ]
         },
-        "register": 1
+        "register": 9
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1282,14 +1585,14 @@
         "hooks": {
           "onGenerateFiles": [
             1,
-            0
+            2
           ],
           "addRuntimePlugin": [
             0,
             0
           ]
         },
-        "register": 1
+        "register": 2
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1302,7 +1605,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 2
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1319,10 +1622,10 @@
             5
           ],
           "addBeforeMiddlewares": [
-            30
+            12
           ]
         },
-        "register": 267
+        "register": 121
       },
       "type": "plugin",
       "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/mock/mock.js",
@@ -1334,7 +1637,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 6
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1347,7 +1650,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "type": "plugin",
       "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/okam/okam.js",
@@ -1360,17 +1663,17 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            0,
+            1,
             0
           ],
           "addEntryImports": [
-            0,
+            1,
             0,
             0,
             0
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1383,7 +1686,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 2
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1397,11 +1700,12 @@
       "time": {
         "hooks": {
           "modifyConfig": [
+            1,
             1
           ],
           "onGenerateFiles": [
-            203,
-            146
+            200,
+            90
           ],
           "addPolyfillImports": [
             0,
@@ -1429,7 +1733,7 @@
             0
           ]
         },
-        "register": 1
+        "register": 2
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1443,11 +1747,11 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            462,
+            679,
             0
           ]
         },
-        "register": 2
+        "register": 4
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1460,7 +1764,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 4
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1473,7 +1777,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1487,14 +1791,14 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            5,
+            0,
             0
           ],
           "addBeforeMiddlewares": [
             0
           ]
         },
-        "register": 1
+        "register": 3
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1508,13 +1812,13 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            41,
+            144,
             12,
-            16,
-            9
+            47,
+            5
           ]
         },
-        "register": 9
+        "register": 12
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1527,7 +1831,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 3
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1552,7 +1856,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 4
+        "register": 6
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1566,11 +1870,11 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            1202,
-            162
+            1277,
+            63
           ]
         },
-        "register": 6
+        "register": 5
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1584,10 +1888,10 @@
       "time": {
         "hooks": {
           "addBeforeBabelPresets": [
-            0
+            1
           ]
         },
-        "register": 6
+        "register": 10
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1600,7 +1904,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 7
+        "register": 10
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1626,7 +1930,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 9
+        "register": 14
       },
       "type": "plugin",
       "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/apiRoute/apiRoute.js",
@@ -1638,7 +1942,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 180
+        "register": 50
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1652,11 +1956,11 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            3,
-            2
+            11,
+            4
           ]
         },
-        "register": 3
+        "register": 4
       },
       "type": "plugin",
       "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/test/test.js",
@@ -1681,7 +1985,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 3
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1694,7 +1998,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 3
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1707,7 +2011,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 3
       },
       "type": "plugin",
       "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/webpack/webpack.js",
@@ -1723,7 +2027,7 @@
             0
           ]
         },
-        "register": 1
+        "register": 2
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1736,7 +2040,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 6
+        "register": 14
       },
       "type": "plugin",
       "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/ui/ui.js",
@@ -1748,7 +2052,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1761,7 +2065,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 4
+        "register": 7
       },
       "type": "plugin",
       "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/hmrGuardian/hmrGuardian.js",
@@ -1773,7 +2077,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 8
       },
       "type": "plugin",
       "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/routePreloadOnLoad/routePreloadOnLoad.js",
@@ -1785,7 +2089,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 4
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1799,10 +2103,10 @@
       "time": {
         "hooks": {
           "modifyUniBundler": [
-            3521
+            1837
           ]
         },
-        "register": 2
+        "register": 3
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1815,7 +2119,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 6
+        "register": 9
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1828,7 +2132,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 89
+        "register": 81
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1842,13 +2146,13 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            99
+            21
           ],
           "onStart": [
             0
           ]
         },
-        "register": 56
+        "register": 110
       },
       "type": "plugin",
       "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/commands/dev/dev.js",
@@ -1860,7 +2164,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1873,7 +2177,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1899,7 +2203,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1912,7 +2216,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1938,7 +2242,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1951,7 +2255,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 3
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1964,7 +2268,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "register",
       "type": "plugin",
@@ -2003,7 +2307,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 4
       },
       "enableBy": "register",
       "type": "plugin",
@@ -2029,7 +2333,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "register",
       "type": "plugin",
@@ -2042,7 +2346,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "register",
       "type": "plugin",
@@ -2055,7 +2359,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 4
       },
       "enableBy": "register",
       "type": "plugin",
@@ -2068,7 +2372,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 3
       },
       "enableBy": "register",
       "type": "plugin",
@@ -2081,7 +2385,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 14
       },
       "enableBy": "register",
       "type": "plugin",
@@ -2094,7 +2398,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 30
+        "register": 43
       },
       "enableBy": "register",
       "type": "plugin",
@@ -2120,7 +2424,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 5
       },
       "enableBy": "register",
       "type": "plugin",
@@ -2133,7 +2437,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 8
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2149,15 +2453,173 @@
       "time": {
         "hooks": {
           "addHTMLHeadScripts": [
-            15,
-            85,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
             0
           ]
         },
-        "register": 6
+        "register": 1
       },
       "type": "plugin",
       "path": "/Users/hou/work/limeet/node_modules/@umijs/plugins/dist/analytics.js",
@@ -2170,10 +2632,11 @@
       "time": {
         "hooks": {
           "modifyConfig": [
+            1,
             0
           ],
           "modifyAppData": [
-            1
+            0
           ],
           "addEntryImportsAhead": [
             0,
@@ -2190,8 +2653,8 @@
             0
           ],
           "onGenerateFiles": [
-            13,
-            4
+            3,
+            3
           ],
           "addExtraBabelPlugins": [
             0
@@ -2200,7 +2663,7 @@
             0
           ]
         },
-        "register": 23
+        "register": 14
       },
       "type": "plugin",
       "path": "/Users/hou/work/limeet/node_modules/@umijs/plugins/dist/antd.js",
@@ -2213,10 +2676,11 @@
       "time": {
         "hooks": {
           "modifyConfig": [
+            0,
             0
           ],
           "modifyAppData": [
-            299
+            155
           ],
           "addRuntimePlugin": [
             0,
@@ -2227,14 +2691,14 @@
             0
           ],
           "onGenerateFiles": [
-            4,
-            85
+            3,
+            134
           ],
           "addTmpGenerateWatcherPaths": [
-            0
+            1
           ]
         },
-        "register": 115
+        "register": 14
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2257,14 +2721,14 @@
           ],
           "onGenerateFiles": [
             1,
-            0
+            1
           ],
           "addExtraModels": [
             0,
             0
           ]
         },
-        "register": 2
+        "register": 3
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2279,7 +2743,7 @@
       },
       "time": {
         "hooks": {},
-        "register": 5
+        "register": 6
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2307,14 +2771,14 @@
             0
           ],
           "onGenerateFiles": [
-            47,
-            11
+            25,
+            18
           ],
           "addTmpGenerateWatcherPaths": [
-            7
+            5
           ]
         },
-        "register": 3
+        "register": 7
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2327,7 +2791,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 4
+        "register": 5
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2345,14 +2809,14 @@
             0
           ],
           "onGenerateFiles": [
-            171,
-            179
+            361,
+            111
           ],
           "addTmpGenerateWatcherPaths": [
             0
           ]
         },
-        "register": 8
+        "register": 3
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2365,7 +2829,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 4
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2379,11 +2843,11 @@
       "time": {
         "hooks": {
           "addRuntimePluginKey": [
-            0,
+            1,
             0
           ]
         },
-        "register": 1
+        "register": 3
       },
       "enableBy": "register",
       "type": "plugin",
@@ -2396,7 +2860,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 4
+        "register": 9
       },
       "type": "plugin",
       "path": "/Users/hou/work/limeet/node_modules/@umijs/plugins/dist/qiankun/master.js",
@@ -2420,7 +2884,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 8
+        "register": 1
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2435,14 +2899,14 @@
         "hooks": {
           "addRuntimePluginKey": [
             0,
-            0
+            3
           ],
           "onGenerateFiles": [
-            3,
-            1
+            5,
+            2
           ]
         },
-        "register": 1
+        "register": 4
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2455,7 +2919,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 5
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2468,7 +2932,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2481,7 +2945,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2495,10 +2959,11 @@
       "time": {
         "hooks": {
           "modifyConfig": [
+            0,
             0
           ]
         },
-        "register": 5
+        "register": 2
       },
       "enableBy": "register",
       "type": "plugin",
@@ -2515,7 +2980,7 @@
             0
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register",
       "type": "plugin",
@@ -2532,7 +2997,7 @@
             0
           ]
         },
-        "register": 1
+        "register": 2
       },
       "enableBy": "register",
       "type": "plugin",
@@ -2545,7 +3010,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "register",
       "type": "plugin",
@@ -2655,13 +3120,7 @@
     "crossorigin": true,
     "esbuildMinifyIIFE": true,
     "scripts": [],
-    "headScripts": [
-      {
-        "src": "https://img.limeetpet.com/limeet/supportImageType.js",
-        "defer": true,
-        "crossOrigin": "anonymous"
-      }
-    ],
+    "headScripts": [],
     "styles": [
       "html, body { font-size: 16px !important; }"
     ]
@@ -2784,13 +3243,7 @@
     "crossorigin": true,
     "esbuildMinifyIIFE": true,
     "scripts": [],
-    "headScripts": [
-      {
-        "src": "https://img.limeetpet.com/limeet/supportImageType.js",
-        "defer": true,
-        "crossOrigin": "anonymous"
-      }
-    ],
+    "headScripts": [],
     "styles": [
       "html, body { font-size: 16px !important; }"
     ],
@@ -2874,10 +3327,10 @@
     },
     "8": {
       "name": "404",
-      "path": "/*",
+      "path": "/404.html",
       "file": "@/pages/404.tsx",
       "id": "8",
-      "absPath": "/*",
+      "absPath": "/404.html",
       "__content": "import { Link } from 'umi';\nimport React from 'react';\nimport { Dropdown, Navbar, Container, Nav, NavDropdown, Row, Col, Button } from 'react-bootstrap';\nimport { history } from 'umi';\n\nexport default function IndexPage() {\n  const backClick = () => {\n    history.push('/');\n  };\n  return (\n    <div>\n      <div\n        status=\"default\"\n        style={{\n          '--image-height': '150px',\n        }}\n        description={<span>No Page</span>}\n      >\n        <Button color=\"primary\" onClick={backClick}>\n          Callback Home\n        </Button>\n      </div>\n    </div>\n  );\n}\n",
       "__isJSFile": true,
       "__absFile": "/Users/hou/work/limeet/src/pages/404.tsx"
@@ -5875,7 +6328,7 @@
             "format": "esm"
           },
           "src/.umi/core/route.tsx": {
-            "bytes": 1545,
+            "bytes": 1552,
             "imports": [
               {
                 "path": "react",
@@ -7751,7 +8204,7 @@
                 "bytesInOutput": 895
               },
               "src/utils/request.js": {
-                "bytesInOutput": 3501
+                "bytesInOutput": 3502
               },
               "src/services/index.js": {
                 "bytesInOutput": 1119
@@ -7937,7 +8390,7 @@
                 "bytesInOutput": 728
               },
               "src/.umi/core/route.tsx": {
-                "bytesInOutput": 1564
+                "bytesInOutput": 1571
               },
               "src/.umi/core/polyfill.ts": {
                 "bytesInOutput": 19240
@@ -7946,7 +8399,7 @@
                 "bytesInOutput": 1966
               }
             },
-            "bytes": 210558
+            "bytes": 210566
           }
         }
       }
