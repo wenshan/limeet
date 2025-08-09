@@ -47,7 +47,7 @@ export default defineConfig({
   ],
   analytics: {
     ga_v2: 'GTM-MBQ58SPM',
-    baidu: 'e3e4ff6865d2ba690ff30184ec5758e8',
+    // baidu: 'e3e4ff6865d2ba690ff30184ec5758e8',
   },
   crossorigin: true,
   esbuildMinifyIIFE: true,
