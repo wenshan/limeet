@@ -53,7 +53,8 @@ export default defineConfig({
   esbuildMinifyIIFE: true,
   scripts: [],
   headScripts: [
-    // { src: 'https://img.limeetpet.com/limeet/supportImageType.js', defer: true, crossOrigin: 'anonymous' },
+    { src: 'https://img.limeetpet.com/limeet/supportImageType.js', defer: true, crossOrigin: 'anonymous' },
   ],
   styles: [`html, body { font-size: 16px !important; }`],
+  theme: { '--bs-link-color': 'red' }
 });

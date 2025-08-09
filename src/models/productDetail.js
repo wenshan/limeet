@@ -17,19 +17,19 @@ function ProductDetail() {
   const projectId = '1747727677';
   const { language, setLanguage } = useModel('common');
   const query = QueryString.parse(window.location.search);
-  if (!query || !(query && query.id && query.product_id && query.projectId && query.language)) {
+  if (!query || !(query && query.id && query.product_id && query.lang)) {
     return false;
   }
   const [ id, setProductId ] = useState(query.id);
   const [ product_detail, setProductDetail ] = useState();
 
   const getProductDetail = async () => {
-    if (query.language) {
-      setLanguage(query.language);
-      setLocale(query.language);
+    if (query.lang) {
+      setLanguage(query.lang);
+      setLocale(query.lang);
     }
-    const { id, product_id, projectId, language} = query;
-    const result = await productDetail({ id, product_id, projectId, language });
+    const { id, product_id, lang} = query;
+    const result = await productDetail({ id, product_id, projectId, language:lang });
     if (result && result.status === 200 && result.data) {
       setProductDetail(result.data);
     }

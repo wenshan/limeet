@@ -22,7 +22,7 @@ function List(props) {
         html.push(
           <Col key={idx} xs={6} sm={4} xxl={3}>
             <div className='item' onClick={() => handleProductToDetail(item.id)}>
-              <a href={`/detail.html?id=${item.id}&product_id=${item.product_id}&projectId=${item.projectId}&language=${item.language}`}>
+              <a href={`/detail.html?id=${item.id}&product_id=${item.product_id}&lang=${item.language}`}>
                 <div className='img-box'>
                   <Image src={item.image_link} fluid />
                 </div>
