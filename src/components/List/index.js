@@ -10,6 +10,8 @@ function List(props) {
   const handleProductToDetail = (id) => {
     if (id) {
       // history.push(`/detail.html?id=${id}`);
+      // image/auto-orient,1/resize,m_lfit,w_480/quality,q_90
+      // ?x-oss-process=style/stylename
     }
   };
 

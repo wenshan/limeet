@@ -8,6 +8,7 @@ import ProductDetail from '@/components/ProductDetail';
 import ProductAttr from '@/components/ProductAttr';
 import ProductHighlight from '@/components/ProductHighlight';
 import ProductDescribe from '@/components/ProductDescribe';
+import ProductSaleSku from '@/components/ProductSaleSku';
 import Footer from '@/components/Footer';
 import ICP from '@/components/Icp';
 
@@ -21,35 +22,19 @@ function DetailPage() {
   if (!query || !(query && query.id) || !product_detail) {
     return false;
   }
-  const { title, link, mobile_link, monetary_unit, discount, sale_price, price, image_link, additional_image_link} = product_detail;
-
+  const { title, link, mobile_link, monetary_unit, discount, sale_price, price, image_link, additional_image_link } = product_detail;
   return (
-  <>
+    <>
       <DetailSwiper from="detail" image_link={image_link} additional_image_link={additional_image_link}></DetailSwiper>
       {false && (<ProductGroup></ProductGroup>)}
-      <Container className='page-detail'>
-        <div className='price-wrap clearfix'>
-          <div className='price'>
-            <i className='unit'>{monetary_unit}</i>
-            <span className='value'>{sale_price}</span>
-            <span className='del-value'>{price}</span>
-            <span className='original-value'>-{discount}%</span>
-          </div>
-          <div className='title'>
-            {title}
-          </div>
-        </div>
-        <div className='submit-button clearfix'>
-          <a href={`${mobile_link ? mobile_link : link}`} target="_blank" >Go to Amazon to buy</a>
-        </div>
-      </Container>
+      {product_detail && product_detail.saleSkus && product_detail.saleSkus[0] && (<ProductSaleSku></ProductSaleSku >)}
       <ProductAttr></ProductAttr>
       <ProductDescribe />
       <ProductHighlight />
       <ProductDetail></ProductDetail>
       <Footer></Footer>
       <ICP></ICP>
-  </>
+    </>
   );
 }
 
