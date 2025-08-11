@@ -5,9 +5,9 @@ import { Row, Col, Container, Card, Image, Toast } from 'react-bootstrap';
 import './index.less';
 function ProductSaleSku() {
   const { product_detail } = useModel('productDetail');
-  const [saleSkus, setSaleSkus] = useState(product_detail.saleSkus);
+  const [saleSkus, setSaleSkus] = useState(product_detail.saleSkusList);
   const [showSku, setShowSku] = useState(true);
-  const [currentSaleSku, setCurrentSaleSku] = useState(product_detail.saleSkus[0]);
+  const [currentSaleSku, setCurrentSaleSku] = useState(product_detail.saleSkusList[0]);
 
   const selectSaleSku = (item, idx) => {
     const newSaleSkus = [];
