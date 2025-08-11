@@ -32,18 +32,19 @@ function About() {
             <h1>Shanghai Erka International Trade Co., Ltd</h1>
             <ul>
               <li><span><FormattedMessage id="footer.product.factory.address" />：</span>2nd Floor, 1270 Luofen Road, Baoshan District, Shanghai, China</li>
-              <li><span>Email：</span><a href="mailto:hangzhououhao@limeet.com">hangzhououhao@limeet.com</a></li>
+              <li><span>Email：</span><a href="mailto:hou_ve@qq.com">hou_ve@qq.com</a></li>
             </ul>
           </div>
           <div className='contact clearfix'>
-            <div className='youtube'><a href="https://www.youtube.com/channel/UCoIs9wNHv3RFkB5Wm6KEHCA"><img src="https://img.limeetpet.com/limeet/youtube-filled.png" /></a></div>
-            <div className='wechat' onClick={handleShow}><img src="https://img.limeetpet.com/limeet/wechat-filled.png" /></div>
+            <div className='youtube'><a target='_blank' href="https://www.youtube.com/channel/UCoIs9wNHv3RFkB5Wm6KEHCA"><img src="https://img.limeetpet.com/limeet/icon/icons8-youtube-240.png" /></a></div>
+            <div className='facebook'><a target='_blank' href="https://www.facebook.com/limeet.366183"><img src="https://img.limeetpet.com/limeet/icon/icons8-facebook-240.png" /></a></div>
+            <div className='wechat' onClick={handleShow}><img src="https://img.limeetpet.com/limeet/icon/icons8-whatsapp-240.png" /></div>
             <Modal show={wechatStatus} onHide={handleClose}>
               <Modal.Header closeButton>
                 <Modal.Title></Modal.Title>
               </Modal.Header>
               <Modal.Body>
-                <Image thumbnail src="https://img.limeetpet.com/limeet/wechat.png"></Image>
+                <Image thumbnail src="https://img.limeetpet.com/limeet/icon/whatApp.png"></Image>
               </Modal.Body>
               <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>

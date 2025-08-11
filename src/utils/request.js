@@ -9,7 +9,8 @@ const devUrl = 'http://127.0.0.1:7001/';
 
 const isDev = process.env.NODE_ENV === 'development';
 
-const API_DEV = `${devUrl}/`;
+// const API_DEV = `${devUrl}/`;
+const API_DEV = `${proUrl}/`;
 const API_PRO = `${proUrl}/`;
 
 const instance = axios.create({

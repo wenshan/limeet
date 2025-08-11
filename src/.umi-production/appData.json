@@ -50,7 +50,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 4
       },
       "enableBy": "register",
       "type": "preset",
@@ -63,7 +63,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 82
+        "register": 57
       },
       "enableBy": "register",
       "type": "preset",
@@ -76,7 +76,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 16
+        "register": 2
       },
       "enableBy": "register",
       "type": "preset",
@@ -90,10 +90,10 @@
       "time": {
         "hooks": {
           "onStart": [
-            1
+            0
           ]
         },
-        "register": 225
+        "register": 9
       },
       "enableBy": "register",
       "type": "plugin",
@@ -107,10 +107,10 @@
       "time": {
         "hooks": {
           "onStart": [
-            10
+            5
           ]
         },
-        "register": 6
+        "register": 4
       },
       "enableBy": "register",
       "type": "plugin",
@@ -127,7 +127,7 @@
             0
           ]
         },
-        "register": 2
+        "register": 0
       },
       "enableBy": "register",
       "type": "plugin",
@@ -140,7 +140,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 2
       },
       "enableBy": "register",
       "type": "plugin",
@@ -154,10 +154,10 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            20
+            24
           ]
         },
-        "register": 172
+        "register": 43
       },
       "enableBy": "register",
       "type": "plugin",
@@ -170,7 +170,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "register",
       "type": "plugin",
@@ -187,10 +187,10 @@
             0
           ],
           "onCheck": [
-            1
+            0
           ]
         },
-        "register": 21
+        "register": 1
       },
       "enableBy": "register",
       "type": "plugin",
@@ -207,7 +207,7 @@
             0
           ]
         },
-        "register": 6
+        "register": 1
       },
       "enableBy": "register",
       "type": "plugin",
@@ -237,7 +237,7 @@
             0
           ]
         },
-        "register": 20
+        "register": 15
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1089,7 +1089,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1103,10 +1103,10 @@
       "time": {
         "hooks": {
           "onStart": [
-            2
+            1
           ]
         },
-        "register": 2
+        "register": 1
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1119,7 +1119,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1132,7 +1132,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 534
+        "register": 170
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1145,7 +1145,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 312
+        "register": 193
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1158,7 +1158,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 342
+        "register": 23
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1214,7 +1214,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 171
+        "register": 63
       },
       "type": "plugin",
       "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/mock/mock.js",
@@ -1226,7 +1226,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 6
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1251,7 +1251,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1264,7 +1264,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 4
+        "register": 1
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1278,10 +1278,10 @@
       "time": {
         "hooks": {
           "modifyConfig": [
-            1
+            3
           ]
         },
-        "register": 7
+        "register": 2
       },
       "type": "plugin",
       "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/polyfill/polyfill.js",
@@ -1293,7 +1293,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 15
+        "register": 1
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1306,7 +1306,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 3
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1332,7 +1332,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1345,7 +1345,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1358,7 +1358,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 11
+        "register": 7
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1396,7 +1396,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 4
+        "register": 3
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1409,7 +1409,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 72
+        "register": 4
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1422,7 +1422,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 8
+        "register": 5
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1435,7 +1435,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 7
+        "register": 5
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1448,7 +1448,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1461,7 +1461,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 18
+        "register": 10
       },
       "type": "plugin",
       "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/apiRoute/apiRoute.js",
@@ -1473,7 +1473,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 136
+        "register": 36
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1486,7 +1486,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 1
       },
       "type": "plugin",
       "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/test/test.js",
@@ -1498,7 +1498,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "type": "plugin",
       "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/clickToComponent/clickToComponent.js",
@@ -1523,7 +1523,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1536,7 +1536,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 6
+        "register": 1
       },
       "type": "plugin",
       "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/webpack/webpack.js",
@@ -1549,10 +1549,10 @@
       "time": {
         "hooks": {
           "addOnDemandDeps": [
-            0
+            1
           ]
         },
-        "register": 15
+        "register": 1
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1565,7 +1565,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 39
+        "register": 7
       },
       "type": "plugin",
       "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/ui/ui.js",
@@ -1577,7 +1577,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 8
+        "register": 1
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1590,7 +1590,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 14
+        "register": 4
       },
       "type": "plugin",
       "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/hmrGuardian/hmrGuardian.js",
@@ -1602,7 +1602,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 11
+        "register": 4
       },
       "type": "plugin",
       "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/features/routePreloadOnLoad/routePreloadOnLoad.js",
@@ -1640,7 +1640,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 10
+        "register": 7
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1653,7 +1653,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 237
+        "register": 80
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1666,7 +1666,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 230
+        "register": 81
       },
       "type": "plugin",
       "path": "/Users/hou/work/limeet/node_modules/@umijs/preset-umi/dist/commands/dev/dev.js",
@@ -1691,7 +1691,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1704,7 +1704,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 4
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1717,7 +1717,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 5
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1743,7 +1743,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 4
+        "register": 5
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1756,7 +1756,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1769,7 +1769,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1782,7 +1782,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1795,7 +1795,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 5
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1808,7 +1808,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1834,7 +1834,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1873,7 +1873,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1886,7 +1886,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1899,7 +1899,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 13
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1912,7 +1912,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 149
+        "register": 35
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1925,7 +1925,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 6
+        "register": 1
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1938,7 +1938,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 5
+        "register": 3
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1951,7 +1951,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 5
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1982,10 +1982,10 @@
             0
           ],
           "modifyAppData": [
-            1
+            0
           ]
         },
-        "register": 9
+        "register": 7
       },
       "type": "plugin",
       "path": "/Users/hou/work/limeet/node_modules/@umijs/plugins/dist/antd.js",
@@ -2001,10 +2001,10 @@
             0
           ],
           "modifyAppData": [
-            983
+            136
           ]
         },
-        "register": 9
+        "register": 10
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2017,7 +2017,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 4
+        "register": 1
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2032,7 +2032,7 @@
       },
       "time": {
         "hooks": {},
-        "register": 10
+        "register": 5
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2045,7 +2045,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 6
+        "register": 4
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2058,7 +2058,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 7
+        "register": 3
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2071,7 +2071,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 6
+        "register": 2
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2084,7 +2084,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2097,7 +2097,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 21
+        "register": 1
       },
       "enableBy": "register",
       "type": "plugin",
@@ -2110,7 +2110,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 9
+        "register": 3
       },
       "type": "plugin",
       "path": "/Users/hou/work/limeet/node_modules/@umijs/plugins/dist/qiankun/master.js",
@@ -2122,7 +2122,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 8
+        "register": 3
       },
       "type": "plugin",
       "path": "/Users/hou/work/limeet/node_modules/@umijs/plugins/dist/qiankun/slave.js",
@@ -2134,7 +2134,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2160,7 +2160,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 7
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2237,7 +2237,7 @@
             0
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register",
       "type": "plugin",
@@ -2250,7 +2250,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 4
       },
       "enableBy": "register",
       "type": "plugin",
@@ -2565,7 +2565,7 @@
       "file": "@/pages/about/index.jsx",
       "id": "6",
       "absPath": "/about.html",
-      "__content": "import React, { Component } from 'react';\nimport { FormattedMessage } from 'umi';\nimport { useEffect, useState } from 'react';\nimport { Row, Col, Container, Image, Modal, Button } from 'react-bootstrap';\nimport Header from '@/components/Header';\nimport Footer from '@/components/Footer';\nimport ICP from '@/components/Icp';\n\n\nimport './index.less';\n\nfunction About() {\n  const [wechatStatus, setWechatStatus] = useState(false);\n  const handleClose = () => setWechatStatus(false);\n  const handleShow = () => setWechatStatus(true);\n  return (\n    <>\n      <Header from=\"about\"></Header>\n      <Container fluid>\n        <div className=\"about-page clearfix\">\n          <div className=\"des-tx clearfix\">\n            <h1><FormattedMessage id=\"common.about.name\" /></h1>\n            <p><FormattedMessage id=\"common.about.tip\" /></p>\n            <img src=\"https://img.limeetpet.com/limeet/factory.png\"></img>\n            <p></p>\n            <p>\n              <img src=\"https://img.limeetpet.com/limeet/jiaozhang.png\" />\n              <FormattedMessage id='common.about.des' />\n            </p>\n          </div>\n          <div className='company clearfix'>\n            <h1>Shanghai Erka International Trade Co., Ltd</h1>\n            <ul>\n              <li><span><FormattedMessage id=\"footer.product.factory.address\" />：</span>2nd Floor, 1270 Luofen Road, Baoshan District, Shanghai, China</li>\n              <li><span>Email：</span><a href=\"mailto:hangzhououhao@limeet.com\">hangzhououhao@limeet.com</a></li>\n            </ul>\n          </div>\n          <div className='contact clearfix'>\n            <div className='youtube'><a href=\"https://www.youtube.com/channel/UCoIs9wNHv3RFkB5Wm6KEHCA\"><img src=\"https://img.limeetpet.com/limeet/youtube-filled.png\" /></a></div>\n            <div className='wechat' onClick={handleShow}><img src=\"https://img.limeetpet.com/limeet/wechat-filled.png\" /></div>\n            <Modal show={wechatStatus} onHide={handleClose}>\n              <Modal.Header closeButton>\n                <Modal.Title></Modal.Title>\n              </Modal.Header>\n              <Modal.Body>\n                <Image thumbnail src=\"https://img.limeetpet.com/limeet/wechat.png\"></Image>\n              </Modal.Body>\n              <Modal.Footer>\n                <Button variant=\"secondary\" onClick={handleClose}>\n                  Close\n                </Button>\n              </Modal.Footer>\n            </Modal>\n          </div>\n        </div>\n      </Container>\n      <Footer></Footer>\n      <ICP></ICP>\n    </>\n  );\n}\n\nexport default About;\n",
+      "__content": "import React, { Component } from 'react';\nimport { FormattedMessage } from 'umi';\nimport { useEffect, useState } from 'react';\nimport { Row, Col, Container, Image, Modal, Button } from 'react-bootstrap';\nimport Header from '@/components/Header';\nimport Footer from '@/components/Footer';\nimport ICP from '@/components/Icp';\n\n\nimport './index.less';\n\nfunction About() {\n  const [wechatStatus, setWechatStatus] = useState(false);\n  const handleClose = () => setWechatStatus(false);\n  const handleShow = () => setWechatStatus(true);\n  return (\n    <>\n      <Header from=\"about\"></Header>\n      <Container fluid>\n        <div className=\"about-page clearfix\">\n          <div className=\"des-tx clearfix\">\n            <h1><FormattedMessage id=\"common.about.name\" /></h1>\n            <p><FormattedMessage id=\"common.about.tip\" /></p>\n            <img src=\"https://img.limeetpet.com/limeet/factory.png\"></img>\n            <p></p>\n            <p>\n              <img src=\"https://img.limeetpet.com/limeet/jiaozhang.png\" />\n              <FormattedMessage id='common.about.des' />\n            </p>\n          </div>\n          <div className='company clearfix'>\n            <h1>Shanghai Erka International Trade Co., Ltd</h1>\n            <ul>\n              <li><span><FormattedMessage id=\"footer.product.factory.address\" />：</span>2nd Floor, 1270 Luofen Road, Baoshan District, Shanghai, China</li>\n              <li><span>Email：</span><a href=\"mailto:hou_ve@qq.com\">hou_ve@qq.com</a></li>\n            </ul>\n          </div>\n          <div className='contact clearfix'>\n            <div className='youtube'><a target='_blank' href=\"https://www.youtube.com/channel/UCoIs9wNHv3RFkB5Wm6KEHCA\"><img src=\"https://img.limeetpet.com/limeet/icon/icons8-youtube-240.png\" /></a></div>\n            <div className='facebook'><a target='_blank' href=\"https://www.facebook.com/limeet.366183\"><img src=\"https://img.limeetpet.com/limeet/icon/icons8-facebook-240.png\" /></a></div>\n            <div className='wechat' onClick={handleShow}><img src=\"https://img.limeetpet.com/limeet/icon/icons8-whatsapp-240.png\" /></div>\n            <Modal show={wechatStatus} onHide={handleClose}>\n              <Modal.Header closeButton>\n                <Modal.Title></Modal.Title>\n              </Modal.Header>\n              <Modal.Body>\n                <Image thumbnail src=\"https://img.limeetpet.com/limeet/icon/whatApp.png\"></Image>\n              </Modal.Body>\n              <Modal.Footer>\n                <Button variant=\"secondary\" onClick={handleClose}>\n                  Close\n                </Button>\n              </Modal.Footer>\n            </Modal>\n          </div>\n        </div>\n      </Container>\n      <Footer></Footer>\n      <ICP></ICP>\n    </>\n  );\n}\n\nexport default About;\n",
       "__isJSFile": true,
       "__absFile": "/Users/hou/work/limeet/src/pages/about/index.jsx"
     },

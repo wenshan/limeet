@@ -1,10 +1,14 @@
-import { Dropdown, Navbar, Container, Nav, NavDropdown, Row, Col } from 'react-bootstrap';
+import { Dropdown, Navbar, Container, Nav, NavDropdown, Row, Col, Modal, Button, Image } from 'react-bootstrap';
 import { useModel, history, FormattedMessage, Link } from 'umi';
+import { useEffect, useState } from 'react';
 
 import './index.less';
 
 function Layout() {
   const { categories, setCategories, product_type_id, setProductTypeId } = useModel('categories');
+  const [wechatStatus, setWechatStatus] = useState(false);
+  const handleClose = () => setWechatStatus(false);
+  const handleShow = () => setWechatStatus(true);
   const renderHtml = (props) => {
     const html = [];
     categories &&
@@ -38,7 +42,7 @@ function Layout() {
   return (
     <Container className='footer' fluid>
       <Row>
-        <Col>
+        <Col sm>
           <h3 className='title'>
             <FormattedMessage id='footer.product.we' />
           </h3>
@@ -60,13 +64,13 @@ function Layout() {
             </li>
           </ul>
         </Col>
-        <Col>
+        <Col sm>
           <h3 className='title'>
             <FormattedMessage id='footer.product.category.title' />
           </h3>
           <Nav className='flex-column'>{renderHtml()}</Nav>
         </Col>
-        <Col>
+        <Col sm>
           <h3 className='title'>
             <FormattedMessage id='footer.product.contact' />
           </h3>
@@ -79,10 +83,28 @@ function Layout() {
               </li>
               <li>
                 <span>Email：</span>
-                <a href='mailto:hangzhououhao@limeet.com'>hangzhououhao@limeet.com</a>
+                <a href='mailto:hou_ve@qq.com'>hou_ve@qq.com</a>
+              </li>
+              <li className='wrap-box'>
+                <span className='youtube'><a target='_blank' href="https://www.youtube.com/channel/UCoIs9wNHv3RFkB5Wm6KEHCA"><img src="https://img.limeetpet.com/limeet/icon/icons8-youtube-240.png" /></a></span>
+                <span className='facebook'><a target='_blank' href="https://www.facebook.com/limeet.366183"><img src="https://img.limeetpet.com/limeet/icon/icons8-facebook-240.png" /></a></span>
+                <span className='wechat' onClick={handleShow}><img src="https://img.limeetpet.com/limeet/icon/icons8-whatsapp-240.png" /></span>
               </li>
             </ul>
           </div>
+          <Modal show={wechatStatus} onHide={handleClose}>
+            <Modal.Header closeButton>
+              <Modal.Title></Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <Image thumbnail src="https://img.limeetpet.com/limeet/icon/whatApp.png"></Image>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={handleClose}>
+                Close
+              </Button>
+            </Modal.Footer>
+          </Modal>
         </Col>
       </Row>
     </Container>

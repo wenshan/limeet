@@ -42,8 +42,8 @@ function Banner() {
       swiperBanner.map((item, idx) => {
         if (item.is_show && item.src) {
           html.push(
-            <Carousel.Item key={idx} onClick={() => bannerClick(item)} title={item.name}>
-              <Image src={item.src} fluid />
+            <Carousel.Item key={idx} title={item.name}>
+              <a href={item.url} target='_blank' title={item.name} ><Image src={item.src} fluid /> </a>
             </Carousel.Item>
           );
         }
