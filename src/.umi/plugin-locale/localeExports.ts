@@ -190,13 +190,13 @@ export const getIntl = (locale?: string, changeIntl?: boolean) => {
     `The current popular language does not exist, please check the locales folder!`,
   );
   // 使用 zh-CN
-  if (localeInfo["zh-CN"]) {
-    return _createIntl("zh-CN");
+  if (localeInfo["ja-JP"]) {
+    return _createIntl("ja-JP");
   }
 
   // 如果还没有，返回一个空的
   return createIntl({
-    locale: "zh-CN",
+    locale: "ja-JP",
     messages: {}
   });
 };
@@ -232,7 +232,7 @@ export const getLocale = () => {
   browserLang = isNavigatorLanguageValid
     ? navigator.language.split('-').join('-')
     : '';
-  return lang || browserLang || "zh-CN";
+  return lang || browserLang || "ja-JP";
 };
 
 

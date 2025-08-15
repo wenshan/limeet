@@ -202,10 +202,12 @@ function Header(props) {
         <div className='header'>
           <div className='main'>
             <div className='logo'>
-              <img src='https://img.limeetpet.com/limeet/limeet_logo.png' />
+              <a href='/'>
+                <img src='https://img.limeetpet.com/limeet/limeet_logo.png' />
+              </a>
             </div>
             <div className='des'>
-              <h1>LIMEET</h1>
+              <h1><a href='/'>LIMEET</a></h1>
               <h2>
                 <FormattedMessage id='common.header.name.second' />
                 <img src='https://img.limeetpet.com/limeet/maogou.png' />

@@ -32,7 +32,7 @@ export default defineConfig({
   routes: routes.routes,
   // https://umijs.org/zh-CN/plugins/plugin-locale
   locale: {
-    default: 'zh-CN',
+    default: 'ja-JP',
     baseSeparator: '-',
   },
   alias: {
@@ -45,16 +45,19 @@ export default defineConfig({
       propList: ['*'],
     }),
   ],
+  /*
   analytics: {
     ga_v2: 'GTM-MBQ58SPM',
     // baidu: 'e3e4ff6865d2ba690ff30184ec5758e8',
   },
+  */
   crossorigin: true,
   esbuildMinifyIIFE: true,
   scripts: [],
   headScripts: [
-    { src: 'https://img.limeetpet.com/limeet/supportImageType.js', defer: true, crossOrigin: 'anonymous' },
+    // { src: 'https://img.limeetpet.com/limeet/supportImageType.js', defer: true, crossOrigin: 'anonymous' },
+    { src: 'https://www.googletagmanager.com/gtag/js?id=G-6N01WX01MW', async: true },
+    { content: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-6N01WX01MW');`, charset: 'utf-8' },
   ],
-  styles: [`html, body { font-size: 16px !important; }`],
-  theme: { '--bs-link-color': 'red' }
+  styles: [`html, body { font-size: 16px !important; }`]
 });

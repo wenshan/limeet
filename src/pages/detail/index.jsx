@@ -27,7 +27,6 @@ function DetailPage() {
     <>
       <DetailSwiper from="detail" image_link={image_link} additional_image_link={additional_image_link}></DetailSwiper>
       {false && (<ProductGroup></ProductGroup>)}
-      {product_detail && product_detail.saleSkusList && product_detail.saleSkusList[0] && (<ProductSaleSku></ProductSaleSku >)}
       <ProductAttr></ProductAttr>
       <ProductDescribe />
       <ProductHighlight />

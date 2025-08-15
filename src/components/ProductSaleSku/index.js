@@ -55,14 +55,23 @@ function ProductSaleSku() {
     return cardHtml;
   }
 
+  const gtagEvent = (data) => {
+    if (window.gtag && gtag && data && data.projectId && data.offer_id) {
+      gtag('event', 'detail_buy_click', {
+        'language': data.language,
+        'offer_id': data.offer_id,
+        'product_id': data.product_id,
+        'product_main_id': data.product_main_id,
+        'projectId': data.projectId,
+      });
+    }
+  }
   const buyLink = () => {
     let html = '';
     let defaultLink = 'https://www.amazon.co.jp/-/en/stores/LIMEETKET%E3%83%9A%E3%83%83%E3%83%88%E3%83%9B%E3%83%BC%E3%83%A0/page/E8D38BBB-5773-49C9-8A2F-0CC199CAC4C7';
     if (product_detail && product_detail.link && product_detail.link.indexOf('www.taobao.com') > -1) {
-      defaultTx = '淘宝购买';
-      html = (<a href={`${product_detail.mobile_link ? product_detail.mobile_link : product_detail.link}`} target="_blank" >淘宝购买</a>)
+      html = (<a onClick={()=>gtagEvent(product_detail)} href={`${product_detail.mobile_link ? product_detail.mobile_link : product_detail.link}`} target="_blank" >淘宝购买</a>)
     } else {
-      // html = (<a href={`${product_detail.mobile_link ? product_detail.mobile_link : product_detail.link}`} target="_blank" >Go to Amazon to buy</a>)
       html = (<a href={defaultLink} target="_blank" >Go to Amazon to buy</a>)
     }
     return html;
