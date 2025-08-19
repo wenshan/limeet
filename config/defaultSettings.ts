@@ -4,7 +4,10 @@ const Settings = {
   logo: 'https://img.limeetpet.com/gtraffic/gtraffic_500_260.png',
   iconfontUrl: '',
   token: '',
-  userid: '277'
+  userid: '277',
+  i18n: {
+    defaultLocale: 'ja-JP'
+  }
 };
 
 export default Settings;

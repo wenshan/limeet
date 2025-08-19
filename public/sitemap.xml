@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- 首页 - 最高优先级 -->
+  <url>
+    <loc>https://www.limeetpet.com/</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.limeetpet.com/</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>daily</changefreq> <!-- 修正为有效值 -->
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.limeetpet.com/product/list.html?key=all</loc>
+    <lastmod>2025-08-14</lastmod>
+    <changefreq>daily</changefreq> <!-- 修正为有效值 -->
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.limeetpet.com/product/list.html?key=33381771</loc>
+    <lastmod>2025-08-14</lastmod>
+    <changefreq>daily</changefreq> <!-- 修正为有效值 -->
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.limeetpet.com/product/list.html?key=12771663</loc>
+    <lastmod>2025-08-14</lastmod>
+    <changefreq>daily</changefreq> <!-- 修正为有效值 -->
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.limeetpet.com/product/list.html?key=97974047</loc>
+    <lastmod>2025-08-14</lastmod>
+    <changefreq>daily</changefreq> <!-- 修正为有效值 -->
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.limeetpet.com/brand.html?key=brand</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>monthly</changefreq> <!-- 修正为有效值 -->
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.limeetpet.com/about.html?key=about</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>monthly</changefreq> <!-- 修正为有效值 -->
+    <priority>0.6</priority>
+  </url>
+</urlset>
